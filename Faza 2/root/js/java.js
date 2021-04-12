@@ -20,3 +20,17 @@ function starmark(item){
 function deleteads(){
   document.getElementById("userAds").style.visibility="hidden";
 }
+function loading(){
+  document.getElementById("inputads").style.visibility="hidden"; 
+}
+function change(){
+  document.getElementById("inputads").style.visibility="visible";
+  document.getElementById("ad1").value=document.getElementById("ad").innerHTML
+}
+function change2(){
+  document.getElementById("ad").innerHTML=document.getElementById("ad1").value
+  loading();
+}
+function odbaci(){
+  loading()
+}
