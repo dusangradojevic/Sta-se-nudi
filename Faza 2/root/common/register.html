@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="../css/style.css">    
     <link href="../img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>
     <title>Šta se nudi - Registracija</title>
+    <script src="../js/java.js"></script>
 </head>
-<body>
+<body onload="loading2()">
     <div id='header'>
         <table width="100%" style="table-layout: fixed;">
             <tr>
@@ -73,34 +74,46 @@
                     <table>
                         <tr>
                             <td>Ime*</td>
-                            <td><input type="text"></td>
+                            <td><input id="ime" type="text"></td>
                         </tr>
                         <tr>
                             <td>Prezime*</td>
-                            <td><input type="text"></td>
+                            <td><input id="prezime" type="text"></td>
                         </tr>
                         <tr>
                             <td>Korisničko ime*</td>
-                            <td><input type="text"></td>
+                            <td><input id="username" type="text"></td>
                         </tr>
                         <tr>
                             <td>E-mail*</td>
-                            <td><input type="email" name="" id=""></td>
+                            <td><input id="email" type="email" name="" id=""></td>
                         </tr>
                         <tr>
                             <td>Lozinka*</td>
-                            <td><input type="password"></td>
+                            <td><input id="pass" type="password"></td>
                         </tr>
                         <tr>
                             <td>Potvrdite lozinku*</td>
-                            <td><input type="password"></td>
+                            <td><input id="passr" type="password"></td>
                         </tr>
                         <tr>
                             <td align="center" colspan="2">
-                                <a href="profile.html"><button class="btn btn-success" type="button">Registruj se</button></a>
+                                <button type="button" onclick="register()" class="btn btn-success">Registruj se</button>
                             </td>
                         </tr>
                     </table>
+<<<<<<< Updated upstream
+=======
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="alert" class="alert alert-danger alert-dismissable">
+                                <!--<button class="close" data-dismiss="alert">&times;</button>-->
+                                Neka polja nisu ispravno popunjena ili su prazna. Pokušajte ponovo.
+                            </div>
+                        </div>
+                    </div>
+>>>>>>> Stashed changes
                 </form>
             </div>
             <div class="col-sm-3">&nbsp;</div>
