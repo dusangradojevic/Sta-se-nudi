@@ -1,4 +1,3 @@
-//Dobrosav 
 var count;
 function result(){
   let rate=parseFloat(document.getElementById("rate").innerHTML)
@@ -33,8 +32,6 @@ function change2(){
 }
 function odbaci(){
   loading()
-<<<<<<< Updated upstream
-=======
 }
 function loading2(){
   document.getElementById("alert").style.visibility="hidden";
@@ -64,6 +61,4 @@ function reset(){
     document.getElementById("alert").style.visibility="visible";
     document.getElementById("alert").innerHTML="Link je poslat mail-om";
   }
-  
->>>>>>> Stashed changes
 }
