@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">    
-    <link href="../img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link href="../img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/> 
     <title>Šta se nudi - Prijava</title>
+    <script src="../js/java.js"></script>
 </head>
-<body>
+<body onload="loading2()">
     <div id='header'>
         <table width="100%" style="table-layout: fixed;">
             <tr>
@@ -73,20 +74,23 @@
                     <table>
                         <tr>
                             <td>Korisničko ime</td>
-                            <td><input type="text"></td>
+                            <td><input id="username" type="text"></td>
                         </tr>
                         <tr>
                             <td>Lozinka</td>
-                            <td><input type="password"></td>
+                            <td><input id="pass" type="password"></td>
                         </tr>
                         <tr>
                             <td align="center" colspan="2">
-                                <a href="profile.html"><button class="btn btn-success" type="button">Prijavi se</button></a>
+                                <button type="button" onclick="login()" class="btn btn-success">Prijavi se</button>
                                 <br>
                                 <a href="password-forget.html">Zaboravili ste lozinku?</a>
                             </td>
                         </tr>
                     </table>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="alert" class="alert alert-danger alert-dismissable">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="alert alert-danger alert-dismissable">

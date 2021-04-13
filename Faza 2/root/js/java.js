@@ -34,3 +34,27 @@ function change2(){
 function odbaci(){
   loading()
 }
+function loading2(){
+  document.getElementById("alert").style.visibility="hidden";
+}
+function login(){
+  if((document.getElementById("username").value=="") || ((document.getElementById("pass").value=="")))
+    document.getElementById("alert").style.visibility="visible";
+  else
+  window.open("../common/profile.html","_self")
+}
+function register(){
+  if((document.getElementById("ime").value=="") || (document.getElementById("prezime").value=="") || (document.getElementById("username").value=="") || (document.getElementById("email").value=="") || ((document.getElementById("pass").value=="") || (document.getElementById("passr").value=="")))
+    document.getElementById("alert").style.visibility="visible";
+  else
+  window.open("../common/profile.html","_self")
+}
+function reset(){
+  if(document.getElementById("email").value=="")
+    document.getElementById("alert").style.visibility="visible";
+  else{
+    document.getElementById("alert").style.visibility="visible";
+    document.getElementById("alert").innerHTML="Link je poslat mail-om";
+  }
+  
+}
