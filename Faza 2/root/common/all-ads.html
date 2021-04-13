@@ -11,7 +11,7 @@
     <title>Šta se nudi - Svi oglasi korisnika</title>
     <script src="../js/java.js"></script>
 </head>
-<body>
+<body onload="loading()">
     <div id='header'>
         <table width="100%" style="table-layout: fixed;">
             <tr>
@@ -63,7 +63,7 @@
     <div id='user-ads' class="content">
         <h1>Oglasi korisnika korisničkoIme:</h1>
         <br>
-        <table>
+        <table id="userAds">
             <tr>
                 <td align="center">
                     <h2>Maltezer</h2>
@@ -71,17 +71,22 @@
             </tr>
             <tr>
                 <td align="center">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sapiente iste debitis repellat pariatur nisi maxime eius, error, dolorum facilis cumque velit non tenetur recusandae qui! Autem sint tempora odit.</p>
+                    <p id="ad">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sapiente iste debitis repellat pariatur nisi maxime eius, error, dolorum facilis cumque velit non tenetur recusandae qui! Autem sint tempora odit.</p>
                 </td>                
             </tr>
            
             <tr>
                 <td align="right">
                     <input onclick="deleteads()" class="btn btn-danger" type="button" value="Obriši oglas" />
-                   <a href="pets.html"><input class="btn btn-info" type="button" value="Izmeni" /></a>
+                   <input onclick="change()" class="btn btn-info" type="button" value="Izmeni" />
                 </td>
             </tr>
         </table>
+        <br>
+        <div id="inputads">
+            <textarea id="ad1" cols="30" rows="10"></textarea><br>
+            <button onclick="change2()" type="button">Izmeni</button> <button type="button" onclick="odbaci()">Odbaci</button>
+        </div>
     </div>
     </div>
     <div id='footer'>
