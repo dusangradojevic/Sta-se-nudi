@@ -130,6 +130,34 @@ ALTER TABLE `rating`
   ADD KEY `R_4` (`idK`);
 
 --
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `chats`
+--
+ALTER TABLE `chats`
+  MODIFY `idc` int(18) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `korisnici`
+--
+ALTER TABLE `korisnici`
+  MODIFY `idK` int(18) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `oglasi`
+--
+ALTER TABLE `oglasi`
+  MODIFY `IdO` int(18) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `rating`
+--
+ALTER TABLE `rating`
+  MODIFY `IdR` int(18) NOT NULL AUTO_INCREMENT;
+
+--
 -- Constraints for dumped tables
 --
 
