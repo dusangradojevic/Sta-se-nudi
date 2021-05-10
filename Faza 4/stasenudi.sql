@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2021 at 05:09 PM
+-- Generation Time: May 10, 2021 at 05:45 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.18
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `username` varchar(150) NOT NULL,
-  `password` varchar(150) DEFAULT NULL
+  `password` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -39,9 +39,9 @@ CREATE TABLE `admin` (
 --
 
 CREATE TABLE `chats` (
-  `idc` char(18) NOT NULL,
-  `user_to` int(11) NOT NULL,
-  `user_from` int(11) NOT NULL,
+  `idc` int(18) NOT NULL,
+  `user_to` int(18) NOT NULL,
+  `user_from` int(18) NOT NULL,
   `message` varchar(256) DEFAULT NULL,
   `datetime` timestamp NULL DEFAULT NULL,
   `status` int(11) DEFAULT NULL
@@ -54,7 +54,7 @@ CREATE TABLE `chats` (
 --
 
 CREATE TABLE `korisnici` (
-  `idK` int(11) NOT NULL,
+  `idK` int(18) NOT NULL,
   `isValid` tinyint(1) DEFAULT NULL,
   `name` varchar(25) DEFAULT NULL,
   `surname` varchar(25) DEFAULT NULL,
@@ -70,12 +70,12 @@ CREATE TABLE `korisnici` (
 --
 
 CREATE TABLE `oglasi` (
-  `IdO` int(11) NOT NULL,
+  `IdO` int(18) NOT NULL,
   `title` varchar(256) DEFAULT NULL,
   `text` varchar(1000) DEFAULT NULL,
   `type` varchar(20) DEFAULT NULL,
   `isValid` tinyint(1) DEFAULT NULL,
-  `idK` int(11) NOT NULL,
+  `idK` int(18) NOT NULL,
   `category` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -86,9 +86,9 @@ CREATE TABLE `oglasi` (
 --
 
 CREATE TABLE `rating` (
-  `IdR` char(18) NOT NULL,
+  `IdR` int(18) NOT NULL,
   `rate` char(18) DEFAULT NULL,
-  `idK` int(11) NOT NULL
+  `idK` int(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
