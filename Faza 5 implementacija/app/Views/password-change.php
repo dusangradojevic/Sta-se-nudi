@@ -14,14 +14,14 @@
     <div id='header'>
         <table width="100%" style="table-layout: fixed;">
             <tr>
-                <td align="left"><a href="../index.html"><img src="../img/logoMali.png" width=80px height=80px alt="Logo"/></a></td>
-                <td align="center" id="header-caption"><h1><a href="../index.html">Šta se nudi</a></h1></td>
+                <td align="left"><a href="Home"><img src="img/logoMali.png" width=80px height=80px alt="Logo"/></a></td>
+                <td align="center" id="header-caption"><h1><a href="Home">Šta se nudi</a></h1></td>
                 <td align="right">
-                    <a href="sign-in.html"><button class="btn btn-success" type="button">&nbsp; Uloguj se &nbsp;</button></a>
-                    <a href="register.html"><button class="btn btn-danger" type="button">Registruj se</button></a>&nbsp;
+                    <a href="SignIn"><button class="btn btn-success" type="button">&nbsp; Uloguj se &nbsp;</button></a>
+                    <a href="Register"><button class="btn btn-danger" type="button">Registruj se</button></a>&nbsp;
                 </td>
             </tr>
-        </table>
+        </table>     
     </div>
     <div id='menu'>
         <table>
@@ -95,7 +95,7 @@
         </form>        
     </div>
     <div id='footer'>
-        <a href="support-form.html">Kontakt</a>
+        <a href="Support">Kontakt</a>
         &nbsp;|&nbsp;
         <a href="">Uputstva</a>
         &nbsp;|&nbsp;
@@ -103,7 +103,7 @@
         &nbsp;|&nbsp;
         <a href="">Pravila korišćenja</a>
         &nbsp;|&nbsp;
-        <a href="support.html">Podrška</a>
+        <a href="Support">Podrška</a>
     </div>
 </body>
 </html>

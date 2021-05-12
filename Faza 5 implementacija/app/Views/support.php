@@ -14,14 +14,14 @@
     <div id='header'>
         <table width="100%" style="table-layout: fixed;">
             <tr>
-                <td align="left"><a href="../index.html"><img src="../img/logoMali.png" width=80px height=80px alt="Logo"/></a></td>
-                <td align="center" id="header-caption"><h1><a href="../index.html">Šta se nudi</a></h1></td>
+                <td align="left"><a href="Home"><img src="img/logoMali.png" width=80px height=80px alt="Logo"/></a></td>
+                <td align="center" id="header-caption"><h1><a href="Home">Šta se nudi</a></h1></td>
                 <td align="right">
-                    <a href="sign-in.html"><button class="btn btn-success" type="button">&nbsp; Uloguj se &nbsp;</button></a>
-                    <a href="register.html"><button class="btn btn-danger" type="button">Registruj se</button></a>&nbsp;
+                    <a href="SignIn"><button class="btn btn-success" type="button">&nbsp; Uloguj se &nbsp;</button></a>
+                    <a href="Register"><button class="btn btn-danger" type="button">Registruj se</button></a>&nbsp;
                 </td>
             </tr>
-        </table>
+        </table>     
     </div>
     <div id='menu'>
         <table>
@@ -67,29 +67,29 @@
         <div>
             <h3>Dajte nam sugestiju:</h3><br>
             <ul style="list-style: disc;">
-                <a href="support-form.html"><li>Utisci o radu i izgledu sajta</li></a>
-                <a href="support-form.html"><li>Predlog za novo mesto/grad</li></a>
-                <a href="support-form.html"><li>Predlog za novu kategoriju</li></a>
-                <a href="support-form.html"><li>Predlog za poboljšanje</li></a>
+                <a href="support-form.php"><li>Utisci o radu i izgledu sajta</li></a>
+                <a href="support-form.php"><li>Predlog za novo mesto/grad</li></a>
+                <a href="support-form.php"><li>Predlog za novu kategoriju</li></a>
+                <a href="support-form.php"><li>Predlog za poboljšanje</li></a>
             </ul><br><br>
 
             <h3>Prijavite problem:</h3><br>
             <ul style="list-style: disc;">
-                <a href="support-form.html"><li>Greška na sajtu</li></a>
-                <a href="support-form.html"><li>Problem</li></a>
-                <a href="support-form.html"><li>Žalba na korisnika</li></a>
+                <a href="support-form.php"><li>Greška na sajtu</li></a>
+                <a href="support-form.php"><li>Problem</li></a>
+                <a href="support-form.php"><li>Žalba na korisnika</li></a>
             </ul><br><br>
             
             <h3>Ostalo:</h3><br>
             <ul style="list-style: disc;">
-                <a href="support-form.html"><li>Komentar</li></a>
-                <a href="support-form.html"><li>Pitanje</li></a>
-                <a href="support-form.html"><li>Pohvala</li></a>
+                <a href="support-form.php"><li>Komentar</li></a>
+                <a href="support-form.php"><li>Pitanje</li></a>
+                <a href="support-form.php"><li>Pohvala</li></a>
              </ul><br><br>           
         </div>
     </div>
     <div id='footer'>
-        <a href="support-form.html">Kontakt</a>
+        <a href="support-form.php">Kontakt</a>
         &nbsp;|&nbsp;
         <a href="">Uputstva</a>
         &nbsp;|&nbsp;
@@ -97,7 +97,7 @@
         &nbsp;|&nbsp;
         <a href="">Pravila korišćenja</a>
         &nbsp;|&nbsp;
-        <a href="support.html">Podrška</a>
+        <a href="Support">Podrška</a>
     </div>
 </body>
 </html>
