@@ -9,16 +9,17 @@
 namespace App\Controllers;
 
 /**
- * Description of Clothes
+ * Description of Announcements
  *
  * @author vd180005d
  */
-class Clothes extends BaseController{
-   protected function prikazU(){
+class Announcements extends BaseController {
+    //put your code here
+    protected function prikaziU(){
         echo view('Headernotsignedup');
-        echo view('Clothes');
+        echo view('Announcements');
     }
-    public function index(){
-        $this->prikazU();
+    public function index() {
+        $this->prikaziU();
     }
 }

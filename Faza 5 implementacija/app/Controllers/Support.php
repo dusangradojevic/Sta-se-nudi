@@ -14,7 +14,11 @@ namespace App\Controllers;
  * @author vd180005d
  */
 class Support extends BaseController {
-    public function index() {
-        return view('Support');
+   protected function prikazU() {
+        echo view('Headernotsignedup');
+        echo view('Support');
     }
+    public function index(){
+        $this->prikazU();
+    } 
 }

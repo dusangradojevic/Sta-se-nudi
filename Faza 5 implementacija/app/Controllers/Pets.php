@@ -6,8 +6,11 @@ namespace App\Controllers;
 
 class Pets extends BaseController
 {
-	public function index()
-	{
-		return view('Pets');
-	}
+    protected function prikazU(){
+        echo view('Headernotsignedup');
+        echo view('Pets');
+    }
+    public function index(){
+        $this->prikazU();
+    }
 }

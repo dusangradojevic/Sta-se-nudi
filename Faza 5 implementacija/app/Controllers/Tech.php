@@ -9,7 +9,11 @@ namespace App\Controllers;
  * @author Dobrosav Vlaskovic
  */
 class Tech extends BaseController{
+    protected function prikazU() {
+        echo view('Headernotsignedup');
+        echo view('Tech');
+    }
     public function index(){
-        return view('Tech');
+        $this->prikazU();
     }
 }
