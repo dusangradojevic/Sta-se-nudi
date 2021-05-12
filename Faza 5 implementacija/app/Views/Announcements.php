@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
-    <meta name="author" content="Dobrosav">
+    <meta name="author" content="Aleksandra">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel='stylesheet' type = 'text/css' href='../css/style.css'>
     <link href="../img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>
-    <title>Šta se nudi - Odeća</title>
+    <title>Šta se nudi - Obaveštenja</title>
 </head>
 <body>
-
+    
     <div id='menu'>
         <table>
             <tr>
@@ -33,7 +33,7 @@
                         <option >Srbija</option>
                         <option>Crna Gora</option>
                         <option>Makedonija</option>
-                        <option >Bosna i Hercegovina</option>
+                        <option>Bosna i Hercegovina</option>
                         <option>Hrvatska</option>
                     </select>                 
                 </td>
@@ -48,24 +48,14 @@
             </tr>
         </table>        
     </div>
-    <div class="content" style="padding-top: 30px;">
-        <br><br>
-        <div class="row">
-            <div class="col-sm-3">&nbsp;</div>
-            <div class="col-sm-6"><h3>Odeća</h3></div>
-            <div class="col-sm-3">&nbsp;</div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3">&nbsp;</div>
-            <div class="col-sm-6 border border-dark"><h5>Jakna</h5>
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus, velit obcaecati delectus earum sit esse provident consectetur eaque magni! Ut, tempora minus!
-            </div>
-            <div class="col-sm-3">&nbsp;</div>
-        </div> 
+    <div id='announcements' class="content">
+    <h1>Obaveštenja</h1>
+    <h3>21.03.2021.</h3>
+    <h2>Dobrodošli!</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab atque neque numquam modi! Eius animi nostrum veniam. Ullam magni ad pariatur necessitatibus nihil neque accusantium sunt, molestiae ipsum, est enim!</p>
     </div>
     <div id='footer'>
-        <a href="Support">Kontakt</a>
+        <a href="support-form.html">Kontakt</a>
         &nbsp;|&nbsp;
         <a href="">Uputstva</a>
         &nbsp;|&nbsp;
@@ -73,7 +63,7 @@
         &nbsp;|&nbsp;
         <a href="">Pravila korišćenja</a>
         &nbsp;|&nbsp;
-        <a href="Support">Podrška</a>
+        <a href="support.html">Podrška</a>
     </div>
 </body>
 </html>

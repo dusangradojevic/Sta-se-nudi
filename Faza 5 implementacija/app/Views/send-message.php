@@ -11,19 +11,7 @@
     <title>Šta se nudi - Pošalji poruku</title>
 </head>
 <body>
-    <div id='header'>
-        <table width="100%" style="table-layout: fixed;">
-            <tr>
-                <td align="left"><a href="../index.html"><img src="../img/logoMali.png" width=80px height=80px alt="Logo"/></a></td>
-                <td align="center" id="header-caption"><h1><a href="../index.html">Šta se nudi</a></h1></td>
-                <td align="right">
-                    <a href="sign-in.html"><button class="btn btn-success" type="button">&nbsp; Uloguj se &nbsp;</button></a>
-                    <a href="register.html"><button class="btn btn-danger" type="button">Registruj se</button></a>&nbsp;
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div id='menu'>
+      <div id='menu'>
         <table>
             <tr>
                 <td align="left">
@@ -53,7 +41,7 @@
                     <button class="btn-dark" type="button" style="padding: 2px;">Pretraži</button>
                 </td>
                 <td align="right">
-                    <a href="announcements.html">Obaveštenja</a>
+                    <a href="Announcements">Obaveštenja</a>
                     &nbsp;
                 </td>
             </tr>

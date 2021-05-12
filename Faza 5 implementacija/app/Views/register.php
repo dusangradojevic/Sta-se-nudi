@@ -54,7 +54,7 @@
                     <button class="btn-dark" type="button" style="padding: 2px;">Pretraži</button>
                 </td>
                 <td align="right">
-                    <a href="announcements.html">Obaveštenja</a>
+                    <a href="Announcements">Obaveštenja</a>
                     &nbsp;
                 </td>
             </tr>
