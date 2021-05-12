@@ -74,7 +74,7 @@
             </form>            
     </div>
     <div id='footer'>
-        <a href="support-form.html">Kontakt</a>
+        <a href="Support">Kontakt</a>
         &nbsp;|&nbsp;
         <a href="">Uputstva</a>
         &nbsp;|&nbsp;
@@ -82,7 +82,7 @@
         &nbsp;|&nbsp;
         <a href="">Pravila korišćenja</a>
         &nbsp;|&nbsp;
-        <a href="support.html">Podrška</a>
+        <a href="Support">Podrška</a>
     </div>
 </body>
 </html>

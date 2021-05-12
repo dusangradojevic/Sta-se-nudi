@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="../img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>
-    <title>Šta se nudi - Ljubimci</title>
+    <link rel="stylesheet" href="../css/style.css">    
+    <link href="../img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/> 
+    <title>Šta se nudi - Prijava</title>
+    <script src="../js/java.js"></script>
 </head>
-<body>
+<body onload="loading2()">
     <div id='header'>
         <table width="100%" style="table-layout: fixed;">
             <tr>
@@ -53,28 +54,56 @@
                     <button class="btn-dark" type="button" style="padding: 2px;">Pretraži</button>
                 </td>
                 <td align="right">
-                    <a href="common/announcements.html">Obaveštenja</a>
+                    <a href="announcements.html">Obaveštenja</a>
                     &nbsp;
                 </td>
             </tr>
         </table>        
     </div>
     <div class="content" style="padding-top: 30px;">
-        <br><br>
+        <br><br> 
         <div class="row">
             <div class="col-sm-3">&nbsp;</div>
-            <div class="col-sm-6"><h3>Ljubimci</h3></div>
+            <div class="col-sm-6" id="sign-in-and-register"><h3>Prijava</h3></div>
             <div class="col-sm-3">&nbsp;</div>
         </div>
         <div class="row">
             <div class="col-sm-3">&nbsp;</div>
-            <div class="col-sm-6 border border-dark"><h5>Maltezer</h5>
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus, velit obcaecati delectus earum sit esse provident consectetur eaque magni! Ut, tempora minus!
+            <div class="col-sm-6" id="sign-in-and-register">
+                <form>
+                    <table>
+                        <tr>
+                            <td>Korisničko ime</td>
+                            <td><input id="username" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>Lozinka</td>
+                            <td><input id="pass" type="password"></td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="2">
+                                <button type="button" onclick="login()" class="btn btn-success">Prijavi se</button>
+                                <br>
+                                <a href="PasswordForget">Zaboravili ste lozinku?</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="alert" class="alert alert-danger alert-dismissable">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="alert alert-danger alert-dismissable">
+                                <!--<button class="close" data-dismiss="alert">&times;</button>-->
+                                Neka polja nisu ispravno popunjena ili su prazna. Pokušajte ponovo.
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="col-sm-3">&nbsp;</div>
-        </div> 
-    </div>
+        </div>
+   </div>
    <div id='footer'>
         <a href="Support">Kontakt</a>
         &nbsp;|&nbsp;
