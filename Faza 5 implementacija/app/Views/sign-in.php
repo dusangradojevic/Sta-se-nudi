@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">    
-    <link href="../img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/> 
+    <link rel="stylesheet" href="css/style.css">    
+    <link href="img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/> 
     <title>Šta se nudi - Prijava</title>
-    <script src="../js/java.js"></script>
+    <script src="js/java.js"></script>
 </head>
 <body onload="loading2()">
     <div id='header'>
@@ -68,21 +68,21 @@
             <div class="col-sm-3">&nbsp;</div>
         </div>
         <div class="row">
-            <div class="col-sm-3">&nbsp;</div>
+            <div class="col-sm-3"><?php if(isset($poruka)) echo "<font color='red'>$poruka</font><br>"; ?>&nbsp;</div>
             <div class="col-sm-6" id="sign-in-and-register">
-                <form>
+                <form name="loginform" action="<?= site_url("SignIn/loginSubmit") ?>" method="POST">
                     <table>
                         <tr>
                             <td>Korisničko ime</td>
-                            <td><input id="username" type="text"></td>
+                            <td><input minlength="3" name="username" required id="username" type="text"></td>
                         </tr>
                         <tr>
                             <td>Lozinka</td>
-                            <td><input id="pass" type="password"></td>
+                            <td><input name="pass" minlength="3" id="pass" required type="password"></td>
                         </tr>
                         <tr>
                             <td align="center" colspan="2">
-                                <button type="button" onclick="login()" class="btn btn-success">Prijavi se</button>
+                                <button type="submit"  class="btn btn-success">Prijavi se</button>
                                 <br>
                                 <a href="PasswordForget">Zaboravili ste lozinku?</a>
                             </td>
