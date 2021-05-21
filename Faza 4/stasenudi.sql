@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2021 at 05:45 PM
+-- Generation Time: May 21, 2021 at 02:39 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.18
 
@@ -31,6 +31,13 @@ CREATE TABLE `admin` (
   `username` varchar(150) NOT NULL,
   `password` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`username`, `password`) VALUES
+('admin', '123');
 
 -- --------------------------------------------------------
 
@@ -62,6 +69,22 @@ CREATE TABLE `korisnici` (
   `password` varchar(35) DEFAULT NULL,
   `username` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `korisnici`
+--
+
+INSERT INTO `korisnici` (`idK`, `isValid`, `name`, `surname`, `mail`, `password`, `username`) VALUES
+(1, 1, 'admin', 'admin', 'admin@admin.com', '202cb962ac59075b964b07152d234b70', 'admin'),
+(3, 0, 'Dohghh', 'Facfa', 'd@d.com', 'K9qiZNfZznD4qJb', 'dvlaskovic98'),
+(4, 0, 'Dodo', 'Vlaskovic', 'dobrosaw@d.com', 'K9qiZNfZznD4qJb', 'dobrosaw'),
+(5, 0, 'Dodo3', 'Vlaskovic', 'd3@d.com', 'K9qiZNfZznD4qJb', 'dodo3'),
+(6, 0, 'ddd', 'dddd', 'd@d2.com', 'K9qiZNfZznD4qJb', '1ddw'),
+(7, 0, 'dodo5', 'xampp', 'vlaskovic.dodo@gmail.com', 'K9qiZNfZznD4qJb', 'xdodo'),
+(9, 1, 'gg', 'tt', 'd@d3.com', 'K9qiZNfZznD4qJb', 'gt'),
+(11, 0, 'MD5', 'MD5', 'MD5@mail.com', 'fa9d128890c064f92f0cc809d065ef75', 'MD5'),
+(13, 0, 'admin2', 'admin2', 'duyhntg@dvddvf.com', '202cb962ac59075b964b07152d234b70', 'admin2'),
+(16, 0, 'aagg', 'aaaa', 'aaa@aacco.com', '202cb962ac59075b964b07152d234b70', 'aaaa');
 
 -- --------------------------------------------------------
 
@@ -113,7 +136,9 @@ ALTER TABLE `chats`
 -- Indexes for table `korisnici`
 --
 ALTER TABLE `korisnici`
-  ADD PRIMARY KEY (`idK`);
+  ADD PRIMARY KEY (`idK`),
+  ADD UNIQUE KEY `mail` (`mail`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- Indexes for table `oglasi`
@@ -143,7 +168,7 @@ ALTER TABLE `chats`
 -- AUTO_INCREMENT for table `korisnici`
 --
 ALTER TABLE `korisnici`
-  MODIFY `idK` int(18) NOT NULL AUTO_INCREMENT;
+  MODIFY `idK` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `oglasi`
