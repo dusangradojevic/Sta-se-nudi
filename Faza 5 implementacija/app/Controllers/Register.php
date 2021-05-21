@@ -34,11 +34,11 @@ class Register extends BaseController{
         $korisnik->setMail($this->request->getVar('email'));
         $korisnik->setName($this->request->getVar('ime'));
         $korisnik->setSurname($this->request->getVar('prezime'));
-        $korisnik->setPassword($this->request->getVar('pass'));
+        $korisnik->setPassword(md5($this->request->getVar('pass')));
         $korisnik->setUsername($this->request->getVar('username'));
         $this->doctrine->em->persist($korisnik);
         $this->doctrine->em->flush();
         $this->login('Uspeno ste se registrovali cekajte potvrdu administratora bicete preusmereni na pocetnu stranu');
-
+        return redirect()->to(site_url('Home'));
     }
 }

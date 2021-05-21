@@ -10,7 +10,7 @@ namespace App\Controllers;
 
 /**
  * Description of Support
- *
+ * Klasa Support omogucava slanje meila podrsci
  * @author vd180005d
  */
 class Support extends BaseController {
@@ -18,7 +18,14 @@ class Support extends BaseController {
         echo view('Headernotsignedup');
         echo view('Support');
     }
+    protected function prikazL() {
+        echo view('Headersignedup');
+        echo view('Support');
+    }
     public function index(){
-        $this->prikazU();
+        if($this->session->get('korisnik')!=null)
+            $this->prikazL();
+        else
+            $this->prikazU();
     } 
 }
