@@ -18,7 +18,14 @@ class Clothes extends BaseController{
         echo view('Headernotsignedup');
         echo view('Clothes');
     }
+    protected function prikazL(){
+        echo view('Headersignedup');
+        echo view('Clothes');
+    }
     public function index(){
-        $this->prikazU();
+        if($this->session->get('korisnik')!=null)
+            $this->prikazL();
+        else
+            $this->prikazU();
     }
 }

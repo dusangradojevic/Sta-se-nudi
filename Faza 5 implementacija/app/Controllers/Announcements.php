@@ -10,16 +10,24 @@ namespace App\Controllers;
 
 /**
  * Description of Announcements
- *
+ * klasa  Announcements kontrolise prikaz obavestenja u zavisnosti od toga da li je
+ * korisnik prijavljen
  * @author vd180005d
  */
 class Announcements extends BaseController {
     //put your code here
-    protected function prikaziU(){
+    protected function prikazU(){
         echo view('Headernotsignedup');
         echo view('Announcements');
     }
-    public function index() {
-        $this->prikaziU();
+    protected function prikazL(){
+        echo view('Headersignedup');
+        echo view('Announcements');
+    }
+    public function index(){
+        if($this->session->get('korisnik')!=null)
+            $this->prikazL();
+        else
+            $this->prikazU();
     }
 }
