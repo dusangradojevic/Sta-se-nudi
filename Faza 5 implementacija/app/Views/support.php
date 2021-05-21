@@ -56,29 +56,29 @@
         <div>
             <h3>Dajte nam sugestiju:</h3><br>
             <ul style="list-style: disc;">
-                <a href="support-form.php"><li>Utisci o radu i izgledu sajta</li></a>
-                <a href="support-form.php"><li>Predlog za novo mesto/grad</li></a>
-                <a href="support-form.php"><li>Predlog za novu kategoriju</li></a>
-                <a href="support-form.php"><li>Predlog za poboljšanje</li></a>
+                <a href="SlanjePoruke"><li>Utisci o radu i izgledu sajta</li></a>
+                <a href="SlanjePoruke"><li>Predlog za novo mesto/grad</li></a>
+                <a href="SlanjePoruke"><li>Predlog za novu kategoriju</li></a>
+                <a href="SlanjePoruke"><li>Predlog za poboljšanje</li></a>
             </ul><br><br>
 
             <h3>Prijavite problem:</h3><br>
             <ul style="list-style: disc;">
-                <a href="support-form.php"><li>Greška na sajtu</li></a>
-                <a href="support-form.php"><li>Problem</li></a>
-                <a href="support-form.php"><li>Žalba na korisnika</li></a>
+                <a href="SlanjePoruke"><li>Greška na sajtu</li></a>
+                <a href="SlanjePoruke"><li>Problem</li></a>
+                <a href="SlanjePoruke"><li>Žalba na korisnika</li></a>
             </ul><br><br>
             
             <h3>Ostalo:</h3><br>
             <ul style="list-style: disc;">
-                <a href="support-form.php"><li>Komentar</li></a>
-                <a href="support-form.php"><li>Pitanje</li></a>
-                <a href="support-form.php"><li>Pohvala</li></a>
+                <a href="SlanjePoruke"><li>Komentar</li></a>
+                <a href="SlanjePoruke"><li>Pitanje</li></a>
+                <a href="SlanjePoruke"><li>Pohvala</li></a>
              </ul><br><br>           
         </div>
     </div>
     <div id='footer'>
-        <a href="support-form.php">Kontakt</a>
+        <a href="SlanjePoruke">Kontakt</a>
         &nbsp;|&nbsp;
         <a href="">Uputstva</a>
         &nbsp;|&nbsp;
