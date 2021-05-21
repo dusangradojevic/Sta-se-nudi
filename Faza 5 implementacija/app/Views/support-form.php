@@ -11,17 +11,7 @@
     <title>Šta se nudi - Podrška (forma)</title>
 </head>
 <body>
-    <div id='header'>
-        <table width="100%" style="table-layout: fixed;">
-            <tr>
-                <td align="left"><a href="../index.html"><img src="../img/logoMali.png" width=80px height=80px alt="Logo"/></a></td>
-                <td align="center" id="header-caption"><h1><a href="../index.html">Šta se nudi</a></h1></td>
-                <td align="right">
-                    <a href="sign-in.html"><button class="btn btn-success" type="button">&nbsp; Uloguj se &nbsp;</button></a>
-                    <a href="register.html"><button class="btn btn-danger" type="button">Registruj se</button></a>&nbsp;
-                </td>
-            </tr>
-        </table>
+
     </div>
     <div id='menu'>
         <table>
@@ -61,14 +51,15 @@
     </div>
     <div id='support' class="content">
         <h2>Pomozite nam da poboljšamo Šta se nudi?</h2><br><br>
-        <form action="" method="">
+        <?php if(isset($poruka)) echo "<font color='red'>$poruka</font><br>"; ?>&nbsp; <br>
+        <form action="<?= site_url("SlanjePoruke/posalji") ?>" method="POST">
             <table>
                 <tr>
                     <td colspan="2" style="text-align: center;"><b>Unesite tekst komentara/pitanje:</td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <textarea rows="10" cols="80"></textarea>
+                        <textarea name="msg" rows="10" cols="80"></textarea>
                     </td>
                 </tr>
                 <tr>
