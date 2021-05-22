@@ -31,13 +31,14 @@ class SlanjePoruke extends BaseController
         $korisnik=$this->session->get('korisnik');
         if($korisnik==null)
             return $this->login('ne mozete poslati poruku, niste registrovani');
-        $email=$korisnik->getMail();
+        $mail=$korisnik->getMail();
         $text=$this->request->getVar('msg');
-        $headers = 'From: '.$email . "\r\n" .
-            'Reply-To: '.$email . "\r\n" .
-            'X-Mailer: PHP/' . phpversion();
-        mail('vlaskovic.dodo@gmail.com','podrska',$text,$headers);
-        echo 'poruka poslata';
+        $email=\Config\Services::email();
+        $email->setFrom($mail);
+        $email->setTo('vlaskovic.dodo@gmail.com');
+        $email->setSubject('Podrska');
+        $email->setMessage($text);
+        $email->send();
         return redirect()->to(site_url('SlanjePoruke'));
     }
 }
