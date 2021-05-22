@@ -68,7 +68,7 @@
             <div class="col-sm-3">&nbsp;</div>
         </div>
         <div class="row">
-            <div class="col-sm-3"><?php if(isset($poruka)) echo "<font color='red'>$poruka</font><br>"; ?>&nbsp;</div>
+            <div class="col-sm-3"><?php if(isset($poruka)) echo "<font color='red'>$poruka</font><br>"; ?></div>
             <div class="col-sm-6" id="sign-in-and-register">
                 <form name="loginform" action="<?= site_url("SignIn/loginSubmit") ?>" method="POST">
                     <table>

@@ -8,19 +8,23 @@
 
 namespace App\Controllers;
 
+use App\Models\Entities\Oglasi;
+
 /**
  * Description of Clothes
  *
  * @author vd180005d
  */
 class Clothes extends BaseController{
-   protected function prikazU(){
+    protected function prikazU(){
+        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Clotches'));
         echo view('Headernotsignedup');
-        echo view('Clothes');
+        echo view('clothes',['pets'=>$pets]);
     }
     protected function prikazL(){
+        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Clotches'));
         echo view('Headersignedup');
-        echo view('Clothes');
+        echo view('clothes',['Pets'=>$pets]);
     }
     public function index(){
         if($this->session->get('korisnik')!=null)
