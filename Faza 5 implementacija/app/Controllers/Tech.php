@@ -3,17 +3,25 @@
 
 namespace App\Controllers;
 
-/**
+use App\Models\Entities\Oglasi;/**
  * Description of Tech
- 
  * @author Dobrosav Vlaskovic
  */
 class Tech extends BaseController{
-    protected function prikazU() {
+    protected function prikazU(){
+        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Tech'));
         echo view('Headernotsignedup');
-        echo view('Tech');
+        echo view('Tech',['pets'=>$pets]);
+    }
+    protected function prikazL(){
+        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Tech'));
+        echo view('Headersignedup');
+        echo view('Tech',['Pets'=>$pets]);
     }
     public function index(){
-        $this->prikazU();
+        if($this->session->get('korisnik')!=null)
+            $this->prikazL();
+        else
+            $this->prikazU();
     }
 }

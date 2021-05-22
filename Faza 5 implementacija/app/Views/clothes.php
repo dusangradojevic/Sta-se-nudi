@@ -55,14 +55,14 @@
             <div class="col-sm-6"><h3>Odeća</h3></div>
             <div class="col-sm-3">&nbsp;</div>
         </div>
-        <div class="row">
-            <div class="col-sm-3">&nbsp;</div>
-            <div class="col-sm-6 border border-dark"><h5>Jakna</h5>
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus, velit obcaecati delectus earum sit esse provident consectetur eaque magni! Ut, tempora minus!
-            </div>
-            <div class="col-sm-3">&nbsp;</div>
-        </div> 
+        <?php
+        foreach ($pets as $pet){
+            echo "<div class='row'>";
+            echo "<div class='col-sm-3'>&nbsp;</div>";
+            echo "<div class='col-sm-6 border border-dark'><h5>{$pet->getTitle()}</h5> </br> {$pet->getText()}</div>";
+            echo "<div class='col-sm-3'>&nbsp;</div></div>";
+        }
+        ?>
     </div>
     <div id='footer'>
         <a href="Support">Kontakt</a>
