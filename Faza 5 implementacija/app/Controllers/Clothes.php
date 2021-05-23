@@ -17,12 +17,12 @@ use App\Models\Entities\Oglasi;
  */
 class Clothes extends BaseController{
     protected function prikazU(){
-        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Clotches'));
+        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Odeca'));
         echo view('Headernotsignedup');
         echo view('clothes',['pets'=>$pets]);
     }
     protected function prikazL(){
-        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Clotches'));
+        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Odeca'));
         echo view('Headersignedup');
         echo view('clothes',['Pets'=>$pets]);
     }

@@ -9,12 +9,12 @@ use App\Models\Entities\Oglasi;/**
  */
 class Tech extends BaseController{
     protected function prikazU(){
-        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Tech'));
+        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Tehnika'));
         echo view('Headernotsignedup');
         echo view('Tech',['pets'=>$pets]);
     }
     protected function prikazL(){
-        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Tech'));
+        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Tehnika'));
         echo view('Headersignedup');
         echo view('Tech',['Pets'=>$pets]);
     }
