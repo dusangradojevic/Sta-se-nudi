@@ -39,8 +39,10 @@
                     </select>                 
                 </td>
                 <td align="center" style="padding-top: 2px;">
-                    <input type="text" size="55" placeholder="Pretraži oglase..."> 
-                    <button class="btn-dark" type="button" style="padding: 2px;">Pretraži</button>
+                    <form method="POST" action="<?= site_url("Pretraga") ?>">
+                        <input name="pretraga" type="text" size="55" placeholder="Pretraži oglase...">
+                        <button class="btn-dark" type="submit" style="padding: 2px;">Pretraži</button>
+                    </form>
                 </td>
                 <td align="right">
                     <a href="announcements.html">Obaveštenja</a>
