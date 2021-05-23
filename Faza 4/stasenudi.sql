@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2021 at 02:39 PM
+-- Generation Time: May 23, 2021 at 06:02 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.18
 
@@ -84,7 +84,7 @@ INSERT INTO `korisnici` (`idK`, `isValid`, `name`, `surname`, `mail`, `password`
 (9, 1, 'gg', 'tt', 'd@d3.com', 'K9qiZNfZznD4qJb', 'gt'),
 (11, 0, 'MD5', 'MD5', 'MD5@mail.com', 'fa9d128890c064f92f0cc809d065ef75', 'MD5'),
 (13, 0, 'admin2', 'admin2', 'duyhntg@dvddvf.com', '202cb962ac59075b964b07152d234b70', 'admin2'),
-(16, 0, 'aagg', 'aaaa', 'aaa@aacco.com', '202cb962ac59075b964b07152d234b70', 'aaaa');
+(16, 1, 'aagg', 'aaaa', 'aaa@aacco.com', '202cb962ac59075b964b07152d234b70', 'aaaa');
 
 -- --------------------------------------------------------
 
@@ -101,6 +101,15 @@ CREATE TABLE `oglasi` (
   `idK` int(18) NOT NULL,
   `category` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `oglasi`
+--
+
+INSERT INTO `oglasi` (`IdO`, `title`, `text`, `type`, `isValid`, `idK`, `category`) VALUES
+(1, 'Maltezer', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus, velit obcaecati delectus earum sit esse provident consectetur eaque magni! Ut, tempora minus! ', 'Ljubimci', 1, 16, 'Ljubimci'),
+(2, 'S20', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus, velit obcaecati delectus earum sit esse provident consectetur eaque magni! Ut, tempora minus! ', 'Tehnika', 1, 16, 'Tehnika'),
+(7, 'Jakna', 'hnggrfgthhthyytfrggthjyuyhtrgrrgfe', 'Odeca', 1, 16, 'Odeca');
 
 -- --------------------------------------------------------
 
@@ -174,7 +183,7 @@ ALTER TABLE `korisnici`
 -- AUTO_INCREMENT for table `oglasi`
 --
 ALTER TABLE `oglasi`
-  MODIFY `IdO` int(18) NOT NULL AUTO_INCREMENT;
+  MODIFY `IdO` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `rating`
