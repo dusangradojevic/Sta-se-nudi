@@ -8,25 +8,47 @@
     ?>
         <div class="container">
             <div class="row">
-            <div class="col-sm-12"> <h1>Korisnici</h1></div>
+            <div class="col-sm-12"> <h1> Zahtevi za korisnike</h1></div>
             </div>
             <?php
             foreach ($korisnici as $pet){
                 echo "<div class='row'>";
                 echo "<div class='col-sm-3'>&nbsp;</div>";
                 echo "<div class='col-sm-6 border border-dark'><h5>KorisnikID{$pet->getIdk()}</h5> {$pet->getUsername()}</div>";
-                echo "<div class='col-sm-3'>".anchor("Administrator/PotvrdaK/{$pet->getIdk()}","potvrdi Korisnika")."</div></div>";
+                echo "<div class='col-sm-3'>".anchor("Administrator/PotvrdaK/{$pet->getIdk()}","potvrdi Korisnika")." ".anchor("Administrator/brisiK/{$pet->getIdk()}","Obrisi Korisnika")."</div></div>";
             }
             ?>
             <div class="row">
-                <div class="col-sm-12"> <h1>Oglasi</h1></div>
+                <div class="col-sm-12"> <h1>Zahtevi za oglase</h1></div>
             </div>
             <?php
             foreach ($oglasi as $pet){
                 echo "<div class='row'>";
                 echo "<div class='col-sm-3'>&nbsp;</div>";
                 echo "<div class='col-sm-6 border border-dark'><h5>{$pet->getTitle()}</h5> </br> {$pet->getText()}</div>";
-                echo "<div class='col-sm-3'>".anchor("Administrator/PotvrdaO/{$pet->getIdo()}","potvrdi oglas")."</div></div>";
+                echo "<div class='col-sm-3'>".anchor("Administrator/PotvrdaO/{$pet->getIdo()}","potvrdi oglas")." ".anchor("Administrator/brisiO/{$pet->getIdo()}","Obrisi Oglas")."</div></div>";
+            }
+            ?>
+            <div class="row">
+                <div class="col-sm-12"> <h1> Potvrdjeni korisnici</h1></div>
+            </div>
+            <?php
+            foreach ($korisnicip as $pet){
+                echo "<div class='row'>";
+                echo "<div class='col-sm-3'>&nbsp;</div>";
+                echo "<div class='col-sm-6 border border-dark'><h5>KorisnikID{$pet->getIdk()}</h5> {$pet->getUsername()}</div>";
+                echo "<div class='col-sm-3'>".anchor("Administrator/brisiK/{$pet->getIdk()}","Obrisi Korisnika")."</div></div>";
+            }
+            ?>
+            <div class="row">
+                <div class="col-sm-12"> <h1> Potvrdjeni oglasi</h1></div>
+            </div>
+            <?php
+            foreach ($oglasip as $pet){
+                echo "<div class='row'>";
+                echo "<div class='col-sm-3'>&nbsp;</div>";
+                echo "<div class='col-sm-6 border border-dark'><h5>{$pet->getTitle()}</h5> </br> {$pet->getText()}</div>";
+                echo "<div class='col-sm-3'>".anchor("Administrator/brisiO/{$pet->getIdo()}","Obrisi Oglas")."</div></div>";
             }
             ?>
         </div>

@@ -31,28 +31,57 @@ class Administrator extends BaseController{
         else
             return 'Greska';
     }
-    public function PotvrdaK($id){
-        $korisnik=$this->doctrine->em->getRepository(Korisnici::class)->find($id);
-        $korisnik->setIsValid(true);
-        $this->doctrine->em->flush();
-        return redirect()->to(site_url('Administrator/Potvrde'));
+    public function PotvrdaK($id)
+    {
+        if ($this->session->get('Admin') != null) {
+            $korisnik = $this->doctrine->em->getRepository(Korisnici::class)->find($id);
+            $korisnik->setIsValid(true);
+            $this->doctrine->em->flush();
+            return redirect()->to(site_url('Administrator/Potvrde'));
+        }
+        else
+            return 'Greska';
     }
-    public function PotvrdaO($id){
-        $oglasi=$this->doctrine->em->getRepository(Oglasi::class)->find($id);
-        $oglasi->setIsValid(true);
-        $this->doctrine->em->flush();
-        return redirect()->to(site_url('Administrator/Potvrde'));
+    public function PotvrdaO($id)
+    {
+        if ($this->session->get('Admin') != null) {
+            $oglasi = $this->doctrine->em->getRepository(Oglasi::class)->find($id);
+            $oglasi->setIsValid(true);
+            $this->doctrine->em->flush();
+            return redirect()->to(site_url('Administrator/Potvrde'));
+        }
+        else
+            return 'Greska';
+    }
+    public function brisiK($id)
+    {
+        if ($this->session->get('Admin') != null) {
+            $korisnik = $this->doctrine->em->getRepository(Korisnici::class)->find($id);
+            $this->doctrine->em->remove($korisnik);
+            $this->doctrine->em->flush();
+            return redirect()->to(site_url('Administrator/Potvrde'));
+        }
+        else
+            return 'Greska';
+    }
+    public function brisiO($id)
+    {
+        if ($this->session->get('Admin') != null) {
+            $oglasi = $this->doctrine->em->getRepository(Oglasi::class)->find($id);
+            $this->doctrine->em->remove($oglasi);
+            $this->doctrine->em->flush();
+            return redirect()->to(site_url('Administrator/Potvrde'));
+        }
+        else
+            return 'Greska';
     }
     protected function prikazK(){
         $korisnici=$this->doctrine->em->getRepository(Korisnici::class)->findBy(array('isvalid' => false));
-        //echo view('Headernotsignedup');
         $oglasi=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => false));
-        echo view('Prikaz',['korisnici'=>$korisnici,'oglasi'=>$oglasi]);
+        $korisnicip=$this->doctrine->em->getRepository(Korisnici::class)->findBy(array('isvalid' => true));
+        $oglasip=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true));
+        echo view('Prikaz',['korisnici'=>$korisnici,'oglasi'=>$oglasi,'korisnicip'=>$korisnicip,'oglasip'=>$oglasip]);
     }
-    protected function prikazO(){
-        $oglasi=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => false));
-       // echo view('Headersignedup');
-        echo view('Prikaz',['oglasi'=>$oglasi]);
-    }
+
 
 }
