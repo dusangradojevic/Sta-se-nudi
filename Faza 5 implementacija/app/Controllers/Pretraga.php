@@ -17,7 +17,7 @@ class Pretraga extends BaseController{
         $pets=$this->$this->doctrine->em->getRepository(OglasiRepository::class)
             ->pretragadql($tekst);
         echo view('Headersignedup');
-        echo view('Pretraga',['Pets'=>$pets]);
+        echo view('Pretraga',['pets'=>$pets]);
     }
     public function index(){
         if($this->session->get('korisnik')!=null)

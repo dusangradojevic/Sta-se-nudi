@@ -6,6 +6,7 @@
                 <td align="right">
                     <a href=""><button class="btn btn-success" type="button">&nbsp; Daj oglas&nbsp;</button></a>
                     <a href="SignIn/logout"><button class="btn btn-danger" type="button">Odjava</button></a>&nbsp;
+                    <br/> <center><a href="Profile">Profil</a></center>
                 </td>
             </tr>
         </table>     
