@@ -24,7 +24,7 @@ class Clothes extends BaseController{
     protected function prikazL(){
         $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Odeca'));
         echo view('Headersignedup');
-        echo view('clothes',['Pets'=>$pets]);
+        echo view('clothes',['pets'=>$pets]);
     }
     public function index(){
         if($this->session->get('korisnik')!=null)

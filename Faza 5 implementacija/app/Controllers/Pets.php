@@ -16,7 +16,7 @@ class Pets extends BaseController
     protected function prikazL(){
         $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Ljubimci'));
         echo view('Headersignedup');
-        echo view('Pets',['Pets'=>$pets]);
+        echo view('Pets',['pets'=>$pets]);
     }
     public function index(){
         if($this->session->get('korisnik')!=null)
