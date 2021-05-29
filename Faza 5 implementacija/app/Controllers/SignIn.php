@@ -15,7 +15,8 @@ use App\Models\Entities\Korisnici;
  * @author vd180005d
  */
 class SignIn extends BaseController{
-    
+
+
     protected function prikaz($data) {
         $data['controller']='Korisnik';
         echo view ("Sign-in", $data);

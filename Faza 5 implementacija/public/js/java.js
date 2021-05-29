@@ -58,3 +58,15 @@ function reset(){
   }
   
 }
+function typing(){
+  let pass=document.getElementById("pass").value
+  let passr=document.getElementById("passr").value
+  if (pass==passr){
+    document.getElementById("button").disabled=false
+    document.getElementById("alert").style.visibility="hidden"
+  }
+  else {
+    document.getElementById("button").disabled=true
+    document.getElementById("alert").style.visibility="visible"
+  }
+}

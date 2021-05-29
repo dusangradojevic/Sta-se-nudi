@@ -76,31 +76,31 @@
                     <table>
                         <tr>
                             <td>Ime*</td>
-                            <td><input name="ime" minlength="3" id="ime" type="text"></td>
+                            <td><input name="ime" minlength="3" required id="ime" type="text"></td>
                         </tr>
                         <tr>
                             <td>Prezime*</td>
-                            <td><input name="prezime" minlength="5" id="prezime" type="text"></td>
+                            <td><input name="prezime" minlength="5" id="prezime" required type="text"></td>
                         </tr>
                         <tr>
                             <td>Korisničko ime*</td>
-                            <td><input name="username" minlength="7" id="username" type="text"></td>
+                            <td><input name="username" minlength="7" id="username" required type="text"></td>
                         </tr>
                         <tr>
                             <td>E-mail*</td>
-                            <td><input id="email" type="email" name="email" ></td>
+                            <td><input id="email" type="email" name="email" required></td>
                         </tr>
                         <tr>
                             <td>Lozinka*</td>
-                            <td><input name="pass" minlength="8" id="pass" type="password"></td>
+                            <td><input name="pass" oninput="typing()" minlength="8" id="pass" type="password"></td>
                         </tr>
                         <tr>
                             <td>Potvrdite lozinku*</td>
-                            <td><input id="passr" minlength="8" type="password"></td>
+                            <td><input id="passr" minlength="8" oninput="typing()" type="password"></td>
                         </tr>
                         <tr>
                             <td align="center" colspan="2">
-                                <button type="submit" class="btn btn-success">Registruj se</button>
+                                <button id="button" type="submit" class="btn btn-success">Registruj se</button>
                             </td>
                         </tr>
                     </table>
