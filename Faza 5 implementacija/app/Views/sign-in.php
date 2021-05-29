@@ -6,23 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">    
-    <link href="img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/> 
-    <title>Šta se nudi - Prijava</title>
-    <script src="js/java.js"></script>
+    <link rel="stylesheet" href="http://localhost:8080/css/style.css">
+    <link href="http://localhost:8080/img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>
+    <title>Šta se nudi - Prijavljivanje</title>
+    <script src="http://localhost:8080/js/java.js"></script>
+
 </head>
 <body onload="loading2()">
-    <div id='header'>
-        <table width="100%" style="table-layout: fixed;">
-            <tr>
-                <td align="left"><a href="Home"><img src="img/logoMali.png" width=80px height=80px alt="Logo"/></a></td>
-                <td align="center" id="header-caption"><h1><a href="Home">Šta se nudi</a></h1></td>
-                <td align="right">
-                    <a href="SignIn"><button class="btn btn-success" type="button">&nbsp; Uloguj se &nbsp;</button></a>
-                    <a href="Register"><button class="btn btn-danger" type="button">Registruj se</button></a>&nbsp;
-                </td>
-            </tr>
-        </table>     
+<div id='header'>
+    <table width="100%" style="table-layout: fixed;">
+        <tr>
+            <td align="left"><a href="http://localhost:8080/Home"><img src="http://localhost:8080/img/logoMali.png" width=80px height=80px alt="Logo"/></a></td>
+            <td align="center" id="header-caption"><h1><a href="http://localhost:8080/Home">Šta se nudi</a></h1></td>
+            <td align="right">
+                <a href="http://localhost:8080/SignIn"><button class="btn btn-success" type="button">&nbsp; Uloguj se &nbsp;</button></a>
+                <a href="http://localhost:8080/Register"><button class="btn btn-danger" type="button">Registruj se</button></a>&nbsp;
+            </td>
+        </tr>
+    </table>
     </div>
     <div id='menu'>
         <table>
@@ -80,7 +81,7 @@
                         </tr>
                         <tr>
                             <td>Lozinka</td>
-                            <td><input name="pass" minlength="3" id="pass" required type="password"></td>
+                            <td><input name="pass" minlength="8" id="pass" required type="password"></td>
                         </tr>
                         <tr>
                             <td align="center" colspan="2">
