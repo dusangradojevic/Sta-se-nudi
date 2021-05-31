@@ -21,8 +21,7 @@ class Pretraga extends BaseController{
         echo view('Pretraga',['pets'=>$pets]);
     }
     protected function prikazL($tekst){
-        $pets=$this->$this->doctrine->em->getRepository(OglasiRepository::class)
-            ->pretragadql($tekst);
+        $pets=$this->doctrine->em->getRepository(Oglasi::class)->pretragadql($tekst);
         echo view('Headersignedup');
         echo view('Pretraga',['pets'=>$pets]);
     }

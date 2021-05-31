@@ -55,4 +55,8 @@ class Profile extends BaseController
     public function allads(){
         $this->prikazL();
     }
+    public function insertAd(){
+        echo view('Headersignedup');
+        echo view('Post-upload');
+    }
 }
