@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="author" content="Aleksandra">
+    <meta name="author" content="Dusan">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel='stylesheet' type='text/css' href='css/style.css'>
-    <link href="img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>
-    <script src="js/java.js"></script>
-    <title>Šta se nudi - Profil</title>
+    <link rel="stylesheet" href="http://localhost:8080/css/style.css">
+    <link href="http://localhost:8080/img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>
+    <title>Šta se nudi - Brisanje naloga</title>
 </head>
 <body>
-
     <div id='menu'>
         <table>
             <tr>
@@ -52,27 +49,35 @@
             </tr>
         </table>        
     </div>
-    <div id='user-profile' class="content">
-        <img src="../img/defaultUserImage.png" alt="Slika korisnika" width=30% float=left>
-        <div id='user-info'>
-            <h1>Ime korisnika:<?php echo "{$user->getName()} {$user->getSurname()}"?> </h1>
-            <h2>Korisničko ime: <?php echo "{$user->getUsername()}"?></h2>
-            <h3>Ocena korisnika: </h3>
-       <!--     <a href="send-message.html" target="_blank"> <input type="button" id="message-button" value="Pošaljite poruku"> </a>-->
-            <br/>
-            <a href="Profile/allads">Svi aktivni oglasi</a>
-            <a href="post-upload.html">Postavi oglas</a>             
-            <a href="PasswordForget">Promena lozinke</a>
-           <?php echo anchor("Profile/deleteRequest/{$user->getIdk()}","Obrisi nalog")?>
-            <!--<div>
-                <span onmouseover="starmark(this)" onclick="result()" id="1one" style="font-size:40px;cursor:pointer;" class="fa fa-star checked"></span>
-                <span onmouseover="starmark(this)" onclick="result()" id="2one" style="font-size:40px;cursor:pointer;" class="fa fa-star "></span>
-                <span onmouseover="starmark(this)" onclick="result()" id="3one" style="font-size:40px;cursor:pointer;" class="fa fa-star "></span>
-                <span onmouseover="starmark(this)" onclick="result()" id="4one" style="font-size:40px;cursor:pointer;" class="fa fa-star"></span>
-                <span onmouseover="starmark(this)" onclick="result()" id="5one" style="font-size:40px;cursor:pointer;" class="fa fa-star"></span>
-                <span id="rate">4.7</span>
-            </div>-->
-        </div>
+    <div id='acc-delete' class="content">
+    <form method="post" action="<?= site_url("Profile/delete")?>">
+        <table>
+            <tr>
+                <td align="center">
+                    <h2>Brisanje naloga</h2>
+                </td>                
+            </tr>
+            <tr>
+                <td>
+                    <p>Da li ste sigurni da želite da obrišete svoj nalog? Ukoliko nastavite, sve vaše objave i aktivnosti će biti obrisane i nećete biti u mogućnosti da ih povratite.</p>
+                </td>                
+            </tr>
+            <tr>
+                <td style="padding-left: 3%;">
+                    <ol>
+                        <li>Za nastavak radnje pritisnite dugme „Obriši”;</li>
+                        <li>Za povratak na početnu stranu pritisnite dugme „Nazad”.</li>
+                    </ol>
+                </td>                
+            </tr>
+            <tr>
+                <td align="right">
+                    <?php echo anchor("Profile/delete/{$id}","Obrisi")?>
+                   <?php echo anchor("Profile",'Nazad')?>
+                </td>
+            </tr>
+        </table>
+    </form>
     </div>
     <div id='footer'>
         <a href="Support">Kontakt</a>
@@ -84,6 +89,5 @@
         <a href="">Pravila korišćenja</a>
         &nbsp;|&nbsp;
         <a href="Support">Podrška</a>
-    </div>
-</body>
+    </div></body>
 </html>

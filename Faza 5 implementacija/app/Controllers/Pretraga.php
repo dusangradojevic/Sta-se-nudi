@@ -6,6 +6,13 @@ namespace App\Controllers;
 
 use App\Models\Entities\Oglasi;
 use App\Models\Repositories\OglasiRepository;
+/**
+ * Description of Pretraga
+ * Pretraga sluzi pretragu oglasu u bazi podataka
+ * Takodje vodi racuna o tome da li je korisnik ylogovan
+ *
+ * @author vd180005d
+ */
 
 class Pretraga extends BaseController{
     protected function prikazU($tekst){

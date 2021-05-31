@@ -12,7 +12,7 @@ use App\Models\Entities\Korisnici;
 
 /**
  * Description of PasswordForget
- *
+ * Za promeny lozinke
  * @author vd180005d
  */
 class PasswordForget extends BaseController {
