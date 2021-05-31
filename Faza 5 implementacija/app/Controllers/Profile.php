@@ -3,6 +3,7 @@
 
 namespace App\Controllers;
 use App\Models\Entities\Korisnici;
+use App\Models\Entities\Oglasi;
 
 /**
  * Description of Profile
@@ -45,5 +46,13 @@ class Profile extends BaseController
         }
         else
             return "Greska";
+    }
+    protected function prikazL(){
+        $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'idk' => $this->session->get('korisnik')));
+        echo view('Headersignedup');
+        echo view('Pets',['pets'=>$pets]);
+    }
+    public function allads(){
+        $this->prikazL();
     }
 }
