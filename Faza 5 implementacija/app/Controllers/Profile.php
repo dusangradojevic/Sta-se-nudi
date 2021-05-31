@@ -50,7 +50,7 @@ class Profile extends BaseController
     protected function prikazL(){
         $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'idk' => $this->session->get('korisnik')));
         echo view('Headersignedup');
-        echo view('Pets',['pets'=>$pets]);
+        echo view('Adds',['pets'=>$pets]);
     }
     public function allads(){
         $this->prikazL();
