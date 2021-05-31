@@ -61,7 +61,7 @@ class Oglasi
      *
      * @ORM\ManyToOne(targetEntity="App\Models\Entities\Korisnici")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idK", referencedColumnName="idK")
+     *   @ORM\JoinColumn(name="idK", referencedColumnName="idK",onDelete="CASCADE")
      * })
      */
     private $idk;

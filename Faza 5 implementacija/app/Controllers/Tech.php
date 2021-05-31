@@ -6,6 +6,7 @@ namespace App\Controllers;
 use App\Models\Entities\Oglasi;
 /**
  * Description of Tech
+ *
  * @author Dobrosav Vlaskovic
  */
 class Tech extends BaseController{

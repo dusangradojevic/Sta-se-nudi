@@ -12,7 +12,8 @@ use App\Models\Entities\Oglasi;
 
 /**
  * Description of Clothes
- *
+ * Clothes kontrolise prikaz obavestenja u zavisnosti od toga da li je
+ * korisnik prijavljen
  * @author vd180005d
  */
 class Clothes extends BaseController{

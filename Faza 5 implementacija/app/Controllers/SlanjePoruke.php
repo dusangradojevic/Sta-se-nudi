@@ -4,6 +4,11 @@
 namespace App\Controllers;
 use App\Models\Entities\Korisnici;
 
+/**
+ * Class SlanjePoruke
+ * Sluzi za slanje mejloova
+ * @author  vd180005d
+ */
 class SlanjePoruke extends BaseController
 {
     protected function prikazU() {

@@ -81,7 +81,7 @@
                         </tr>
                         <tr>
                             <td>Lozinka</td>
-                            <td><input name="pass" minlength="8" id="pass" required type="password"></td>
+                            <td><input name="pass" minlength="3" id="pass" required type="password"></td>
                         </tr>
                         <tr>
                             <td align="center" colspan="2">

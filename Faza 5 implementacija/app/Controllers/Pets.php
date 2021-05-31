@@ -4,6 +4,11 @@
  */
 namespace App\Controllers;
 
+/**
+ * Pets kontrolise prikaz obavestenja u zavisnosti od toga da li je
+ * korisnik prijavljen
+ * @author vd180005d
+ */
 use App\Models\Entities\Oglasi;
 
 class Pets extends BaseController
