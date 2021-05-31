@@ -61,7 +61,7 @@
        <!--     <a href="send-message.html" target="_blank"> <input type="button" id="message-button" value="Pošaljite poruku"> </a>-->
             <br/>
             <a href="Profile/allads">Svi aktivni oglasi</a>
-            <a href="post-upload.html">Postavi oglas</a>             
+            <a href="Profile/insertAd">Postavi oglas</a>
             <a href="PasswordForget">Promena lozinke</a>
            <?php echo anchor("Profile/deleteRequest/{$user->getIdk()}","Obrisi nalog")?>
             <!--<div>
