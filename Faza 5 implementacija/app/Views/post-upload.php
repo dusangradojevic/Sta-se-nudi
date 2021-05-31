@@ -14,8 +14,7 @@
 <div id='menu'>
     <table>
         <tr>
-            <td align="left">
-                &nbsp;
+            <td align="left">&nbsp;
                 <select id="menu-list">
                     <option selected>Sve kategorije</option>
                     <option>Kućni ljubimci</option>
@@ -44,13 +43,12 @@
             </td>
             <td align="right">
                 <a href="Announcements">Obaveštenja</a>
-                &nbsp;
             </td>
         </tr>
     </table>
 </div>
     <div id='post-upload' class="content">
-        <form>
+        <form method="post" action="<?= site_url("Profile/insertNewAd") ?>">
         <table>
             <tr>
                 <td colspan='2' style="text-align: center;"><h2>Postavljanje oglasa</h2></td>
@@ -58,52 +56,34 @@
             <tr>
                 <td class="cell-titles"><b>Naziv oglasa*</b></td>
                 <td>
-                    <input id="post-name" size="50%" type="text" placeholder="Naziv oglasa" required>
+                    <input name="naziv" id="post-name" size="50%" type="text" placeholder="Naziv oglasa" required>
                 </td>
             </tr>
             <tr>
                 <td class="cell-titles"><b>Kategorija*</b></td>
                 <td>
-                    <select>
+                    <select name="category">
                         <option selected disabled>Izaberite kategoriju</option>
-                        <option>Ljubimci</option>
-                        <option>Odeca</option>
-                        <option>Tehnika</option>
+                        <option value="Ljubimac">Ljubimci</option>
+                        <option value="Odeca">Odeca</option>
+                        <option value="Tehnika">Tehnika</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td class="cell-titles"><b>Tip*</b></td>
                 <td>            
-                    <input id="razmena" type="radio" name="tip" checked>
+                    <input id="razmena" name="radiob" type="radio" value="Razmena" checked>
                     <label for="razmena">Razmena</label>
-                    <input id="poklanjanje" type="radio" name="tip">
+                    <input id="poklanjanje" name="radiob" type="radio" value="Poklanjanje">
                     <label for="poklanjanje">Poklanjanje</label>
                 </td>
             </tr>
-            <tr>
-                <td class="cell-titles"><b>Stanje*</b></td>
-                <td>
-                    <ul style="list-style-type:none;">
-                        <li>
-                            <input id="kao-novo" type="radio" name="stanje" checked>
-                            <label for="kao-novo">Kao novo (nekorišćeno)</label>
-                        </li>
-                        <li>
-                            <input id="korisceno" type="radio" name="stanje">
-                            <label for="korisceno">Korišćeno</label>
-                        </li>
-                        <li>
-                            <input id="neispravno" type="radio" name="stanje">
-                            <label for="neispravno">Neispravno (oštećeno)</label>
-                        </li>
-                    </ul>                             
-                </td>
-            </tr>
+
                    <tr>
                 <td class="cell-titles"><b>Opis</b></td>
                 <td>
-                    <textarea cols="50%" rows="7"></textarea>
+                    <textarea name="opis" cols="50%" rows="7"></textarea>
                 </td>
             </tr>
             <!--<tr>

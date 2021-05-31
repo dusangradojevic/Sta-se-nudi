@@ -53,7 +53,7 @@
         </table>        
     </div>
     <div id='user-profile' class="content">
-        <img src="../img/defaultUserImage.png" alt="Slika korisnika" width=30% float=left>
+        <img src="/img/defaultUserImage.png" alt="Slika korisnika" width=30% float=left>
         <div id='user-info'>
             <h1>Ime korisnika:<?php echo "{$user->getName()} {$user->getSurname()}"?> </h1>
             <h2>Korisničko ime: <?php echo "{$user->getUsername()}"?></h2>

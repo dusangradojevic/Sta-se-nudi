@@ -4,6 +4,8 @@
 namespace App\Controllers;
 use App\Models\Entities\Korisnici;
 use App\Models\Entities\Oglasi;
+use http\Env\Request;
+use phpDocumentor\Reflection\Types\This;
 
 /**
  * Description of Profile
@@ -13,7 +15,6 @@ use App\Models\Entities\Oglasi;
 
 class Profile extends BaseController
 {
-    public static $idk1;
     protected function prikaz($data) {
         $data['controller']='Korisnik';
         echo view ('profile', $data);
@@ -58,5 +59,17 @@ class Profile extends BaseController
     public function insertAd(){
         echo view('Headersignedup');
         echo view('Post-upload');
+    }
+    public function insertNewAd(){
+        $oglas=new Oglasi();
+        $oglas->setIsvalid(false);
+        $oglas->setCategory($this->request->getVar('category'));
+        $oglas->setType($this->request->getVar('radiob'));
+        $oglas->setText($this->request->getVar('opis'));
+        $oglas->setIdk($this->session->get('korisnik'));
+        $oglas->setTitle($this->request->getVar('naziv'));
+        $this->doctrine->em->merge($oglas);
+        $this->doctrine->em->flush();
+        return redirect()->to(site_url('Profile'));
     }
 }
