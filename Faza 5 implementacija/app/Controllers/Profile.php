@@ -72,4 +72,10 @@ class Profile extends BaseController
         $this->doctrine->em->flush();
         return redirect()->to(site_url('Profile'));
     }
+    public function remove($id){
+        $oglasi = $this->doctrine->em->getRepository(Oglasi::class)->find($id);
+        $this->doctrine->em->remove($oglasi);
+        $this->doctrine->em->flush();
+        return redirect()->to(site_url('Profile/allads'));
+    }
 }
