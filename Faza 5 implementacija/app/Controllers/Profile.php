@@ -78,4 +78,15 @@ class Profile extends BaseController
         $this->doctrine->em->flush();
         return redirect()->to(site_url('Profile/allads'));
     }
+    public function editRequest($id){
+        $oglasi = $this->doctrine->em->getRepository(Oglasi::class)->find($id);
+        echo view('Headersignedup');
+        echo view('edit',['oglas'=>$oglasi]);
+    }
+    public function edit($id){
+        $oglasi = $this->doctrine->em->getRepository(Oglasi::class)->find($id);
+        $oglasi->setText($this->request->getVar('text'));
+        $this->doctrine->em->flush();
+        return redirect()->to(site_url('Profile/allads'));
+    }
 }
