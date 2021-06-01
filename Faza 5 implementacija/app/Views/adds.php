@@ -53,7 +53,7 @@
         <br><br>
         <div class="row">
             <div class="col-sm-3">&nbsp;</div>
-            <div class="col-sm-6"><h3>Ljubimci</h3></div>
+            <div class="col-sm-6"><h3>Vasi Oglasi</h3></div>
             <div class="col-sm-3">&nbsp;</div>
         </div>
         <?php
@@ -61,7 +61,7 @@
                 echo "<div class='row'>";
                 echo "<div class='col-sm-3'>&nbsp;</div>";
                 echo "<div class='col-sm-6 border border-dark'><h5>{$pet->getTitle()}</h5> </br> {$pet->getText()}</div>";
-                echo "<div class='col-sm-3'>&nbsp;</div></div>";
+                echo "<div class='col-sm-3'>".anchor("Profile/remove/{$pet->getIdo()}","Obrisi Oglas")."</div></div>";
             }
         ?>
     </div>
