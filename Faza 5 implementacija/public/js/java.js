@@ -1,3 +1,4 @@
+//Dobrosav 
 var count;
 function result(){
   let rate=parseFloat(document.getElementById("rate").innerHTML)
@@ -40,19 +41,13 @@ function login(){
   if((document.getElementById("username").value=="") || ((document.getElementById("pass").value=="")))
     document.getElementById("alert").style.visibility="visible";
   else
-    window.open("../common/profile.html","_self")
+  window.open("../common/profile.html","_self")
 }
 function register(){
   if((document.getElementById("ime").value=="") || (document.getElementById("prezime").value=="") || (document.getElementById("username").value=="") || (document.getElementById("email").value=="") || ((document.getElementById("pass").value=="") || (document.getElementById("passr").value=="")))
     document.getElementById("alert").style.visibility="visible";
   else
-    window.open("../common/profile.html","_self")
-}
-function passChange() {
-  if((document.getElementById("old-password").value=="") || (document.getElementById("new-password").value=="") || (document.getElementById("confirm-password").value==""))
-    document.getElementById("alert").style.visibility="visible";
-  else
-    window.open("../common/profile.html","_self")
+  window.open("../common/profile.html","_self")
 }
 function reset(){
   if(document.getElementById("email").value=="")
@@ -60,5 +55,18 @@ function reset(){
   else{
     document.getElementById("alert").style.visibility="visible";
     document.getElementById("alert").innerHTML="Link je poslat mail-om";
+  }
+  
+}
+function typing(){
+  let pass=document.getElementById("pass").value
+  let passr=document.getElementById("passr").value
+  if (pass==passr){
+    document.getElementById("button").disabled=false
+    document.getElementById("alert").style.visibility="hidden"
+  }
+  else {
+    document.getElementById("button").disabled=true
+    document.getElementById("alert").style.visibility="visible"
   }
 }

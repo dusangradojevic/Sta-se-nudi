@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="author" content="Aleksandra">
+    <meta name="author" content="Lazar">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel='stylesheet' type = 'text/css' href='../css/style.css'>
+    <link rel='stylesheet' type='text/css' href='../css/style.css'> </link>
     <link href="../img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>
-    <title>Šta se nudi - Svi oglasi korisnika</title>
-    <script src="../js/java.js"></script>
+    <title>Šta se nudi - Podrška (forma)</title>
 </head>
-<body onload="loading()">
+<body>
     <div id='header'>
         <table width="100%" style="table-layout: fixed;">
             <tr>
@@ -60,35 +59,29 @@
             </tr>
         </table>        
     </div>
-    <div id='user-ads' class="content">
-        <h1>Oglasi korisnika korisničkoIme:</h1>
-        <br>
-        <table id="userAds">
-            <tr>
-                <td align="center">
-                    <h2>Maltezer</h2>
-                </td>                
-            </tr>
-            <tr>
-                <td align="center">
-                    <p id="ad">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sapiente iste debitis repellat pariatur nisi maxime eius, error, dolorum facilis cumque velit non tenetur recusandae qui! Autem sint tempora odit.</p>
-                </td>                
-            </tr>
-           
-            <tr>
-                <td align="right">
-                    <input onclick="deleteads()" class="btn btn-danger" type="button" value="Obriši oglas" />
-                   <input onclick="change()" class="btn btn-info" type="button" value="Izmeni" />
-                </td>
-            </tr>
-        </table>
-        <br>
-        <div id="inputads">
-            <textarea id="ad1" cols="30" rows="10"></textarea><br>
-            <button onclick="change2()" class="btn btn-success" type="button">Izmeni</button> 
-            <button type="button" class="btn btn-secondary" onclick="odbaci()">Odbaci</button>
-        </div>
-    </div>
+    <div id='support' class="content">
+        <h2>Pomozite nam da poboljšamo Šta se nudi?</h2><br><br>
+        <form action="" method="">
+            <table>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><b>Unesite tekst komentara/pitanje:</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <textarea rows="10" cols="80"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <input type="file" multiple accept="image/*">
+                    </td>
+                    <td align="right">                        
+                        <input type="submit" class="btn btn-success" value="Pošalji">
+                        <input type="reset" class="btn btn-secondary" value="Poništi">
+                    </td>
+                </tr>
+            </table>
+        </form>
     </div>
     <div id='footer'>
         <a href="support-form.html">Kontakt</a>
