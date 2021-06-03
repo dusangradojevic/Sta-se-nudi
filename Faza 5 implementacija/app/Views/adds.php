@@ -60,7 +60,7 @@
             foreach ($pets as $pet){
                 echo "<div class='row'>";
                 echo "<div class='col-sm-3'>&nbsp;</div>";
-                echo "<div class='col-sm-6 border border-dark'><h5>{$pet->getTitle()}</h5> </br> {$pet->getText()}</div>";
+                echo "<div class='col-sm-6 border border-dark'><h5>{$pet->getTitle()}</h5> </br> {$pet->getText()}</br><img class='ad' src='{$pet->getImgurl()}'/> </div>";
                 echo "<div class='col-sm-3'>".anchor("Profile/remove/{$pet->getIdo()}","Obrisi Oglas")." ".anchor("Profile/editRequest/{$pet->getIdo()}","Izmeni oglas")."</div></div>";
             }
         ?>
