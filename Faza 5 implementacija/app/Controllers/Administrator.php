@@ -8,6 +8,12 @@ use App\Models\Entities\Admin;
 use App\Models\Entities\Korisnici;
 use App\Models\Entities\Oglasi;
 
+/**
+ * Class Administrator
+ * Administrator sluzi za prijavu admina
+ * ima mogucnost brisanje i potvrde korisnika i oglasa
+ * @author vd180005d
+ */
 class Administrator extends BaseController{
     public function index(){
         return view('AdminSignin');

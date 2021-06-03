@@ -66,10 +66,10 @@ class Oglasi extends \App\Models\Entities\Oglasi implements \Doctrine\ORM\Proxy\
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'ido', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'title', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'text', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'type', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'isvalid', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'category', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'idk'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'ido', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'title', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'text', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'type', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'isvalid', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'idk', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'category', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'imgurl'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'ido', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'title', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'text', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'type', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'isvalid', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'category', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'idk'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'ido', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'title', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'text', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'type', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'isvalid', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'idk', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'category', '' . "\0" . 'App\\Models\\Entities\\Oglasi' . "\0" . 'imgurl'];
     }
 
     /**
@@ -282,6 +282,28 @@ class Oglasi extends \App\Models\Entities\Oglasi implements \Doctrine\ORM\Proxy\
     /**
      * {@inheritDoc}
      */
+    public function setIdk($idk)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdk', [$idk]);
+
+        return parent::setIdk($idk);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getIdk()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIdk', []);
+
+        return parent::getIdk();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function setCategory($category = NULL)
     {
 
@@ -304,23 +326,23 @@ class Oglasi extends \App\Models\Entities\Oglasi implements \Doctrine\ORM\Proxy\
     /**
      * {@inheritDoc}
      */
-    public function setIdk(\App\Models\Entities\Korisnici $idk = NULL)
+    public function setImgurl($imgurl)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdk', [$idk]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImgurl', [$imgurl]);
 
-        return parent::setIdk($idk);
+        return parent::setImgurl($imgurl);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getIdk()
+    public function getImgurl()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIdk', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImgurl', []);
 
-        return parent::getIdk();
+        return parent::getImgurl();
     }
 
 }

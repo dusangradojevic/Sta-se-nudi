@@ -6,6 +6,13 @@ namespace App\Controllers;
 
 use App\Models\Entities\Oglasi;
 use App\Models\Repositories\OglasiRepository;
+/**
+ * Description of Pretraga
+ * Pretraga sluzi pretragu oglasu u bazi podataka
+ * Takodje vodi racuna o tome da li je korisnik ylogovan
+ *
+ * @author vd180005d
+ */
 
 class Pretraga extends BaseController{
     protected function prikazU($tekst){
@@ -14,10 +21,9 @@ class Pretraga extends BaseController{
         echo view('Pretraga',['pets'=>$pets]);
     }
     protected function prikazL($tekst){
-        $pets=$this->$this->doctrine->em->getRepository(OglasiRepository::class)
-            ->pretragadql($tekst);
+        $pets=$this->doctrine->em->getRepository(Oglasi::class)->pretragadql($tekst);
         echo view('Headersignedup');
-        echo view('Pretraga',['Pets'=>$pets]);
+        echo view('Pretraga',['pets'=>$pets]);
     }
     public function index(){
         if($this->session->get('korisnik')!=null)

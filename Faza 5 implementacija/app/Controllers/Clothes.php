@@ -12,7 +12,8 @@ use App\Models\Entities\Oglasi;
 
 /**
  * Description of Clothes
- *
+ * Clothes kontrolise prikaz obavestenja u zavisnosti od toga da li je
+ * korisnik prijavljen
  * @author vd180005d
  */
 class Clothes extends BaseController{
@@ -24,7 +25,7 @@ class Clothes extends BaseController{
     protected function prikazL(){
         $pets=$this->doctrine->em->getRepository(Oglasi::class)->findBy(array('isvalid' => true, 'category' => 'Odeca'));
         echo view('Headersignedup');
-        echo view('clothes',['Pets'=>$pets]);
+        echo view('clothes',['pets'=>$pets]);
     }
     public function index(){
         if($this->session->get('korisnik')!=null)

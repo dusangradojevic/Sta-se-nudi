@@ -17,44 +17,28 @@ class Rating
      *
      * @ORM\Column(name="IdR", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $idr;
 
     /**
-     * @var string|null
+     * @var int|null
      *
-     * @ORM\Column(name="rate", type="string", length=18, nullable=true, options={"fixed"=true})
+     * @ORM\Column(name="rate", type="integer", nullable=true)
      */
     private $rate;
 
     /**
      * @var \App\Models\Entities\Korisnici
      *
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
-     * @ORM\OneToOne(targetEntity="App\Models\Entities\Korisnici")
+     * @ORM\ManyToOne(targetEntity="App\Models\Entities\Korisnici")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idK", referencedColumnName="idK")
+     *   @ORM\JoinColumn(name="idK", referencedColumnName="idK", onDelete="CASCADE")
      * })
      */
     private $idk;
 
 
-
-    /**
-     * Set idr.
-     *
-     * @param int $idr
-     *
-     * @return Rating
-     */
-    public function setIdr($idr)
-    {
-        $this->idr = $idr;
-
-        return $this;
-    }
 
     /**
      * Get idr.
@@ -69,7 +53,7 @@ class Rating
     /**
      * Set rate.
      *
-     * @param string|null $rate
+     * @param int|null $rate
      *
      * @return Rating
      */
@@ -83,7 +67,7 @@ class Rating
     /**
      * Get rate.
      *
-     * @return string|null
+     * @return int|null
      */
     public function getRate()
     {
@@ -93,11 +77,11 @@ class Rating
     /**
      * Set idk.
      *
-     * @param \App\Models\Entities\Korisnici $idk
+     * @param \App\Models\Entities\Korisnici|null $idk
      *
      * @return Rating
      */
-    public function setIdk(\App\Models\Entities\Korisnici $idk)
+    public function setIdk(\App\Models\Entities\Korisnici $idk = null)
     {
         $this->idk = $idk;
 
@@ -107,7 +91,7 @@ class Rating
     /**
      * Get idk.
      *
-     * @return \App\Models\Entities\Korisnici
+     * @return \App\Models\Entities\Korisnici|null
      */
     public function getIdk()
     {

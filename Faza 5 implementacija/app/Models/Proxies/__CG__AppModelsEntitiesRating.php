@@ -179,17 +179,6 @@ class Rating extends \App\Models\Entities\Rating implements \Doctrine\ORM\Proxy\
     /**
      * {@inheritDoc}
      */
-    public function setIdr($idr)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdr', [$idr]);
-
-        return parent::setIdr($idr);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getIdr()
     {
         if ($this->__isInitialized__ === false) {
@@ -227,7 +216,7 @@ class Rating extends \App\Models\Entities\Rating implements \Doctrine\ORM\Proxy\
     /**
      * {@inheritDoc}
      */
-    public function setIdk(\App\Models\Entities\Korisnici $idk)
+    public function setIdk(\App\Models\Entities\Korisnici $idk = NULL)
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdk', [$idk]);

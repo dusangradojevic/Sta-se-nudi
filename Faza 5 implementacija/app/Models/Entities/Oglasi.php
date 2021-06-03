@@ -61,11 +61,39 @@ class Oglasi
      *
      * @ORM\ManyToOne(targetEntity="App\Models\Entities\Korisnici")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idK", referencedColumnName="idK")
+     *   @ORM\JoinColumn(name="idK", referencedColumnName="idK",onDelete="CASCADE")
      * })
      */
     private $idk;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="imgurl", type="string", length=200, nullable=false)
+     */
+    private $imgurl;
+    /**
+     * Set imgurl.
+     *
+     * @param string $imgurl
+     *
+     * @return Oglasi
+     */
+    public function setImgurl($imgurl)
+    {
+        $this->imgurl = $imgurl;
 
+        return $this;
+    }
+
+    /**
+     * Get imgurl.
+     *
+     * @return string
+     */
+    public function getImgurl()
+    {
+        return $this->imgurl;
+    }
 
 
     /**
