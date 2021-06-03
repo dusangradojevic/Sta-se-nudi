@@ -48,7 +48,7 @@
     </table>
 </div>
     <div id='post-upload' class="content">
-        <form method="post" action="<?= site_url("Profile/insertNewAd") ?>">
+        <form method="post" action="<?= site_url("Profile/insertNewAd") ?>" enctype="multipart/form-data">
         <table>
             <tr>
                 <td colspan='2' style="text-align: center;"><h2>Postavljanje oglasa</h2></td>
@@ -86,13 +86,12 @@
                     <textarea name="opis" cols="50%" rows="7"></textarea>
                 </td>
             </tr>
-            <!--<tr>
+            <<tr>
                 <td class="cell-titles" colspan="2">
-                    <form action="">
-                        <input type="file" multiple accept="image/*">
-                    </form>
+
+                        <input name="image" type="file" multiple required accept="image/*">
                 </td>
-            </tr>-->
+            </tr>
             <tr>
                 <td align="right" colspan="2">
                     <input class="btn btn-success" type="submit" value="Potvrdi" />

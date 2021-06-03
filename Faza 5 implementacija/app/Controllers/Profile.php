@@ -30,7 +30,6 @@ class Profile extends BaseController
     }
     public function deleteRequest($id){
         if ($this->session->get('korisnik')!=null) {
-            Profile::$idk1 = $id;
             echo view('Headersignedup');
             echo view('Acc-delete',['id'=>$id]);
         }
@@ -61,6 +60,11 @@ class Profile extends BaseController
         echo view('Post-upload');
     }
     public function insertNewAd(){
+        $file=$this->request->getFile('image');
+        if ($file->isValid() && !$file->hasMoved()){
+            $newname=$file->getRandomName();
+            $file->move('uploads/',$newname);
+        }
         $oglas=new Oglasi();
         $oglas->setIsvalid(false);
         $oglas->setCategory($this->request->getVar('category'));
@@ -68,6 +72,7 @@ class Profile extends BaseController
         $oglas->setText($this->request->getVar('opis'));
         $oglas->setIdk($this->session->get('korisnik'));
         $oglas->setTitle($this->request->getVar('naziv'));
+        $oglas->setImgurl('http://localhost:8080/'. 'uploads/'.$newname);
         $this->doctrine->em->merge($oglas);
         $this->doctrine->em->flush();
         return redirect()->to(site_url('Profile'));
