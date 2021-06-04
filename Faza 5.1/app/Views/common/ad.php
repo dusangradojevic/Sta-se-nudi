@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel='stylesheet' type = 'text/css' href='/assets/css/style.css'>
+    <link href="/assets/img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>
+    <title>Šta se nudi - Svi oglasi</title>
+</head>
+<body>
+    <div class="content">
+        <div style='text-align: center'>
+            <h1><?= $title ?></h1>
+        </div>
+        <div id="ad-position">
+            <div class="ad-body">
+                <div class="ad-user">
+                    <p><?= anchor("$controller/userProfile/{$userId}", "$username") ?></p>
+                    <form method="POST" action="<?= site_url("$controller/sendMessage/$userId") ?>">
+                        <button class="btn btn-info" type="submit">Pošalji poruku</button>
+                    </form>
+                </div>
+                <div>
+                    <p>Država: &nbsp; <?= $country ?></p><br/>
+                    <p>Kategorija: &nbsp; <?= $category ?></p><br/>
+                    <p>Tip: &nbsp; <?= $type ?></p><br/>
+                    <p>Stanje: &nbsp; <?= $state ?></p><br/>
+                    <p>Opis: &nbsp; <?= $description ?></p><br/>
+                </div>            
+            </div>
+            <div class="ad-images">
+                <p>Slika!</p>
+                
+               <!-- <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">-->
+            </div>
+        </div>
+    </div>   
+</body>
+</html>

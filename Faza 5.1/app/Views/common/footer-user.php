@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Lazar">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel='stylesheet' type = 'text/css' href='/assets/css/style.css'>
+    <link href="/assets/img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/> 
+    <title>Šta se nudi - Promena lozinke</title>
+</head>
+<body>    
+    <div id='footer'>
+        <a href=<?= site_url("User/support") ?>>Kontakt</a>
+        &nbsp;|&nbsp;
+        <a href=<?= site_url("User/support") ?>>Uputstva</a>
+        &nbsp;|&nbsp;
+        <a href=<?= site_url("User/support") ?>>O nama</a>
+        &nbsp;|&nbsp;
+        <a href=<?= site_url("User/support") ?>>Pravila korišćenja</a>
+        &nbsp;|&nbsp;
+        <a href=<?= site_url("User/support") ?>>Podrška</a>
+    </div>
+</body>
+</html>
