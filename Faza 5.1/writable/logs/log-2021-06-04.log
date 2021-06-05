@@ -1,509 +1,137 @@
-CRITICAL - 2021-06-04 04:46:54 --> Too few arguments to function App\Controllers\Guest::showUserAds(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Guest->showUserAds()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guest))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 04:47:16 --> Too few arguments to function App\Controllers\Guest::showUserAds(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Guest->showUserAds()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guest))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 04:47:37 --> Too few arguments to function App\Controllers\Guest::showUserAds(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Guest->showUserAds()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guest))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 04:48:14 --> Too few arguments to function App\Controllers\Guest::showUserAds(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Guest->showUserAds()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guest))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 04:48:55 --> Too few arguments to function App\Controllers\Guest::showUserAds(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Guest->showUserAds()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guest))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 04:48:58 --> Too few arguments to function App\Controllers\Guest::showUserAds(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Guest->showUserAds()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guest))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 04:54:59 --> Too few arguments to function App\Controllers\Guest::showUserAds(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Guest->showUserAds()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guest))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 04:56:01 --> Too few arguments to function App\Controllers\Guest::showUserAds(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Guest->showUserAds()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guest))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 05:08:28 --> Too few arguments to function App\Controllers\User::showUserAds(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->showUserAds()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 05:20:38 --> Call to undefined method CodeIgniter\Session\Session::userdata()
-#0 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(24): App\Controllers\User->show('home', Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->index()
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+CRITICAL - 2021-06-04 17:37:15 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
 #6 {main}
-CRITICAL - 2021-06-04 05:20:40 --> Call to undefined method CodeIgniter\Session\Session::userdata()
-#0 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(65): App\Controllers\User->show('profile-user', Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile()
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-CRITICAL - 2021-06-04 05:20:42 --> Call to undefined method CodeIgniter\Session\Session::userdata()
-#0 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(24): App\Controllers\User->show('home', Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->index()
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-CRITICAL - 2021-06-04 05:20:50 --> Call to undefined method CodeIgniter\Session\Session::has_userdata()
-#0 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(24): App\Controllers\User->show('home', Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->index()
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-CRITICAL - 2021-06-04 05:20:51 --> Call to undefined method CodeIgniter\Session\Session::has_userdata()
-#0 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(65): App\Controllers\User->show('profile-user', Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile()
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-CRITICAL - 2021-06-04 05:20:52 --> Call to undefined method CodeIgniter\Session\Session::has_userdata()
-#0 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(24): App\Controllers\User->show('home', Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->index()
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-CRITICAL - 2021-06-04 05:22:35 --> syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Router\Router.php(169): CodeIgniter\Router\Router->autoRoute('User')
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(812): CodeIgniter\Router\Router->handle('User')
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(392): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-CRITICAL - 2021-06-04 05:25:15 --> Call to undefined method CodeIgniter\Session\Session::userdata()
-#0 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(24): App\Controllers\User->show('home', Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->index()
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-CRITICAL - 2021-06-04 05:25:48 --> Call to undefined method CodeIgniter\Session\Session::userdata()
-#0 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(24): App\Controllers\User->show('home', Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->index()
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-CRITICAL - 2021-06-04 05:25:48 --> Call to undefined method CodeIgniter\Session\Session::userdata()
-#0 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(24): App\Controllers\User->show('home', Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->index()
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-CRITICAL - 2021-06-04 05:25:49 --> Call to undefined method CodeIgniter\Session\Session::userdata()
-#0 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(24): App\Controllers\User->show('home', Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->index()
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-CRITICAL - 2021-06-04 05:26:36 --> Call to undefined method CodeIgniter\Session\Session::userdata()
-#0 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(24): App\Controllers\User->show('home', Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->index()
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-CRITICAL - 2021-06-04 05:26:42 --> Call to undefined method CodeIgniter\Session\Session::set_userdata()
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Guest->loginSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guest))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 05:44:05 --> Too few arguments to function App\Controllers\User::userProfile(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 05:44:28 --> Too few arguments to function App\Controllers\User::userProfile(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 05:46:04 --> Too few arguments to function App\Controllers\User::userProfile(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 05:46:05 --> Too few arguments to function App\Controllers\User::userProfile(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 05:46:27 --> Too few arguments to function App\Controllers\User::userProfile(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 06:24:31 --> syntax error, unexpected '?>'
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('common/post-upl...', Array, true)
-#2 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(17): view('common/post-upl...', Array)
-#3 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(89): App\Controllers\User->show('post-upload', Array)
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->postAd()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#6 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#7 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#8 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#9 {main}
-CRITICAL - 2021-06-04 06:36:45 --> Call to a member function save() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->adSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 06:43:02 --> Call to a member function post() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->adSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 06:50:04 --> Use of undefined constant on - assumed 'on' (this will throw an Error in a future version of PHP)
-#0 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 97, Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->adSubmit()
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-CRITICAL - 2021-06-04 06:52:20 --> Call to a member function post() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->adSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 06:53:00 --> Call to a member function post() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->adSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 06:55:20 --> Call to a member function post() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->adSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 06:55:25 --> Call to a member function post() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->adSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 06:55:52 --> Call to a member function post() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->adSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 07:00:21 --> Use of undefined constant ’tip’ - assumed '’tip’' (this will throw an Error in a future version of PHP)
-#0 C:\xampp\htdocs\stasenudi\app\Views\common\post-upload.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 41, Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\View\View.php(230): include('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('common/post-upl...', Array, true)
-#4 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(17): view('common/post-upl...', Array)
-#5 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(89): App\Controllers\User->show('post-upload', Array)
-#6 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->postAd()
-#7 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#8 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#10 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+CRITICAL - 2021-06-04 17:45:32 --> Undefined variable: sessionId
+#0 C:\xampp\htdocs\sta-se-nudi\app\Views\common\profile-guest.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 29, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\View\View.php(230): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('common/profile-...', Array, true)
+#4 C:\xampp\htdocs\sta-se-nudi\app\Controllers\Guest.php(17): view('common/profile-...', Array)
+#5 C:\xampp\htdocs\sta-se-nudi\app\Controllers\Guest.php(93): App\Controllers\Guest->show('profile-guest', Array)
+#6 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Guest->userProfile('1')
+#7 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guest))
+#8 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
 #11 {main}
-CRITICAL - 2021-06-04 07:00:31 --> Use of undefined constant ’tip’ - assumed '’tip’' (this will throw an Error in a future version of PHP)
-#0 C:\xampp\htdocs\stasenudi\app\Views\common\post-upload.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 41, Array)
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\View\View.php(230): include('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
-#3 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('common/post-upl...', Array, true)
-#4 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(17): view('common/post-upl...', Array)
-#5 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(89): App\Controllers\User->show('post-upload', Array)
-#6 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->postAd()
-#7 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#8 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#10 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#11 {main}
-CRITICAL - 2021-06-04 11:16:53 --> Class 'App\Controllers\AnnouncementModel' not found
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BaseController->showAnnouncements()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+CRITICAL - 2021-06-04 17:53:56 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:04:36 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:04:53 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:05:01 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:08:08 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:09:47 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:15:26 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:19:19 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:23:36 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:24:35 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:26:10 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:28:09 --> Call to a member function where() on array
+#0 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->search()
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
 #5 {main}
-CRITICAL - 2021-06-04 11:16:57 --> Class 'App\Controllers\AnnouncementModel' not found
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BaseController->showAnnouncements()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+CRITICAL - 2021-06-04 18:31:28 --> Call to a member function where() on array
+#0 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->search()
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
 #5 {main}
-CRITICAL - 2021-06-04 11:17:22 --> Class 'App\Controllers\AnnouncementModel' not found
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BaseController->showAnnouncements()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guest))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+CRITICAL - 2021-06-04 18:36:59 --> Call to a member function getAds() on array
+#0 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->search()
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
 #5 {main}
-CRITICAL - 2021-06-04 12:38:02 --> Call to a member function save() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 12:41:08 --> Call to a member function save() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 12:41:42 --> Call to a member function save() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 12:44:10 --> Call to a member function save() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 12:47:13 --> Call to a member function save() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 12:47:54 --> Call to a member function save() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 12:48:05 --> Call to a member function getErrors() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 12:48:12 --> Call to a member function getErrors() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 12:48:23 --> Call to a member function save() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 12:59:46 --> Call to a member function save() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 13:18:41 --> Call to a member function set() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 13:23:03 --> Call to a member function save() on null
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 13:25:37 --> Call to a member function save() on array
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 13:26:39 --> Call to undefined method stdClass::save()
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 13:31:31 --> There is no data to update.
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\BaseModel.php(1668): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\BaseModel.php(880): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Model.php(718): CodeIgniter\BaseModel->update(Array, NULL)
-#3 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(183): CodeIgniter\Model->update(Array)
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#6 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#7 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#8 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#9 {main}
-CRITICAL - 2021-06-04 13:37:02 --> There is no data to update.
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\BaseModel.php(1668): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\BaseModel.php(880): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Model.php(718): CodeIgniter\BaseModel->update(Array, NULL)
-#3 C:\xampp\htdocs\stasenudi\app\Controllers\User.php(185): CodeIgniter\Model->update(Array)
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->passwordChangeSubmit()
-#5 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#6 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#7 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#8 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#9 {main}
-CRITICAL - 2021-06-04 14:00:09 --> Call to undefined method App\Controllers\User::get()
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('2')
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 14:00:50 --> Call to undefined method App\Controllers\User::get()
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('2')
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 14:01:03 --> Call to undefined method App\Controllers\User::get()
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('2')
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-ERROR - 2021-06-04 14:09:48 --> Cannot delete or update a parent row: a foreign key constraint fails (`stasenudi`.`ads`, CONSTRAINT `R_1` FOREIGN KEY (`idK`) REFERENCES `users` (`idK`))
-ERROR - 2021-06-04 14:13:07 --> Cannot delete or update a parent row: a foreign key constraint fails (`stasenudi`.`ads`, CONSTRAINT `R_1` FOREIGN KEY (`idK`) REFERENCES `users` (`idK`))
-ERROR - 2021-06-04 14:13:46 --> Cannot delete or update a parent row: a foreign key constraint fails (`stasenudi`.`ads`, CONSTRAINT `R_1` FOREIGN KEY (`idK`) REFERENCES `users` (`idK`))
-CRITICAL - 2021-06-04 14:19:29 --> Call to undefined method stdClass::delete()
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->accountDelete()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 14:23:34 --> Too few arguments to function App\Controllers\User::userProfile(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 14:23:37 --> Too few arguments to function App\Controllers\User::userProfile(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 14:25:53 --> Too few arguments to function App\Controllers\User::userProfile(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 14:26:01 --> Call to undefined method stdClass::delete()
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->accountDelete()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 14:26:19 --> Call to undefined method stdClass::delete()
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->accountDelete()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-CRITICAL - 2021-06-04 14:39:04 --> Too few arguments to function App\Controllers\User::userProfile(), 0 passed in C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
-#0 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile()
-#1 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
-#2 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\xampp\htdocs\stasenudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
-#4 C:\xampp\htdocs\stasenudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+CRITICAL - 2021-06-04 18:38:20 --> Call to a member function where() on array
+#0 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->search()
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
 #5 {main}
