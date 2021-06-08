@@ -4,14 +4,42 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
+/**
+ * Autor: Aleksandra Milović 2018/0126
+ */
+
+/**
+ * ChatModel - klasa koja dohvata podatke iz baze iz tabele chats
+ * 
+ * @version 1.0
+ */
+
 class ChatModel extends Model
 {
+    /**
+    * @var string $table naziv tabele
+    */
     protected $table      = 'chats';
+    
+    /**
+    * @var string $primaryKey primarni kljuc
+    */
     protected $primaryKey = 'idc';
-   // protected $useAutoIncrement = true;
+    
+    /**
+    * @var string $returnType povratna vrednost modela
+    */
     protected $returnType     = 'object';
     protected $allowedFields = ['user_to', 'user_from', 'message', 'datetime', 'status'];
     
+        
+   /**
+    * Prikazuje sve korisnike sa kojima se zadati korisnik dopisivao ili od kojih je primio poruke
+    * 
+    * @param int $userId
+    * 
+    * @return chats[]
+    */  
     public function getFriends($userId) 
     {
         $friends = $this->where('user_to', $userId)
@@ -48,6 +76,14 @@ class ChatModel extends Model
         return $friends;
     }
     
+        
+   /**
+    * Prikazuje sve poruke između korisnika sa userId1 i korisnika sa userId2
+    * 
+    * @param int $userId1, int $userId2
+    * 
+    * @return chats[]
+    */  
     public function getChat($userId1, $userId2)
     {
         $chats = $this->where('user_to', $userId1)

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+
+<!--
+    Autor: Dušan Gradojević 2018/0310
+-->
 <html lang="sr">
 <head>
-    <meta name="author" content="Dusan">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +15,7 @@
 </head>
 <body>
     <div id='post-upload' class="content">
-        <form action="<?= site_url("User/adChangeSubmit/$adId") ?>" method="post" id="sign-in-and-register">
+        <form action="<?= site_url("User/adChangeSubmit/$adId") ?>" method="post" enctype=multipart/form-data id="sign-in-and-register">
         <table>
             <tr>
                 <td colspan='2' style="text-align: center;"><h2>Izmena oglasa <?= $title ?></h2></td>
@@ -58,14 +61,14 @@
             <tr>
                 <td class="cell-titles" colspan="2">
                     <form action="">
-                        <input type="file" accept="image/*" name="pic">
+                        <input type="file" accept="image/*" name="file">
                         <!-- add multiple -->
                     </form>  
                 </td>
             </tr>
             <tr>
                 <td align="right" colspan="2">
-                    <input class="btn btn-success" type="submit" value="Potvrdi izmenu" />
+                    <input class="btn btn-success" type="submit" name="submit" value="Potvrdi izmenu" />
                     <input class="btn btn-secondary" type="reset" value="Poništi" />
                 </td>
             </tr>

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+
+<!--
+    Autor: Lazar Gospavić 2018/0677
+-->
 <html lang="en">
 <head>
-    <meta name="author" content="Lazar">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +14,7 @@
     <title>Šta se nudi - Podrška</title>
 </head>
 <body>
-    <div id='support' class="content">
+    <div id='support' class="content set-overflow">
         <div>
              <h1>Šta se nudi - Podrška</h1>
              <h2>Mi smo tu za vas!</h2><br>
