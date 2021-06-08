@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+<!--
+    Autor: Dušan Gradojević 2018/0310
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,10 +11,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel='stylesheet' type = 'text/css' href='/assets/css/style.css'>
     <link href="/assets/img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>
-    <title>Šta se nudi - Svi oglasi</title>
+    <title>Šta se nudi - Oglas</title>
 </head>
 <body>
-    <div class="content">
+    <div class="content set-overflow">
         <div style='text-align: center'>
             <h1><?= $title ?></h1>
         </div>
@@ -18,9 +22,13 @@
             <div class="ad-body">
                 <div class="ad-user">
                     <p><?= anchor("$controller/userProfile/{$userId}", "$username") ?></p>
-                    <form method="POST" action="<?= site_url("$controller/sendMessage/$userId") ?>">
-                        <button class="btn btn-info" type="submit">Pošalji poruku</button>
-                    </form>
+                    <?php
+                    if ($sessionId != $userId) {
+                    ?>
+                        <form method="POST" action="<?= site_url("$controller/sendMessage/$userId") ?>">
+                            <button class="btn btn-info" type="submit">Pošalji poruku</button>
+                        </form>
+                    <?php } ?>
                 </div>
                 <div>
                     <p>Država: &nbsp; <?= $country ?></p><br/>
@@ -31,14 +39,45 @@
                 </div>            
             </div>
             <div class="ad-images">
-                <p>Slika!</p>
+                <?php
+                if ($sessionId == $userId && $controller != 'Admin') {
+                ?>
+                    <div class="flex-row">
+                        <form method='POST' action="<?= site_url("$controller/deleteAd/$adId") ?>">
+                            <input class='btn btn-danger' type='submit' value='Obriši oglas'>
+                        </form>
+                        &nbsp;
+                        <form method='POST' action="<?= site_url("$controller/adChange/$adId") ?>">
+                            <input class='btn btn-info' type='submit' value='Izmeni'>
+                        </form>
+                    </div>
+                    <br>
+                <?php } ?>
                 
-               <!-- <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">-->
+                
+                <?php if ($controller == 'Admin'){ ?>
+                    <?php if ($isValid == false){ ?>
+                        <div class="flex-row">
+                            <form method='POST' action="<?= site_url("$controller/approveAd/$adId") ?>">
+                                <input class='btn btn-success' type='submit' value='Odobri oglas'>
+                            </form>
+                            &nbsp;
+                    <?php } ?>
+                        <form method='POST' action="<?= site_url("$controller/deleteAd/$adId") ?>">
+                            <input class='btn btn-danger' type='submit' value='Obriši oglas'>
+                        </form>
+                    </div>
+                    <br>
+                <?php } ?>
+                <br>
+                <?php if ($img != null){ ?>
+                        <img src="/assets/imgAds/<?=$img?>" width="300" height="300">
+                <?php } ?>
+                
+                
             </div>
         </div>
     </div>   
 </body>
 </html>
+                        

@@ -6,12 +6,23 @@ use App\Models\AdModel;
 use App\Models\AnnouncementModel;
 use App\Models\UserModel;
 
+/**
+ * Autori: Aleksandra Milović 2018/0126 i Dušan Gradojević 2018/0310
+ */
+
+/**
+ * Guest - klasa koja sadrzi funkcionalnosti koje su dostupne gostu
+ * 
+ * @version 1.0
+ */
+
 class Guest extends BaseController
 {
 	protected function show($page,$data)
 	{
             
                 $data['controller']='Guest';
+                $data['sessionId'] = '';
 		echo view('common/header-guest');
                 echo view('common/menu', $data);
                 echo view("common/$page", $data);
@@ -22,12 +33,6 @@ class Guest extends BaseController
 	{       
 		$this->show('home', []);
 	}
-        
-        public function login($poruka=null)
-	{
-		$this->show('sign-in', ['poruka'=>$poruka]);
-	}
-        
         
         
         public function support() 
@@ -42,46 +47,50 @@ class Guest extends BaseController
                 {
                     return $this->show('register', ['errors'=>$this->validator->getErrors()]);
                 }    
-                //$this->form_validation->set_rules('confirmpassword', 'Confirm Password', 'required|matches[password]');
                 
-                $user=new UserModel();
+                $userModel=new UserModel();
                 
                 $date = date('Y-m-d');
+                $mail = $this->request->getVar('email');
+                $username = $this->request->getVar('username');
                 
-                $user->save([
+                $allUsers = $userModel->findAll();
+                
+                foreach ($allUsers as $user)
+                {
+                    if($user->mail == $mail)
+                    {
+                        return $this->show('register', ['poruka'=>"Već postoji korisnik sa zadatim mejlom."]);
+                    }
+                    elseif($user->username == $username)
+                    {
+                        return $this->show('register', ['poruka'=>"Već postoji korisnik sa zadatim korisničkim imenom."]);
+                    }
+                }
+                
+                
+                $userModel->save([
                     'username'=>$this->request->getVar('username'),
-                    'isValid'=>false,
                     'name'=>$this->request->getVar('name'),
                     'mail'=>$this->request->getVar('email'),
                     'password'=>$this->request->getVar('password'),
                     'surname'=>$this->request->getVar('surname'),
                     'country'=>$this->request->getVar('country'),
                     'num'=>$this->request->getVar('phone'),
-                    'rating'=>'0',
                     'date'=>$date
                 ]);
                 
-                return redirect()->to(site_url('User'));   
+         
+                
+                $user = $userModel->where("username",$this->request->getVar('username'))->first();
+                $this->session->set('user', $user);
+                return redirect()->to(site_url("User"));   
 	}
         
         
          public function register()
         {
                 $this->show('register', []);
-        }
-        
-        
-        //Dohvata oglas po id-u
-        public function getAd($idAd)   
-        {       
-                $adModel = new AdModel();
-                $userModel = new UserModel();
-                $ad = $adModel->find($idAd);
-                /*$where = "idO='$idAd' AND isValid=1";
-                $ad = $adModel->where($where)->first();*/
-                $user = $userModel->where('idK', $ad->idK)->first();
-                $this->show('ad', ['title' => $ad->title, 'country' => $ad->country ,'username' => $user->username, 'userId' => $user->idK, 
-                                'category' => $ad->category, 'type' => $ad->type, 'state' => $ad->state, 'description' => $ad->text]);
         }
         
         
@@ -94,73 +103,47 @@ class Guest extends BaseController
         }
         
         
+        
+        
         public function sendMessage($userId)
         {
-                $this->show('sign-in', ['userId' => $userId]);
+                $this->show('sign-in', []);
         }
         
         
-        public function search()
+        
+        public function passwordForget($poruka = null)
         {
-                $adModel = new AdModel();
-                $searched = $this->request->getVar('search-bar');
-                
-                $category = $this->request->getVar('search-category');
-                $type = $this->request->getVar('search-type');
-                $country = $this->request->getVar('search-country');
-                $ads = $adModel->search($searched);   
-                if ($category != 'Sve kategorije') 
-                {
-                    echo 'a';
-                    $ads = $ads->like('category', $category);
-                }
-                if ($type != 'Svi tipovi') 
-                {
-                    echo 'a';
-                    $ads = $ads->like('type', $type);
-                }
-                if ($country != 'Sve države') 
-                {
-                    echo 'a';
-                    $ads = $ads->like('country', $country);
-                }
-                $this->show('search', ['ads'=>$ads, 'searched' => $searched]);
+                $this->show('password-forget', ['poruka' => $poruka]);
         }
         
         
-        public function showUserAds($userId) 
+        public function mailForgetPassword()
         {
+                $username = $this->request->getVar('username');
                 $userModel = new UserModel();
-                $user = $userModel->find($userId);
-                $adModel = new AdModel();
-                $ads = $adModel->getAds("idK", $userId);
-                $this->show('ads-user', ['userId' => $userId, 'username' => $user->username, 'ads' => $ads]);
-        }
-        
-        public function showAnnouncements()
-        {
-                $annModel = new AnnouncementModel();
-                $ann = $annModel->findAll();
-                $this->show('announcements', ['announcements' => $ann]);
-        }
-        
-        
-        public function searchCategory($category)
-        {
-                $adModel = new AdModel();
-                $ads = $adModel->getAds("category", $category);
-                $this->show('search', ['ads' => $ads, 'searched' => $category]);
+                $user = $userModel->where('username', $username)->first();
+                
+                if ($user == null)
+                {
+                    return $this->passwordForget('Korisnik ne postoji');
+                }
+                
+                $msg = "Vaša lozinka je $user->password.";
+                        
+                // use wordwrap() if lines are longer than 70 characters
+                //$msg = wordwrap($msg,70);
+
+                mail($user->mail,"Šta se nudi - zaboravljena lozinka", $msg);
+                return redirect()->to(site_url("Guest")); 
         }
         
         
         
-        
-        public function passwordForget()
-        {
-                $this->show('password-forget', []);
-        }
-        
-        
+        public function login($poruka=null)
+	{
+		$this->show('sign-in', ['poruka'=>$poruka]);
+	}
         
         
         public function loginSubmit()
@@ -180,14 +163,19 @@ class Guest extends BaseController
                 
                 if($user->password != $this->request->getVar('password'))   //Promenjeno u user->password umesto user->lozinka
                 {
-                    echo $this->request->getVar('password');
-                    echo '------------------';
-                    echo $user->password;
-                    echo '------------------';
-                    echo $this->request->getVar('password');
                     return $this->login('Pogresna lozinka');
                 }
+                
+                
                 $this->session->set('user', $user);
+                
+                if ($user->username == 'admin')
+                {
+                    return redirect()->to(site_url("Admin"));  
+                }
+                
+                
                 return redirect()->to(site_url("User"));  
         }
+      
 }

@@ -1,0 +1,137 @@
+CRITICAL - 2021-06-04 17:37:15 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 17:45:32 --> Undefined variable: sessionId
+#0 C:\xampp\htdocs\sta-se-nudi\app\Views\common\profile-guest.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 29, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\View\View.php(230): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('common/profile-...', Array, true)
+#4 C:\xampp\htdocs\sta-se-nudi\app\Controllers\Guest.php(17): view('common/profile-...', Array)
+#5 C:\xampp\htdocs\sta-se-nudi\app\Controllers\Guest.php(93): App\Controllers\Guest->show('profile-guest', Array)
+#6 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Guest->userProfile('1')
+#7 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Guest))
+#8 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-06-04 17:53:56 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:04:36 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:04:53 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:05:01 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:08:08 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:09:47 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:15:26 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:19:19 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:23:36 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:24:35 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:26:10 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\sta-se-nudi\app\Controllers\User.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->userProfile('<')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-06-04 18:28:09 --> Call to a member function where() on array
+#0 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->search()
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-06-04 18:31:28 --> Call to a member function where() on array
+#0 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->search()
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-06-04 18:36:59 --> Call to a member function getAds() on array
+#0 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->search()
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-06-04 18:38:20 --> Call to a member function where() on array
+#0 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\User->search()
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sta-se-nudi\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#5 {main}

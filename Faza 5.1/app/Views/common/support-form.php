@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+
+<!--
+    Autor: Lazar Gospavić 2018/0677
+-->
 <html lang="en">
 <head>
-    <meta name="author" content="Lazar">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,21 +16,18 @@
 <body>
     <div id='support' class="content">
         <h2>Pomozite nam da poboljšamo Šta se nudi?</h2><br><br>
-        <form action="" method="">
+        <form action="<?= site_url("$controller/sendMessageSubmit/1") ?>" method="POST">
             <table>
                 <tr>
                     <td colspan="2" style="text-align: center;"><b>Unesite tekst komentara/pitanje:</td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <textarea rows="10" cols="80"></textarea>
+                        <textarea rows="10" cols="80" name="message-body" required=""></textarea>
                     </td>
                 </tr>
                 <tr>
-                    <td align="left">
-                        <input type="file" multiple accept="image/*">
-                    </td>
-                    <td align="right">                        
+                    <td align="right" colspan="2">                        
                         <input type="submit" class="btn btn-success" value="Pošalji">
                         <input type="reset" class="btn btn-secondary" value="Poništi">
                     </td>

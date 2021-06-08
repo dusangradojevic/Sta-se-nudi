@@ -1,0 +1,56 @@
+CRITICAL - 2021-06-01 06:36:14 --> Class 'Doctrine\Common\Cache\ArrayCache' not found
+#0 C:\xampp\htdocs\sta-se-nudi\app\Config\Services.php(29): App\Libraries\Doctrine->__construct()
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Config\BaseService.php(192): Config\Services::doctrine(false)
+#2 C:\xampp\htdocs\sta-se-nudi\app\Config\Services.php(26): CodeIgniter\Config\BaseService::getSharedInstance('doctrine')
+#3 C:\xampp\htdocs\sta-se-nudi\app\Controllers\BaseController.php(44): Config\Services::doctrine()
+#4 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\CodeIgniter->createController()
+#6 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\sta-se-nudi\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-06-01 06:40:05 --> An exception occurred in driver: Unknown database 'stasenudi'
+#0 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\dbal\lib\Doctrine\DBAL\DBALException.php(182): Doctrine\DBAL\Driver\AbstractMySQLDriver->convertException('An exception oc...', Object(Doctrine\DBAL\Driver\Mysqli\Exception\ConnectionFailed))
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\dbal\lib\Doctrine\DBAL\DBALException.php(169): Doctrine\DBAL\DBALException::wrapException(Object(Doctrine\DBAL\Driver\Mysqli\Driver), Object(Doctrine\DBAL\Driver\Mysqli\Exception\ConnectionFailed), 'An exception oc...')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\dbal\lib\Doctrine\DBAL\Driver\Mysqli\Driver.php(19): Doctrine\DBAL\DBALException::driverException(Object(Doctrine\DBAL\Driver\Mysqli\Driver), Object(Doctrine\DBAL\Driver\Mysqli\Exception\ConnectionFailed))
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\dbal\lib\Doctrine\DBAL\Connection.php(400): Doctrine\DBAL\Driver\Mysqli\Driver->connect(Array, 'root', '', Array)
+#4 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\dbal\lib\Doctrine\DBAL\Connection.php(1940): Doctrine\DBAL\Connection->connect()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\dbal\lib\Doctrine\DBAL\Connection.php(1717): Doctrine\DBAL\Connection->getWrappedConnection()
+#6 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\orm\lib\Doctrine\ORM\UnitOfWork.php(402): Doctrine\DBAL\Connection->beginTransaction()
+#7 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\orm\lib\Doctrine\ORM\EntityManager.php(378): Doctrine\ORM\UnitOfWork->commit(NULL)
+#8 C:\xampp\htdocs\sta-se-nudi\app\Controllers\Register.php(40): Doctrine\ORM\EntityManager->flush()
+#9 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Register->register()
+#10 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sta-se-nudi\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2021-06-01 06:40:05 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\sta-se-nudi\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\sta-se-nudi\app\Views\errors\html\error_exception.php(100): print_r(Object(Doctrine\DBAL\Driver\Mysqli\Exception\ConnectionFailed), true)
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Debug\Exceptions.php(278): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Debug\Exceptions.php(147): CodeIgniter\Debug\Exceptions->render(Object(Doctrine\DBAL\Exception\ConnectionException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Doctrine\DBAL\Exception\ConnectionException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-01 06:47:55 --> An exception occurred while executing 'INSERT INTO korisnici (isValid, name, surname, mail, password, username) VALUES (?, ?, ?, ?, ?, ?)' with params [0, "aleksandra", "milovic", "a@gmail.com", "46bc09200e836c79fe0c3b102494d1f9", "aleksandramilovic"]:
+
+Duplicate entry 'a@gmail.com' for key 'mail'
+#0 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\dbal\lib\Doctrine\DBAL\DBALException.php(182): Doctrine\DBAL\Driver\AbstractMySQLDriver->convertException('An exception oc...', Object(Doctrine\DBAL\Driver\Mysqli\Exception\StatementError))
+#1 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\dbal\lib\Doctrine\DBAL\DBALException.php(159): Doctrine\DBAL\DBALException::wrapException(Object(Doctrine\DBAL\Driver\Mysqli\Driver), Object(Doctrine\DBAL\Driver\Mysqli\Exception\StatementError), 'An exception oc...')
+#2 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\dbal\lib\Doctrine\DBAL\Connection.php(2214): Doctrine\DBAL\DBALException::driverExceptionDuringQuery(Object(Doctrine\DBAL\Driver\Mysqli\Driver), Object(Doctrine\DBAL\Driver\Mysqli\Exception\StatementError), 'INSERT INTO kor...', Array)
+#3 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\dbal\lib\Doctrine\DBAL\Statement.php(183): Doctrine\DBAL\Connection->handleExceptionDuringQuery(Object(Doctrine\DBAL\Driver\Mysqli\Exception\StatementError), 'INSERT INTO kor...', Array, Array)
+#4 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\orm\lib\Doctrine\ORM\Persisters\Entity\BasicEntityPersister.php(287): Doctrine\DBAL\Statement->execute()
+#5 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\orm\lib\Doctrine\ORM\UnitOfWork.php(1111): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->executeInserts()
+#6 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\orm\lib\Doctrine\ORM\UnitOfWork.php(423): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#7 C:\xampp\htdocs\sta-se-nudi\vendor\doctrine\orm\lib\Doctrine\ORM\EntityManager.php(378): Doctrine\ORM\UnitOfWork->commit(NULL)
+#8 C:\xampp\htdocs\sta-se-nudi\app\Controllers\Register.php(40): Doctrine\ORM\EntityManager->flush()
+#9 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Register->register()
+#10 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sta-se-nudi\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sta-se-nudi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#14 {main}

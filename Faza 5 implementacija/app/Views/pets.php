@@ -57,12 +57,12 @@
             <div class="col-sm-3">&nbsp;</div>
         </div>
         <?php
-            foreach ($pets as $pet){
-                echo "<div class='row'>";
-                echo "<div class='col-sm-3'>&nbsp;</div>";
-                echo "<div class='col-sm-6 border border-dark'><h5>{$pet->getTitle()}</h5> </br> {$pet->getText()}</div>";
-                echo "<div class='col-sm-3'>&nbsp;</div></div>";
-            }
+        foreach ($pets as $pet){
+            echo "<div class='row'>";
+            echo "<div class='col-sm-3'>&nbsp;</div>";
+            echo "<div class='col-sm-6 border border-dark'><h5>{$pet->getTitle()}</h5> </br> {$pet->getText()}</br><img class='ad' src='{$pet->getImgurl()}'/> </div>";
+            echo "<div class='col-sm-3'>&nbsp;</div></div>";
+        }
         ?>
     </div>
    <div id='footer'>

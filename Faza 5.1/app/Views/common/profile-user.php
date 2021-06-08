@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+
+<!--
+    Autor: Aleksandra Milović 2018/0126
+-->
 <html lang="en">
 <head>
-    <meta name="author" content="Aleksandra">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='stylesheet' type = 'text/css' href='/assets/css/style.css'>
     <link href="/assets/img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>  
-    <script src="/assets/js/java.js"></script>
     <title>Šta se nudi - Profil</title>
 </head>
 <body>
@@ -22,38 +24,64 @@
             <h2>Broj telefona: <?= $num ?> </h2>
             <h3>Član od <?= $date ?></h3>
             <h3>Ocena korisnika: <?= $rating?></h3>
-            <?php 
-                if ($userId != $userVisitId) 
-                {   
-                    $string = "$controller/sendMessage/$userId";
-                    echo "<form method='POST' action='<?= site_url($string) ?>'>";
-                    echo    "<button type='submit' class='btn btn-info' id='message-button'>Pošaljite poruku</button>";
-                    echo "</form><br/>";
-                    echo anchor("$controller/showUserAds/{$userId}", "Svi aktivni oglasi");
-                    echo "<div>";
-                    echo    '<span onmouseover="starmark(this)" onclick="result()" id="1one" style="font-size:40px;cursor:pointer;" class="fa fa-star checked"></span>';
-                    echo    '<span onmouseover="starmark(this)" onclick="result()" id="2one" style="font-size:40px;cursor:pointer;" class="fa fa-star "></span>';
-                    echo    '<span onmouseover="starmark(this)" onclick="result()" id="3one" style="font-size:40px;cursor:pointer;" class="fa fa-star "></span>';
-                    echo    '<span onmouseover="starmark(this)" onclick="result()" id="4one" style="font-size:40px;cursor:pointer;" class="fa fa-star"></span>';
-                    echo    '<span onmouseover="starmark(this)" onclick="result()" id="5one" style="font-size:40px;cursor:pointer;" class="fa fa-star"></span>';
-                    echo    '<span id="rate">4.7</span>';
-                    echo '</div>';
+            <form method='POST' action='<?= site_url("$controller/sendMessage/$userVisitId") ?>'>
+                <button type='submit' class='btn btn-info' id='message-button'>Pošaljite poruku</button>
+            </form>
+            <br/>
+                <?= anchor("$controller/showUserAds/{$userVisitId}", "Svi aktivni oglasi") ?>
+            
+            <?php if ($controller == 'User' && $userVisitId != 1) { ?>
+                <br>
+                <form method='POST' action='<?= site_url("$controller/gradeUser/$userVisitId") ?>'>                    
+                    <select name="rate" class="menu-list">
+                        <option selected>Ocenite korisnika</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    &nbsp;
+                    <button type='submit' class='btn btn-success'>Oceni</button>
+                </form>
+            <?php } ?>
+                
+            <?php if ($controller == 'Admin') { ?>
+                <?= anchor("$controller/showUserAds/{$sessionId}", "Svi aktivni oglasi");?>
+                <?= anchor("$controller/accountDelete/", "Obriši nalog");?> 
+                &nbsp;&nbsp;
+            <?php } ?>
+            
+            <!--<script>
+                var count;
+                function result(){
+                    let cnt = parseFloat(count)
+                    alert(cnt)
                 }
-                else
-                {   
-                    echo "<br>";
-                    echo anchor("$controller/showUserAds/{$userId}", "Svi aktivni oglasi");
-                    echo anchor("$controller/postAd", "Postavi oglas");
-                    echo anchor("$controller/changePassword", "Promena lozinke");
-                    echo anchor("$controller/accountDelete/", "Obriši nalog");
+
+                function starmark(item){
+                    count = item.id[0];
+                    sessionStorage.starRating = count;
+                    var subid = item.id.substring(1);
+                    for(var i=0;i<5;i++) {
+                        if(i<count)
+                            document.getElementById((i+1)+subid).style.color="orange";
+                        else
+                            document.getElementById((i+1)+subid).style.color="black";  
+                    }
                 }
-            ?>
+            </script>-->
             
             
-            <!--<a href="post-upload.html"></a>             
-            <a href="password-change.html"></a>
-            <a href="acc-delete.html"></a>-->
             
+            <!--<div>
+                <span onmouseover="starmark(this)" onclick="result()" id="1one" style="font-size:40px;cursor:pointer;" class="fa fa-star checked"></span>
+                <span onmouseover="starmark(this)" onclick="result()" id="2one" style="font-size:40px;cursor:pointer;" class="fa fa-star "></span>
+                <span onmouseover="starmark(this)" onclick="result()" id="3one" style="font-size:40px;cursor:pointer;" class="fa fa-star "></span>
+                <span onmouseover="starmark(this)" onclick="result()" id="4one" style="font-size:40px;cursor:pointer;" class="fa fa-star"></span>
+                <span onmouseover="starmark(this)" onclick="result()" id="5one" style="font-size:40px;cursor:pointer;" class="fa fa-star"></span>
+                <span id="rate">4.7</span>-->
+            </div>
         </div>
     </div>
 </body>
