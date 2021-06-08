@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 03, 2021 at 02:52 PM
+-- Generation Time: May 29, 2021 at 04:07 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.18
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
+  `idAd` int(18) NOT NULL,
   `username` varchar(150) NOT NULL,
   `password` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -36,8 +37,8 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`username`, `password`) VALUES
-('admin', '202cb962ac59075b964b07152d234b70');
+INSERT INTO `admin` (`idAd`,`username`, `password`) VALUES
+('1','admin', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -57,55 +58,66 @@ CREATE TABLE `chats` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `korisnici`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `korisnici` (
+CREATE TABLE `users` (
   `idK` int(18) NOT NULL,
-  `isValid` tinyint(1) DEFAULT NULL,
   `name` varchar(25) DEFAULT NULL,
   `surname` varchar(25) DEFAULT NULL,
   `mail` varchar(100) DEFAULT NULL,
   `password` varchar(35) DEFAULT NULL,
-  `username` varchar(20) DEFAULT NULL
+  `username` varchar(20) DEFAULT NULL,
+  `country` varchar(30) DEFAULT NULL,
+  `num` varchar(20) DEFAULT NULL,
+  `date` DATE NOT NULL,
+  `img`BLOB NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `korisnici`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `korisnici` (`idK`, `isValid`, `name`, `surname`, `mail`, `password`, `username`) VALUES
-(1, 1, 'admin', 'admin', 'admin@admin.com', '202cb962ac59075b964b07152d234b70', 'admin'),
-(7, 0, 'dodo5', 'xampp', 'vlaskovic.dodo@gmail.com', 'K9qiZNfZznD4qJb', 'xdodo'),
-(9, 1, 'gg', 'tt', 'd@d3.com', 'K9qiZNfZznD4qJb', 'gt'),
-(13, 0, 'admin2', 'admin2', 'duyhntg@dvddvf.com', '202cb962ac59075b964b07152d234b70', 'admin2');
+INSERT INTO `users` (`idK`, `username`, `name`, `surname`, `mail`, `password`, `country`, `num`) VALUES
+(1,'admin','admin','adminic','admin@admin.com','sifra1','Srbija','0645828828'),
+(2,'Aleks','Aleksandra','Milovic','aleksandra.milovic@gmail.com','sifra2','Srbija','0632547898'),
+(3,'Ducko','Dusan','Gradojevic','dusan.gradojevic@gmail.com','sifra3','Srbija','0606981984'),
+(4,'Dobri','Dobrosav','Vlaskovic','dobri.vlah@admin.com','sifra4','Srbija','0698745896'),
+(5,'Laki','Lazar','Gospavic','gospavic@admin.com','sifra5','Srbija','0652563516');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oglasi`
+-- Table structure for table `ads`
 --
 
-CREATE TABLE `oglasi` (
-  `IdO` int(18) NOT NULL,
+CREATE TABLE `ads` (
+  `idO` int(18) NOT NULL,
   `title` varchar(256) DEFAULT NULL,
   `text` varchar(1000) DEFAULT NULL,
   `type` varchar(20) DEFAULT NULL,
   `isValid` tinyint(1) DEFAULT NULL,
   `idK` int(18) NOT NULL,
   `category` varchar(30) DEFAULT NULL,
-  `imgurl` varchar(200) NOT NULL
+  `date` DATE NOT NULL,
+  `state` varchar(30) DEFAULT NULL,
+  `country` varchar(30) DEFAULT NULL,
+  `img` varchar(1000) NOT NULL
+  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `oglasi`
+-- Dumping data for table `ads`
 --
 
-INSERT INTO `oglasi` (`IdO`, `title`, `text`, `type`, `isValid`, `idK`, `category`, `imgurl`) VALUES
-(11, 'Nije potvrdjen', 'gjuymujhk,', 'Tehnika', 0, 16, 'Tehnika', ''),
-(13, 'LJubimac', 'hrtrhuyyjthhtgtrtnyf', 'Ljubimci', 1, 18, 'Ljubimci', ''),
-(17, 'J20', 'gjregjfgerdf[thdgr[dgsferjdgfsrhsdfdx[17', 'Razmena', 1, 18, 'Tehnika', ''),
-(18, 'fgfd', 'ggreew', 'Razmena', 0, 1, 'Ljubimac', '1622718773_400706df365e4a31324a.jpg');
+INSERT INTO `ads` (`idO`, `title`, `text`, `type`, `isValid`, `idK`, `category`,`state`,`country`) VALUES
+(1, 'Povodac za pse', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus, velit!', 'Poklanjanje', 1, 2, 'Ljubimci','Kao novo','Srbija'),
+(2, 'S20', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus! ', 'Razmena', 1, 3, 'Tehnika','Korisceno','Hrvatska'),
+(3, 'Fen', 'Panasonic fen', 'Razmena', 0, 5, 'Tehnika', 'Korisceno', 'Srbija'),
+(4, 'Popcorn popper', 'Pucac kokica iz tehnomanije', 'Razmena', 1, 4, 'Tehnika', 'Korisceno', 'Srbija'),
+(5, 'Patike za trcanje', 'Original nove patike nekoriscene', 'Razmena', 1, 3, 'Odeca', 'Kao novo', 'Srbija'),
+(6, 'Bluetooth slusalice', 'Kenwood', 'Razmena', 0, 5, 'Tehnika', 'Osteceno', 'Srbija'),
+(7, 'Jakna', 'hnggrfgthhthyytfrggthjyuyhtrgrrgfe', 'Poklanjanje', 1, 2, 'Odeca','Korisceno','Srbija');
 
 -- --------------------------------------------------------
 
@@ -116,8 +128,49 @@ INSERT INTO `oglasi` (`IdO`, `title`, `text`, `type`, `isValid`, `idK`, `categor
 CREATE TABLE `rating` (
   `IdR` int(18) NOT NULL,
   `rate` int(18) DEFAULT NULL,
-  `idK` int(18) NOT NULL
+  `user_rater` int(18) NOT NULL,
+  `user_rated` int(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `rating`
+--
+
+INSERT INTO `rating` (`idR`, `rate`, `user_rater`, `user_rated`) VALUES
+(1, 2, 3, 2),
+(2, 5, 2, 4),
+(3, 4, 4, 3),
+(4, 5, 3, 4),
+(5, 1, 4, 5),
+(6, 3, 3, 5);
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `announcement`
+--
+
+CREATE TABLE `announcement` (
+  `idA` int(18) NOT NULL,
+  `title` varchar(25) DEFAULT NULL,
+  `text` varchar(250) DEFAULT NULL,
+  `idAd` int(18) NOT NULL,
+  `date` DATE NOT NULL
+  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `announcement`
+--
+
+INSERT INTO `announcement` (`idA`, `title`, `text`, `idAd`) VALUES
+(0,'Poruka dobrodoslice!', 'Dobro dosli na sajt Sta se nudi!',1),
+(1,'Izmene na sajtu!', 'Izmene na sajtu stupaju na snagu!',1);
+
+-- --------------------------------------------------------
+
 
 --
 -- Indexes for dumped tables
@@ -127,7 +180,14 @@ CREATE TABLE `rating` (
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`username`);
+  ADD PRIMARY KEY (`idAd`);
+  
+  --
+-- Indexes for table `announcement`
+--
+ALTER TABLE `announcement`
+  ADD PRIMARY KEY (`idA`),
+  ADD KEY `R_5` (`idAd`);
 
 --
 -- Indexes for table `chats`
@@ -138,18 +198,18 @@ ALTER TABLE `chats`
   ADD KEY `R_3` (`user_from`);
 
 --
--- Indexes for table `korisnici`
+-- Indexes for table `users`
 --
-ALTER TABLE `korisnici`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`idK`),
   ADD UNIQUE KEY `mail` (`mail`),
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- Indexes for table `oglasi`
+-- Indexes for table `ads`
 --
-ALTER TABLE `oglasi`
-  ADD PRIMARY KEY (`IdO`),
+ALTER TABLE `ads`
+  ADD PRIMARY KEY (`idO`),
   ADD KEY `R_1` (`idK`);
 
 --
@@ -157,7 +217,8 @@ ALTER TABLE `oglasi`
 --
 ALTER TABLE `rating`
   ADD PRIMARY KEY (`IdR`),
-  ADD KEY `R_4` (`idK`);
+  ADD KEY `R_6` (`user_rated`),
+  ADD KEY `R_7` (`user_rater`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -169,17 +230,27 @@ ALTER TABLE `rating`
 ALTER TABLE `chats`
   MODIFY `idc` int(18) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `korisnici`
---
-ALTER TABLE `korisnici`
-  MODIFY `idK` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+
 
 --
--- AUTO_INCREMENT for table `oglasi`
+-- AUTO_INCREMENT for table `announcement``
 --
-ALTER TABLE `oglasi`
-  MODIFY `IdO` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+ALTER TABLE `announcement`
+  MODIFY `idA` int(18) NOT NULL, AUTO_INCREMENT=3;
+
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `idK` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `ads`
+--
+ALTER TABLE `ads`
+  MODIFY `idO` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `rating`
@@ -191,18 +262,33 @@ ALTER TABLE `rating`
 -- Constraints for dumped tables
 --
 
+
+--
+-- Constraints for table `announcement`
+--
+ALTER TABLE `announcement`
+  ADD CONSTRAINT `R_5` FOREIGN KEY (`idAd`) REFERENCES `admin` (`idAd`);
+
+
 --
 -- Constraints for table `chats`
 --
 ALTER TABLE `chats`
-  ADD CONSTRAINT `R_2` FOREIGN KEY (`user_to`) REFERENCES `korisnici` (`idK`),
-  ADD CONSTRAINT `R_3` FOREIGN KEY (`user_from`) REFERENCES `korisnici` (`idK`);
+  ADD CONSTRAINT `R_2` FOREIGN KEY (`user_to`) REFERENCES `users` (`idK`),
+  ADD CONSTRAINT `R_3` FOREIGN KEY (`user_from`) REFERENCES `users` (`idK`);
+
+--
+-- Constraints for table `ads`
+--
+ALTER TABLE `ads`
+  ADD CONSTRAINT `R_1` FOREIGN KEY (`idK`) REFERENCES `users` (`idK`);
 
 --
 -- Constraints for table `rating`
 --
 ALTER TABLE `rating`
-  ADD CONSTRAINT `R_4` FOREIGN KEY (`idK`) REFERENCES `korisnici` (`idK`);
+  ADD CONSTRAINT `R_6` FOREIGN KEY (`user_rated`) REFERENCES `users` (`idK`),
+  ADD CONSTRAINT `R_7` FOREIGN KEY (`user_rater`) REFERENCES `users` (`idK`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
