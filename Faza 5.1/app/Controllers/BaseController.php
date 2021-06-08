@@ -25,6 +25,10 @@ use App\Models\UserModel;
  * For security be sure to declare any new methods as protected or private.
  */
 
+/**
+ * Autori: Dobrosav Vlašković 2018/0005 i Lazar Gospavić 2018/0677 
+ */
+
 class BaseController extends Controller
 {
 	/**
@@ -66,8 +70,11 @@ class BaseController extends Controller
                 throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
         
-        
-        
+        /**
+         * Izlistavanje svih obaveštenja.
+         * 
+         * @return void
+         */        
         public function showAnnouncements()
         {
                 $annModel = new AnnouncementModel();
@@ -75,7 +82,13 @@ class BaseController extends Controller
                 $this->show('announcements', ['announcements' => $ann]);
         }
         
-        
+        /**
+         * Izlistava sve oglase koji pripadaju prosleđenoj kategoriji kao parametar
+         * 
+         * @param String $category
+         * 
+         * @return void
+         */     
         public function searchCategory($category)
         {
                 $adModel = new AdModel();
@@ -84,7 +97,13 @@ class BaseController extends Controller
                 $this->show('search', ['ads' => $ads, 'searched' => $category]);
         }
         
-        
+        /**
+         * Izlistavanje svih oglasa zadatog korisnika.
+         * 
+         * @param int $userId
+         * 
+         * @return void
+         */      
         public function showUserAds($userId) 
         {
                 $userModel = new UserModel();
@@ -104,19 +123,41 @@ class BaseController extends Controller
         }
         
         
-        //Dohvata oglas po id-u
+        /**
+         * Dohvatanje oglasa po id-u
+         * 
+         * @param int $adId
+         * 
+         * @return void
+         */     
         public function getAd($adId)   
-        {       
+        {
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
                 $adModel = new AdModel();
                 $userModel = new UserModel();
                 $ad = $adModel->find($adId);
+                if($ad == null)
+                {
+                    if($this->session->get('user')->idK == 1)
+                    {
+                        return redirect()->to(site_url("Admin")); 
+                    }
+                    return redirect()->to(site_url("Guest")); 
+                }
                 $user = $userModel->where('idK', $ad->idK)->first();
                 $this->show('ad', ['adId' => $adId, 'title' => $ad->title, 'country' => $ad->country ,'username' => $user->username, 'userId' => $user->idK, 
-                                'category' => $ad->category, 'type' => $ad->type, 'state' => $ad->state, 'description' => $ad->text, 'pic' => $ad->img0,
+                                'category' => $ad->category, 'type' => $ad->type, 'state' => $ad->state, 'description' => $ad->text, 'img' => $ad->img,
                                 'isValid' => $ad->isValid]);
         }
         
-        
+        /**
+         * Funkcija za pretragu i filtriranje oglasa.
+         * 
+         * @return void
+         */     
         public function search()
         {
                 $adModel = new AdModel();

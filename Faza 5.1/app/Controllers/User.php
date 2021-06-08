@@ -6,9 +6,28 @@ use App\Models\AdModel;
 use App\Models\AnnouncementModel;
 use App\Models\ChatModel;
 use App\Models\UserModel;
+use App\Models\RatingModel;
+
+/**
+ * Autori: Lazar Gospavić 2018/0677 i Dušan Gradojević 2018/0310
+ */
+
+/**
+ * User - klasa koja sadrzi funkcionalnosti koje su dostupne korisniku sa nalogom
+ * 
+ * @version 1.0
+ */
 
 class User extends BaseController
 {
+    
+        /**
+         * Prikazuje izgled stranice koja je prosleđena sa dodatnim argumentima
+         * 
+         * @param String $page, Array $data
+         * 
+         * @return void
+         */     
     	protected function show($page,$data)
 	{       
                 $data['controller'] = 'User';
@@ -19,11 +38,28 @@ class User extends BaseController
                 echo view('common/footer-user');
 	}
         
+        
+        
+        /**
+         * Prikaz početnog stanja aplikacije u režimu korisnika.
+         * 
+         * @return void
+         */     
 	public function index()
 	{
 		$this->show('home', []);
 	}
         
+        
+        
+        
+        
+        /**
+         * Izlistavanje svih obaveštenja.
+         * 
+         * 
+         * @return void
+         */     
         public function announcements() 
         {
                 $this->show('announcements',[]);
@@ -32,27 +68,73 @@ class User extends BaseController
 
         
         
+        
+        /**
+         * Prikaz profila korisnika čiji je id prosleđen kao parametar
+         * 
+         * @param int $userVisitId
+         * 
+         * @return void
+         */     
         public function userProfile($userVisitId)
         {       
                 $userModel = new UserModel();
                 $profile = $userModel->find($userVisitId);
-                if ($this->session->get('user')->idK != $userVisitId)
+                
+                $ratingModel = new RatingModel();
+                $rates = $ratingModel->where('user_rated', $userVisitId)->findAll();
+                $sum = 0;
+                $cnt = 0;                
+                foreach ($rates as $rate)
                 {
-                    $this->show('profile-user', ['userVisitId' => $userVisitId, 'name' => $profile->name, 'surname' => $profile->surname ,'username' => $profile->username, 'country' => $profile->country, 
-                                'num' => $profile->num, 'rating' => $profile->rating, 'date' => $profile->date]);
+                    $sum = $sum + $rate->rate;
+                    $cnt = $cnt + 1;
                 }
-                $this->show('profile-session-user', ['userVisitId' => $userVisitId, 'name' => $profile->name, 'surname' => $profile->surname ,'username' => $profile->username, 'country' => $profile->country, 
-                                'num' => $profile->num, 'rating' => $profile->rating, 'date' => $profile->date]);
+                $rating = $cnt == 0 ? 0 : $sum / $cnt;
+                
+                
+                
+                $page = 'profile-user';
+                
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
+                
+                if ($this->session->get('user')->idK == $userVisitId)
+                {
+                    $page = 'profile-session-user';
+                }
+                $this->show($page, ['userVisitId' => $userVisitId, 'name' => $profile->name, 'surname' => $profile->surname ,'username' => $profile->username, 'country' => $profile->country, 
+                                'num' => $profile->num, 'rating' => $rating, 'date' => $profile->date]);
         }
         
         
         
         
+        
+        
+        
+        /**
+         * Prikaz stranice za korisničku podršku.
+         * 
+         * @return void
+         */     
         public function support() 
         {
                 $this->show('support', []);
         }
         
+        
+        
+        
+        
+        /**
+         * Prikaz stranice za slanje korsničkih sugestija ili žalbi.
+         * 
+         * @return void
+         */     
         public function supportForm()
         {
                 $this->show('support-form', []);
@@ -60,12 +142,33 @@ class User extends BaseController
         
         
         
+        
+        
+        /**
+         * Funkcija za odjavljivanje korisnika.
+         * 
+         * @return void
+         */     
         public function logout()
         {
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
                 $this->session->destroy();
                 return redirect()->to(site_url(''));
         }
         
+        
+        
+        
+        
+        /**
+         * Prikazivanje forme za postavljanje oglasa
+         * 
+         * @return void
+         */     
         public function postAd()
         {
                 $this->show('post-upload', []);
@@ -74,10 +177,58 @@ class User extends BaseController
         
         
         
+        /**
+         * Funkcija koja upisuje oglas u bazu ukoliko je forma adekvatno popunjena.
+         * 
+         * @return void
+         */     
         public function adSubmit() 
         {
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
                 $date = date('Y-m-d');
                 $adModel = new AdModel();
+                
+                
+                if (isset($_POST['submit']))
+                {
+                    $file = $_FILES['file'];
+                    $fileName = $file['name'];
+                    $fileTmpName = $file['tmp_name'];
+                    $fileSize = $file['size'];
+                    $fileError = $file['error'];
+                    
+                    $fileExt = explode('.', $fileName);
+                    $fileActualExt = strtolower(end($fileExt));
+                    
+                    $allowed = array('jpg', 'jpeg', 'png');
+                    $fileNameNew = "";
+                    
+                    if (in_array($fileActualExt, $allowed))
+                    {
+                        if ($fileError === 0)
+                        {
+                            if ($fileSize < 500000)
+                            {
+                                $fileNameNew = uniqid('', true).".".$fileActualExt;
+                                $fileDestination = 'C:/xampp/htdocs/sta-se-nudi/public/assets/imgAds/'.$fileNameNew;
+                                move_uploaded_file($fileTmpName, $fileDestination);
+                            }
+                            else
+                            {
+                                echo "File too big";
+                            }
+                        }
+                    }
+                    else 
+                    {
+                        echo "Wrong extension";
+                    }
+                }
+                
                 
                 $adModel->save([
                     'title'=>$this->request->getVar('name'),
@@ -89,21 +240,40 @@ class User extends BaseController
                     'date'=>$date,
                     'idK'=>$this->session->get('user')->idK,
                     'country'=>$this->session->get('user')->country,
-                    'img0'=>$this->request->getVar('pic')
+                    'img'=>$fileNameNew
                 ]);
                 
                 return redirect()->to(site_url('User'));  
         }
         
         
+        
+        
+        /**
+         * Prikaz stranice za promenu lozinke.
+         * 
+         * @return void
+         */     
         public function changePassword() 
         {
                 $this->show('password-change', []);
         }
         
         
+        
+        
+        /**
+         * Potvrđivanje zahteva za promenu lozinke.
+         * 
+         * @return void
+         */     
         public function passwordChangeSubmit()
-        {       
+        {                       
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
                 $oldPass = $this->request->getVar('old-pass');
                 $newPass = $this->request->getVar('new-pass');
                 $newPassConf = $this->request->getVar('new-pass-conf');
@@ -130,6 +300,14 @@ class User extends BaseController
         
         
         
+        
+        /**
+         * Prikazuje formu za slanje poruke korisniku koji je prosleđen kao parametar.
+         * 
+         * @param int $userId
+         * 
+         * @return void
+         */     
         public function sendMessage($userId)
         {       
                 $userModel = new UserModel();
@@ -139,8 +317,22 @@ class User extends BaseController
         }
         
         
+        
+        
+        /**
+         * Potvrđivanje slanja poruke korisniku čiji je id prosleđen kao parametar.
+         * 
+         * @param int $userId
+         * 
+         * @return void
+         */     
         public function sendMessageSubmit($userId)
         {       
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
                 $msg = $this->request->getVar('message-body');
                 
                 $userModel = new UserModel();
@@ -165,9 +357,21 @@ class User extends BaseController
         }
         
         
+        
+        
+        /**
+         * Otvara prijemnno sanduče korisnika.
+         * 
+         * @return void
+         */     
         public function inbox()
         {       
                 //lista korisnika sa kojima se dopisivao
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
                 $chatModel = new ChatModel();
                 $friends = $chatModel->getFriends($this->session->get('user')->idK);
                 
@@ -175,31 +379,111 @@ class User extends BaseController
         }
         
         
-        public function chat($userId)
+        
+        /**
+         * Funkcija koja daje ocenu korisniku čiji je id prosleđen kao parametar.
+         * 
+         * @param int $userId
+         * 
+         * @return void
+         */     
+        public function gradeUser($userId)
         {
-            $chatModel = new ChatModel();
-            $chat = $chatModel->getChat($this->session->get('user')->idK, $userId);
-            $userModel = new UserModel();
-            $user = $userModel->find($userId);
-            $nameSession = $userModel->find($this->session->get('user')->idK)->name;
-            $surnameSession = $userModel->find($this->session->get('user')->idK)->surname;
-            $this->show('chat', ['chat' => $chat, 'userId' => $userId, 'name' => $user->name, 'surname' => $user->surname, 
-                                'nameSession' => $nameSession, 'surnameSession' => $surnameSession]);
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
+                $rate = $this->request->getVar('rate');
+                
+                if ($rate == 'Ocenite korisnika')
+                {
+                    return redirect()->to(site_url("User/userProfile/$userId"));
+                }
+                
+                $ratingModel = new RatingModel();
+                $rating = $ratingModel->where('user_rater', $this->session->get('user')->idK)->where('user_rated', $userId)->first();
+                if ($rating != null)
+                {
+                    $ratingModel->set('rate', $rate)->where('IdR', $rating->IdR)->update();
+                }
+                else
+                {
+                    $ratingModel->save([
+                        'rate' => $rate,
+                        'user_rater' => $this->session->get('user')->idK,
+                        'user_rated' => $userId                        
+                    ]);
+                }
+                
+                return redirect()->to(site_url("User/userProfile/$userId"));
         }
         
         
+        
+        /**
+         * Prikazivanje prepiske sa korisnikom čiji je id prosleđen kao parametar.
+         * 
+         * @param int $userId
+         * 
+         * @return void
+         */     
+        public function chat($userId)
+        {
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
+                $chatModel = new ChatModel();
+                $chat = $chatModel->getChat($this->session->get('user')->idK, $userId);
+                $userModel = new UserModel();
+                $user = $userModel->find($userId);
+                $nameSession = $userModel->find($this->session->get('user')->idK)->name;
+                $surnameSession = $userModel->find($this->session->get('user')->idK)->surname;
+                $this->show('chat', ['chat' => $chat, 'userId' => $userId, 'name' => $user->name, 'surname' => $user->surname, 
+                                    'nameSession' => $nameSession, 'surnameSession' => $surnameSession]);
+        }
+        
+        
+        
+        /**
+         * Funkcija za brisanje korisnika iz baze.
+         * 
+         * @return void
+         */     
         public function accountDelete()
         {       
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
                 $adModel = new AdModel();
                 $adModel->where('idK', $this->session->get('user')->idK)->delete();
+                $chatModel = new ChatModel();               
+                $chatModel->where('user_from', $this->session->get('user')->idK)->delete();
+                $chatModel->where('user_to', $this->session->get('user')->idK)->delete();
+                $ratingModel = new RatingModel();               
+                $ratingModel->where('user_rater', $this->session->get('user')->idK)->delete();
+                $ratingModel->where('user_rated', $this->session->get('user')->idK)->delete();
                 $userModel = new UserModel();               
                 $userModel->where('idK', $this->session->get('user')->idK)->delete();
+                
                 
                 $this->session->destroy();
                 return redirect()->to(site_url("/"));
         }
         
         
+        
+        /**
+         * Brisanje oglasa iz baze čiji je id prosleđen kao parametar.
+         * 
+         * @param int $adId
+         * 
+         * @return void
+         */     
         public function deleteAd($adId)
         {
                 $adModel = new AdModel();
@@ -208,6 +492,14 @@ class User extends BaseController
                 return redirect()->to(site_url("User"));
         }
         
+        
+        /**
+         * Izmena oglasa čiji je id prosleđen kao parametar.
+         * 
+         * @param int $adId
+         * 
+         * @return void
+         */       
         public function adChange($adId) 
         {
                 $adModel = new AdModel();
@@ -216,12 +508,57 @@ class User extends BaseController
         }
         
         
+        
+        /**
+         * Potvrda izmene oglasa čiji je id prosleđen kao parametar.
+         * 
+         * @param int $adId
+         * 
+         * @return void
+         */   
         public function adChangeSubmit($adId) 
         {
                 $type = $this->request->getVar('tip');
                 $state = $this->request->getVar('stanje');
                 $text = $this->request->getVar('description');
-                $img = $this->request->getVar('pic');
+                $img = $this->request->getVar('file');
+                
+                 if (isset($_POST['submit']))
+                {
+                    $file = $_FILES['file'];
+                    $fileName = $file['name'];
+                    $fileTmpName = $file['tmp_name'];
+                    $fileSize = $file['size'];
+                    $fileError = $file['error'];
+                    
+                    $fileExt = explode('.', $fileName);
+                    $fileActualExt = strtolower(end($fileExt));
+                    
+                    $allowed = array('jpg', 'jpeg', 'png');
+                    $fileNameNew = "";
+                    
+                    if (in_array($fileActualExt, $allowed))
+                    {
+                        if ($fileError === 0)
+                        {
+                            if ($fileSize < 500000)
+                            {
+                                $fileNameNew = uniqid('', true).".".$fileActualExt;
+                                $fileDestination = 'C:/xampp/htdocs/sta-se-nudi/public/assets/imgAds/'.$fileNameNew;
+                                move_uploaded_file($fileTmpName, $fileDestination);
+                            }
+                            else
+                            {
+                                echo "File too big";
+                            }
+                        }
+                    }
+                    else 
+                    {
+                        echo "Wrong extension";
+                    }
+                }
+                
                 
                 if (empty($text)) 
                 {
@@ -232,80 +569,8 @@ class User extends BaseController
                 $adModel->set('type', $type)->where('idO', $adId)->update();
                 $adModel->set('state', $state)->where('idO', $adId)->update();
                 $adModel->set('text', $text)->where('idO', $adId)->update();
-                if (!empty($img)) $adModel->set('img', $img)->where('idO', $adId)->update();
+                if (!empty($fileNameNew)) $adModel->set('img', $fileNameNew)->where('idO', $adId)->update();
                 
                 $this->getAd($adId);
-        }
-        
-        
-        
-        
-//        public function searchCategory($category)
-//        {
-//                $adModel = new AdModel();
-//                $ads = $adModel->getAds("category", $category);
-//                $this->show('search', ['ads' => $ads, 'searched' => $category]);
-//        }
-        
-        
-//        public function showAnnouncements()
-//        {
-//                $annModel = new AnnouncementModel();
-//                $ann = $annModel->findAll();
-//                $this->show('announcements', ['announcements' => $ann]);
-//        }
-        
-        
-        
-        
-//        //Dohvata oglas po id-u
-//        public function getAd($idAd)   
-//        {       
-//                $adModel = new AdModel();
-//                $userModel = new UserModel();
-//                $ad = $adModel->find($idAd);
-//                $user = $userModel->where('idK', $ad->idK)->first();
-//                $this->show('ad', ['title' => $ad->title, 'country' => $ad->country ,'username' => $user->username, 'userId' => $user->idK, 
-//                                'category' => $ad->category, 'type' => $ad->type, 'state' => $ad->state, 'description' => $ad->text, 'pic' => $ad->img0]);
-//        }
-        
-        
-        
-        
-        
-        
-//        public function search()
-//        {
-//                $adModel = new AdModel();
-//                $searched = $this->request->getVar('search-bar');
-//                
-//                $category = $this->request->getVar('search-category');
-//                $type = $this->request->getVar('search-type');
-//                $country = $this->request->getVar('search-country');
-//                $ads = $adModel->search($searched);   
-//                
-//                if ($category != 'Sve kategorije' || $type != 'Svi tipovi' || $country != 'Sve države')
-//                {
-//                    $i = 0;
-//                    foreach ($ads as $ad)
-//                    {
-//                        if ($category != 'Sve kategorije' && $ad->category != $category)
-//                        {
-//                            unset($ads[$i]);
-//                        }
-//                        elseif($type != 'Svi tipovi' && $ad->type != $type)
-//                        {
-//                            unset($ads[$i]);
-//                        }
-//                        elseif($country != 'Sve države' && $ad->country != $country)
-//                        {
-//                            unset($ads[$i]);
-//                        }
-//                        $i++;
-//                    }
-//                }
-//                
-//                $this->show('search', ['ads'=>$ads, 'searched' => $searched]);
-//        }
-        
+        }        
 }

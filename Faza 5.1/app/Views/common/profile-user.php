@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+
+<!--
+    Autor: Aleksandra Milović 2018/0126
+-->
 <html lang="en">
 <head>
-    <meta name="author" content="Aleksandra">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,21 +29,28 @@
             </form>
             <br/>
                 <?= anchor("$controller/showUserAds/{$userVisitId}", "Svi aktivni oglasi") ?>
-            <br>
             
-            <form method='POST' action='<?= site_url("$controller/sendMessage/$userVisitId") ?>'>
-                <select name="search-category" class="menu-list">
-                    <option selected disabled>Ocenite korisnika</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
+            <?php if ($controller == 'User' && $userVisitId != 1) { ?>
                 <br>
-                <button type='submit' class='btn btn-success' id='message-button'>Pošaljite poruku</button>
-            </form>
-            
+                <form method='POST' action='<?= site_url("$controller/gradeUser/$userVisitId") ?>'>                    
+                    <select name="rate" class="menu-list">
+                        <option selected>Ocenite korisnika</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    &nbsp;
+                    <button type='submit' class='btn btn-success'>Oceni</button>
+                </form>
+            <?php } ?>
+                
+            <?php if ($controller == 'Admin') { ?>
+                <?= anchor("$controller/showUserAds/{$sessionId}", "Svi aktivni oglasi");?>
+                <?= anchor("$controller/accountDelete/", "Obriši nalog");?> 
+                &nbsp;&nbsp;
+            <?php } ?>
             
             <!--<script>
                 var count;

@@ -5,30 +5,30 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 /**
- * Autor: Lazar Gospavić 2018/0677
+ * Autor: Aleksandra Milović 2018/0126
  */
 
 /**
- * AnnouncementModel - klasa koja dohvata podatke iz baze iz tabele announcement
+ * RatingModel - klasa koja dohvata podatke iz baze iz tabele ratings
  * 
  * @version 1.0
  */
 
-class AnnouncementModel extends Model
+class RatingModel extends Model
 {
     /**
     * @var string $table naziv tabele
-    */
-    protected $table      = 'announcement';
+    */    
+    protected $table      = 'rating';
     
     /**
     * @var string $primaryKey primarni kljuc
     */
-    protected $primaryKey = 'idA';
+    protected $primaryKey = 'IdR';
     
     /**
     * @var string $returnType povratna vrednost modela
     */
     protected $returnType     = 'object';
-    protected $allowedFields = ['title', 'text', 'idAd', 'date'];
+    protected $allowedFields = ['rate', 'user_rater', 'user_rated'];
 }

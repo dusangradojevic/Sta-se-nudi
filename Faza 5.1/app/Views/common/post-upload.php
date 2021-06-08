@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+
+<!--
+    Autor: Dušan Gradojević 2018/0310
+-->
 <html lang="sr">
 <head>
-    <meta name="author" content="Dusan">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +14,9 @@
     <title>Šta se nudi - Postavljanje oglasa</title>
 </head>
 <body>
-    <div id='post-upload' class="content">
+    <div id='post-upload' class="content set-overflow">
         <?php if(isset($poruka)) echo "<font color='red'>$poruka</font><br>"; ?>
-        <form action="<?= site_url("User/adSubmit") ?>" method="post" id="sign-in-and-register">
+        <form action="<?= site_url("User/adSubmit") ?>" method="post" enctype=multipart/form-data id="sign-in-and-register">
         <table>
             <tr>
                 <td colspan='2' style="text-align: center;"><h2>Postavljanje oglasa</h2></td>
@@ -29,8 +32,8 @@
                 <td>
                     <select name="category">
                         <option selected disabled >Izaberite kategoriju</option>
-                        <option selected>Automobili</option>
-                        <option>Namestaj</option>
+                        <option selected>Ljubimci</option>
+                        <option>Odeca</option>
                         <option>Tehnika</option>
                     </select>
                 </td>
@@ -71,15 +74,12 @@
             </tr>
             <tr>
                 <td class="cell-titles" colspan="2">
-                    <form action="">
-                        <input type="file" accept="image/*" name="pic">
-                        <!-- add multiple -->
-                    </form>  
+                    <input type="file" accept="image/*" name="file">
                 </td>
             </tr>
             <tr>
                 <td align="right" colspan="2">
-                    <input class="btn btn-success" type="submit" value="Potvrdi" />
+                    <input class="btn btn-success" type="submit" name="submit" value="Potvrdi" />
                 </td>
             </tr>
         </table>

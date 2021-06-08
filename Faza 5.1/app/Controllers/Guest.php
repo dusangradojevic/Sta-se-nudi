@@ -6,12 +6,23 @@ use App\Models\AdModel;
 use App\Models\AnnouncementModel;
 use App\Models\UserModel;
 
+/**
+ * Autori: Aleksandra Milović 2018/0126 i Dušan Gradojević 2018/0310
+ */
+
+/**
+ * Guest - klasa koja sadrzi funkcionalnosti koje su dostupne gostu
+ * 
+ * @version 1.0
+ */
+
 class Guest extends BaseController
 {
 	protected function show($page,$data)
 	{
             
                 $data['controller']='Guest';
+                $data['sessionId'] = '';
 		echo view('common/header-guest');
                 echo view('common/menu', $data);
                 echo view("common/$page", $data);
@@ -22,9 +33,6 @@ class Guest extends BaseController
 	{       
 		$this->show('home', []);
 	}
-        
-        
-        
         
         
         public function support() 
@@ -63,14 +71,12 @@ class Guest extends BaseController
                 
                 $userModel->save([
                     'username'=>$this->request->getVar('username'),
-                    'isValid'=>false,
                     'name'=>$this->request->getVar('name'),
                     'mail'=>$this->request->getVar('email'),
                     'password'=>$this->request->getVar('password'),
                     'surname'=>$this->request->getVar('surname'),
                     'country'=>$this->request->getVar('country'),
                     'num'=>$this->request->getVar('phone'),
-                    'rating'=>'0',
                     'date'=>$date
                 ]);
                 
@@ -106,11 +112,31 @@ class Guest extends BaseController
         
         
         
-        public function passwordForget()
+        public function passwordForget($poruka = null)
         {
-                $this->show('password-forget', []);
+                $this->show('password-forget', ['poruka' => $poruka]);
         }
         
+        
+        public function mailForgetPassword()
+        {
+                $username = $this->request->getVar('username');
+                $userModel = new UserModel();
+                $user = $userModel->where('username', $username)->first();
+                
+                if ($user == null)
+                {
+                    return $this->passwordForget('Korisnik ne postoji');
+                }
+                
+                $msg = "Vaša lozinka je $user->password.";
+                        
+                // use wordwrap() if lines are longer than 70 characters
+                //$msg = wordwrap($msg,70);
+
+                mail($user->mail,"Šta se nudi - zaboravljena lozinka", $msg);
+                return redirect()->to(site_url("Guest")); 
+        }
         
         
         
@@ -151,90 +177,5 @@ class Guest extends BaseController
                 
                 return redirect()->to(site_url("User"));  
         }
-        
-        
-        
-        
-        
-        
-        
-        
-//        public function search()
-//        {
-//                $adModel = new AdModel();
-//                $searched = $this->request->getVar('search-bar');
-//                
-//                $category = $this->request->getVar('search-category');
-//                $type = $this->request->getVar('search-type');
-//                $country = $this->request->getVar('search-country');
-//                $ads = $adModel->search($searched);   
-//                
-//                if ($category != 'Sve kategorije' || $type != 'Svi tipovi' || $country != 'Sve države')
-//                {
-//                    $i = 0;
-//                    foreach ($ads as $ad)
-//                    {
-//                        if ($category != 'Sve kategorije' && $ad->category != $category)
-//                        {
-//                            unset($ads[$i]);
-//                        }
-//                        elseif($type != 'Svi tipovi' && $ad->type != $type)
-//                        {
-//                            unset($ads[$i]);
-//                        }
-//                        elseif($country != 'Sve države' && $ad->country != $country)
-//                        {
-//                            unset($ads[$i]);
-//                        }
-//                        $i++;
-//                    }
-//                }
-//                
-//                $this->show('search', ['ads'=>$ads, 'searched' => $searched]);
-//        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-//        //Dohvata oglas po id-u
-//        public function getAd($idAd)   
-//        {       
-//                $adModel = new AdModel();
-//                $userModel = new UserModel();
-//                $ad = $adModel->find($idAd);
-//                $user = $userModel->where('idK', $ad->idK)->first();
-//                $this->show('ad', ['title' => $ad->title, 'country' => $ad->country ,'username' => $user->username, 'userId' => $user->idK, 
-//                                'category' => $ad->category, 'type' => $ad->type, 'state' => $ad->state, 'description' => $ad->text, 'pic' => $ad->img0]);
-//        }
-        
-        
-        
-        
-        
-//        public function showAnnouncements()
-//        {
-//                $annModel = new AnnouncementModel();
-//                $ann = $annModel->findAll();
-//                $this->show('announcements', ['announcements' => $ann]);
-//        }
-        
-        
-        
-        
-//        public function searchCategory($category)
-//        {
-//                $adModel = new AdModel();
-//                $ads = $adModel->getAds("category", $category);
-//                $this->show('search', ['ads' => $ads, 'searched' => $category]);
-//        }
-        
-        
-        
-        
       
 }

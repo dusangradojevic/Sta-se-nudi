@@ -6,9 +6,28 @@ use App\Models\AdModel;
 use App\Models\AnnouncementModel;
 use App\Models\ChatModel;
 use App\Models\UserModel;
+use App\Models\RatingModel;
+
+/**
+ * Autori: Aleksandra Milović 2018/0126 i Dobrosav Vlašković 2018/0005
+ */
+
+/**
+ * Admin - klasa koja sadrzi funkcionalnosti koje su dostupne adminu
+ * 
+ * @version 1.0
+ */
 
 class Admin extends BaseController
 {
+    
+        /**
+         * Prikazuje izgled stranice koja je prosleđena sa dodatnim argumentima
+         * 
+         * @param String $page, Array $data
+         * 
+         * @return void
+         */       
         protected function show($page,$data)
 	{       
                 $data['controller'] = 'Admin';
@@ -19,13 +38,23 @@ class Admin extends BaseController
                 echo view('common/footer-admin');
 	}
     
-    
+        
+        /**
+         * Prikaz početnog stanja aplikacije u režimu administratora.
+         * 
+         * @return void
+         */ 
 	public function index()
 	{       
 		$this->show('home', []);
 	}
         
         
+        /**
+         * Izlistavanje svih oglasa koji čekaju da budu odobreni.
+         * 
+         * @return void
+         */ 
         public function pendingPosts()
         {
                 $adModel = new AdModel();
@@ -34,25 +63,56 @@ class Admin extends BaseController
                 $this->show('ads-user', ['userId' => 'admin', 'ads' => $ads]);
         }       
         
+        
+        /**
+         * Funkcija koja odobrava oglasa čiji je id prosleđen kao parametar.
+         * 
+         * @param int $adId
+         * 
+         * @return void
+         */ 
         public function approveAd($adId)
         {
                 $adModel = new AdModel();
                 $adModel->set('isValid', true)->where('idO', $adId)->update();
                 
                 //$this->show('ad', ['userId' => 'admin', 'ads' => $ads]);
-                $this->getAd($adId);
+                return redirect()->to(site_url("Admin/pendingPosts"));
         }
         
         
-        
-         public function logout()
+        /**
+         * Funkcija za odjavljivanje sa sistema.
+         * 
+         * @return void
+         */ 
+        public function logout()
         {
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
                 $this->session->destroy();
                 return redirect()->to(site_url(''));
         }
         
+        
+        
+        /**
+         * Prikaz profila korisnika čiji je id prosleđen kao parametar
+         * 
+         * @param int $userVisitId
+         * 
+         * @return void
+         */   
         public function userProfile($userVisitId)
         {       
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
                 $userModel = new UserModel();
                 $profile = $userModel->find($userVisitId);
                 if ($this->session->get('user')->idK != $userVisitId)
@@ -65,14 +125,30 @@ class Admin extends BaseController
         }
         
         
+        /**
+         * Prikaz forme za promenu lozinke
+         * 
+         * @return void
+         */   
         public function changePassword() 
         {
                 $this->show('password-change', []);
         }
         
         
+        
+        /**
+         * Potvrđivanje zahteva za promenu lozinke.
+         * 
+         * @return void
+         */     
         public function passwordChangeSubmit()
         {       
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
                 $oldPass = $this->request->getVar('old-pass');
                 $newPass = $this->request->getVar('new-pass');
                 $newPassConf = $this->request->getVar('new-pass-conf');
@@ -97,15 +173,34 @@ class Admin extends BaseController
                 return redirect()->to(site_url("Admin/userProfile/{$userId}"));
         }
         
+        
+        /**
+         * Otvara prijemnno sanduče korisnika.
+         * 
+         * @return void
+         */   
         public function inbox()
         {       
                 //lista korisnika sa kojima se dopisivao
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                            
                 $chatModel = new ChatModel();
                 $friends = $chatModel->getFriends($this->session->get('user')->idK);
                 
                 $this->show('inbox', ['friends' => $friends]);
         }
         
+        
+        /**
+         * Prikazuje formu za slanje poruke korisniku koji je prosleđen kao parametar.
+         * 
+         * @param int $userId
+         * 
+         * @return void
+         */     
         public function sendMessage($userId)
         {       
                 $userModel = new UserModel();
@@ -115,8 +210,21 @@ class Admin extends BaseController
         }
         
         
+        
+        /**
+         * Potvrđivanje slanja poruke korisniku čiji je id prosleđen kao parametar.
+         * 
+         * @param int $userId
+         * 
+         * @return void
+         */   
         public function sendMessageSubmit($userId)
         {       
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
                 $msg = $this->request->getVar('message-body');
                 
                 $userModel = new UserModel();
@@ -141,19 +249,39 @@ class Admin extends BaseController
         }
         
         
+        /**
+         * Prikazivanje prepiske sa korisnikom čiji je id prosleđen kao parametar.
+         * 
+         * @param int $userId
+         * 
+         * @return void
+         */     
         public function chat($userId)
         {
-            $chatModel = new ChatModel();
-            $chat = $chatModel->getChat($this->session->get('user')->idK, $userId);
-            $userModel = new UserModel();
-            $user = $userModel->find($userId);
-            $nameSession = $userModel->find($this->session->get('user')->idK)->name;
-            $surnameSession = $userModel->find($this->session->get('user')->idK)->surname;
-            $this->show('chat', ['chat' => $chat, 'userId' => $userId, 'name' => $user->name, 'surname' => $user->surname, 
-                                'nameSession' => $nameSession, 'surnameSession' => $surnameSession]);
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
+                $chatModel = new ChatModel();
+                $chat = $chatModel->getChat($this->session->get('user')->idK, $userId);
+                $userModel = new UserModel();
+                $user = $userModel->find($userId);
+                $nameSession = $userModel->find($this->session->get('user')->idK)->name;
+                $surnameSession = $userModel->find($this->session->get('user')->idK)->surname;
+                $this->show('chat', ['chat' => $chat, 'userId' => $userId, 'name' => $user->name, 'surname' => $user->surname, 
+                                    'nameSession' => $nameSession, 'surnameSession' => $surnameSession]);
         }
         
         
+        
+        /**
+         * Brisanje oglasa iz baze čiji je id prosleđen kao parametar.
+         * 
+         * @param int $adId
+         * 
+         * @return void
+         */ 
         public function deleteAd($adId)
         {
                 $adModel = new AdModel();
@@ -162,13 +290,34 @@ class Admin extends BaseController
                 return redirect()->to(site_url("Admin"));
         }
         
+        
+        
+        
+        /**
+         * Prikaz forme za postavljanje obaveštenja.
+         * 
+         * @return void
+         */ 
         public function postAnnouncement()
         {
                 $this->show('post-announcement', []);
         }
         
+        
+        
+        
+        /**
+         * Potvrda za postavljanje oglasa.
+         * 
+         * @return void
+         */ 
         public function announcementSubmit()
         {
+                if($this->session->get('user')==null)
+                {
+                    return redirect()->to(site_url("Guest")); 
+                }
+                
                 $annModel = new AnnouncementModel();
                 
                 $annModel->save([
