@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+<!--
+    Autor: Aleksandra Milović 2018/0126
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +15,7 @@
 </head>
 <body>
     <div class="content set-overflow">
-        <h1>Prijemno sanduče</h1><hr>
+        <h1>Inbox</h1><hr>
         <?php
         foreach($friends as $friend)
         {

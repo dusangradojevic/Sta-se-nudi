@@ -2,8 +2,20 @@
 
 namespace App\Controllers;
 
+/**
+ * Home - klasa za preusmeravanje na početnu stranicu Home.
+ * 
+ * @version 1.0
+ */
+
 class Home extends BaseController
 {
+        /**
+         * Prikazivanje početnog sadržaja stranice. Daje kontrolu gostu.
+         * 
+         * @return void
+         */
+    
 	public function index()
 	{
                 $data['controller']='Guest';

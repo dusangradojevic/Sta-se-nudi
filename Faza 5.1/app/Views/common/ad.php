@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+<!--
+    Autor: Dušan Gradojević 2018/0310
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,10 +11,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel='stylesheet' type = 'text/css' href='/assets/css/style.css'>
     <link href="/assets/img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>
-    <title>Šta se nudi - Svi oglasi</title>
+    <title>Šta se nudi - Oglas</title>
 </head>
 <body>
-    <div class="content">
+    <div class="content set-overflow">
         <div style='text-align: center'>
             <h1><?= $title ?></h1>
         </div>
@@ -65,12 +69,12 @@
                     </div>
                     <br>
                 <?php } ?>
-                <br><p>Slika!</p>
+                <br>
+                <?php if ($img != null){ ?>
+                        <img src="/assets/imgAds/<?=$img?>" width="300" height="300">
+                <?php } ?>
                 
-               <!-- <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">-->
+                
             </div>
         </div>
     </div>   

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
+
+<!--
+    Autor: Aleksandra Milović 2018/0126
+-->
 <html lang="en">
 <head>
-    <meta name="author" content="Aleksandra">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='stylesheet' type = 'text/css' href='/assets/css/style.css'>
-    <link href="/assets/img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>  
-    <script src="/assets/js/java.js"></script>
+    <link href="/assets/img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/> 
     <title>Šta se nudi - Profil</title>
 </head>
 <body>
@@ -20,10 +22,7 @@
             <h2>Korisničko ime: <?= $username ?></h2>
             <h2>Država: <?= $country ?> </h2>
             
-            <?php
-            if ($controller == 'User')
-            {
-            ?>
+            <?php if ($controller == 'User') { ?>
                 <h2>Broj telefona: <?= $num ?> </h2>
             <?php } ?>
             
@@ -32,10 +31,7 @@
             
              
             
-            <?php
-            if ($controller == 'User')
-            {
-            ?>
+            <?php if ($controller == 'User') { ?>
                 <h3>Ocena korisnika: <?= $rating?></h3>
                 <?= anchor("$controller/showUserAds/{$sessionId}", "Svi aktivni oglasi");?>
                 <?= anchor("$controller/postAd", "Postavi oglas");?>
@@ -44,16 +40,11 @@
                 &nbsp;&nbsp;
             <?php } ?>
                 
-            <?php
-            if ($controller == 'Admin')
-            {
-            ?>
+            <?php if ($controller == 'Admin') { ?>
                 <?= anchor("$controller/changePassword", "Promena lozinke");?>
             <?php } ?>    
                 
             <br>
-            
-            
         </div>
     </div>
 </body>

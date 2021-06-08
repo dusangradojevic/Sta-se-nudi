@@ -1,27 +1,29 @@
 <!DOCTYPE html>
+
+<!--
+    Autor: Dobrosav Vlašković 2018/0005
+-->
 <html lang="sr">
 <head>
-    <meta name="author" content="Dusan">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel='stylesheet' type = 'text/css' href='/assets/css/style.css'>
-    <link href="/assets/img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/> 
-    <title>Šta se nudi - Postavljanje oglasa</title>
+    <link href="/assets/img/sta_se_nudi_ico.ico" rel="shortcut icon" type="image/x-icon"/>
 </head>
 <body>
     <div id='menu'>
         <table>
             <tr>
-                <form method="POST" action="<?= site_url("$controller/search") ?>">
+                <form method="GET" action="<?= site_url("$controller/search") ?>">
                     <td align="left">
                         &nbsp;
                         <select name="search-category" class="menu-list">
                             <option selected>Sve kategorije</option>
                             <option>Ljubimci</option>
                             <option>Odeca</option>
-                            <option>Tehnologija</option>
+                            <option>Tehnika</option>
                         </select>
                         <select name="search-type" class="menu-list">
                             <option selected>Svi tipovi</option>
