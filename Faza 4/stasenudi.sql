@@ -78,8 +78,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`idK`, `isValid`,`username`, `name`, `surname`, `mail`, `password`, `country`, `num`, `rating`) VALUES
-(1,'admin','admin','adminic','admin@admin.com','sifra1','Srbija','0645828828','5.00'),
+INSERT INTO `users` (`idK`, `username`, `name`, `surname`, `mail`, `password`, `country`, `num`) VALUES
+(1,'admin','admin','adminic','admin@admin.com','sifra1','Srbija','0645828828'),
 (2,'Aleks','Aleksandra','Milovic','aleksandra.milovic@gmail.com','sifra2','Srbija','0632547898'),
 (3,'Ducko','Dusan','Gradojevic','dusan.gradojevic@gmail.com','sifra3','Srbija','0606981984'),
 (4,'Dobri','Dobrosav','Vlaskovic','dobri.vlah@admin.com','sifra4','Srbija','0698745896'),
@@ -113,10 +113,10 @@ CREATE TABLE `ads` (
 INSERT INTO `ads` (`idO`, `title`, `text`, `type`, `isValid`, `idK`, `category`,`state`,`country`) VALUES
 (1, 'Povodac za pse', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus, velit!', 'Poklanjanje', 1, 2, 'Ljubimci','Kao novo','Srbija'),
 (2, 'S20', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus! ', 'Razmena', 1, 3, 'Tehnika','Korisceno','Hrvatska'),
-(3, 'Fen', 'Panasonic fen', 'Razmena', 0, 5, 'Tehnika', 'Korisceno', 'Srbija');
-(4, 'Popcorn popper', 'Pucac kokica iz tehnomanije', 'Razmena', 1, 4, 'Tehnika', 'Korisceno', 'Srbija');
-(5, 'Patike za trcanje', 'Original nove patike nekoriscene', 'Razmena', 1, 3, 'Odeca', 'Kao novo', 'Srbija');
-(6, 'Bluetooth slusalice', 'Kenwood', 'Razmena', 0, 5, 'Tehnika', 'Osteceno', 'Srbija');
+(3, 'Fen', 'Panasonic fen', 'Razmena', 0, 5, 'Tehnika', 'Korisceno', 'Srbija'),
+(4, 'Popcorn popper', 'Pucac kokica iz tehnomanije', 'Razmena', 1, 4, 'Tehnika', 'Korisceno', 'Srbija'),
+(5, 'Patike za trcanje', 'Original nove patike nekoriscene', 'Razmena', 1, 3, 'Odeca', 'Kao novo', 'Srbija'),
+(6, 'Bluetooth slusalice', 'Kenwood', 'Razmena', 0, 5, 'Tehnika', 'Osteceno', 'Srbija'),
 (7, 'Jakna', 'hnggrfgthhthyytfrggthjyuyhtrgrrgfe', 'Poklanjanje', 1, 2, 'Odeca','Korisceno','Srbija');
 
 -- --------------------------------------------------------
