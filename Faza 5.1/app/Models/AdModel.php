@@ -46,8 +46,11 @@ class AdModel extends Model
      */    
     public function search($searched) 
     {
+//        $ads = $this->where('isValid', true)->groupStart()->like('title', $searched)->groupEnd()->groupStart()
+//                    ->orLike('text', $searched)->groupEnd()->findAll();
         $ads = $this->like('title', $searched)
                     ->orLike('text', $searched)->findAll();
+        
         $i = 0;
         foreach ($ads as $ad)
         {
@@ -69,27 +72,42 @@ class AdModel extends Model
     * 
     * @return ads[]
     */       
-    public function getAds($field, $value, $valid = false) 
+    public function getAds($field, $value, $valid = true) 
     {
-        $ads = $this->where($field, $value)->findAll();
-        
-        $i = 0;
-        
-        if ($valid == true)
+        if ($valid == false)
         {
-            return $ads;
+            return $this->where('isValid', false)->where($field, $value)->findAll();
         }
-        
-        
-        foreach ($ads as $ad)
+        else
         {
-            if ($ad->isValid == false)
-            {
-                unset($ads[$i]);
-            }
-            $i++;
+            return $this->where('isValid', true)->where($field, $value)->findAll();
         }
+
+
+//        $ads = $this->where($field, $value)->findAll();
+//        
+//        
+//        if ($valid == true)
+//        {
+//            return $ads;
+//        }
+//        
+//        $i = 0;
+//        foreach ($ads as $ad)
+//        {
+//            if ($ad->isValid == false)
+//            {
+//                unset($ads[$i]);
+//            }
+//            $i++;
+//        }
+//        
+//        return $ads;
         
-        return $ads;
+        
+        
+        
+       
+        
     }
 }

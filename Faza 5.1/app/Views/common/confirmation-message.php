@@ -18,26 +18,26 @@
         <table>
             <tr>
                 <td align="center">
-                    <h2>Brisanje naloga</h2>
+                    <h2><?= $title ?></h2>
                 </td>                
             </tr>
             <tr>
                 <td>
-                    <p>Da li ste sigurni da želite da obrišete svoj nalog? Ukoliko nastavite, sve vaše objave i aktivnosti će biti obrisane i nećete biti u mogućnosti da ih povratite.</p>
+                    <p><?= $msg ?></p>
                 </td>                
             </tr>
             <tr>
                 <td style="padding-left: 3%;">
                     <ol>
                         <li>Za nastavak radnje pritisnite dugme „Obriši”;</li>
-                        <li>Za povratak na početnu stranu pritisnite dugme „Nazad”.</li>
+                        <li>Za povratak natrag pritisnite dugme „Nazad”.</li>
                     </ol>
                 </td>                
             </tr>
             <tr>
                 <td align="right">
-                    <input class="btn btn-danger" type="button" value="Obriši" />
-                    <a href="profile.html"><input class="btn btn-secondary" type="button" value="Nazad" /></a>
+                    <a href="<?= site_url("$controller/$pageSubmit") ?>"><input class="btn btn-danger" type="button" value="Obriši"></a>
+                    <a href="<?= site_url("$controller/$pageReturn") ?>"><input class="btn btn-secondary" type="button" value="Nazad"></a>
                 </td>
             </tr>
         </table>        

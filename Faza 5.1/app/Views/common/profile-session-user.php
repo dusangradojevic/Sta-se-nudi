@@ -33,10 +33,13 @@
             
             <?php if ($controller == 'User') { ?>
                 <h3>Ocena korisnika: <?= $rating?></h3>
+                <form method='POST' action='<?= site_url("$controller/postAd") ?>'>
+                    <button type='submit' class='btn btn-info' id='message-button'>Postavi oglas</button>
+                </form>
                 <?= anchor("$controller/showUserAds/{$sessionId}", "Svi aktivni oglasi");?>
-                <?= anchor("$controller/postAd", "Postavi oglas");?>
+            <!--    <?= anchor("$controller/postAd", "Postavi oglas");?>  -->
                 <?= anchor("$controller/changePassword", "Promena lozinke");?>
-                <?= anchor("$controller/accountDelete/", "Obriši nalog");?> 
+                <?= anchor("$controller/accountDeleteForm/{$sessionId}", "Obriši nalog");?> 
                 &nbsp;&nbsp;
             <?php } ?>
                 
