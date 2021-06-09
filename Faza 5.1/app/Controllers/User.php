@@ -65,54 +65,6 @@ class User extends BaseController
                 $this->show('announcements',[]);
         }
         
-
-        
-        
-        
-        /**
-         * Prikaz profila korisnika čiji je id prosleđen kao parametar
-         * 
-         * @param int $userVisitId
-         * 
-         * @return void
-         */     
-        public function userProfile($userVisitId)
-        {       
-                $userModel = new UserModel();
-                $profile = $userModel->find($userVisitId);
-                
-                $ratingModel = new RatingModel();
-                $rates = $ratingModel->where('user_rated', $userVisitId)->findAll();
-                $sum = 0;
-                $cnt = 0;                
-                foreach ($rates as $rate)
-                {
-                    $sum = $sum + $rate->rate;
-                    $cnt = $cnt + 1;
-                }
-                $rating = $cnt == 0 ? 0 : $sum / $cnt;
-                
-                
-                
-                $page = 'profile-user';
-                
-                if($this->session->get('user')==null)
-                {
-                    return redirect()->to(site_url("Guest")); 
-                }
-                
-                
-                if ($this->session->get('user')->idK == $userVisitId)
-                {
-                    $page = 'profile-session-user';
-                }
-                $this->show($page, ['userVisitId' => $userVisitId, 'name' => $profile->name, 'surname' => $profile->surname ,'username' => $profile->username, 'country' => $profile->country, 
-                                'num' => $profile->num, 'rating' => $rating, 'date' => $profile->date]);
-        }
-        
-        
-        
-        
         
         
         
@@ -139,28 +91,7 @@ class User extends BaseController
         {
                 $this->show('support-form', []);
         }
-        
-        
-        
-        
-        
-        /**
-         * Funkcija za odjavljivanje korisnika.
-         * 
-         * @return void
-         */     
-        public function logout()
-        {
-                if($this->session->get('user')==null)
-                {
-                    return redirect()->to(site_url("Guest")); 
-                }
-                
-                $this->session->destroy();
-                return redirect()->to(site_url(''));
-        }
-        
-        
+      
         
         
         
@@ -214,18 +145,10 @@ class User extends BaseController
                             if ($fileSize < 500000)
                             {
                                 $fileNameNew = uniqid('', true).".".$fileActualExt;
-                                $fileDestination = 'C:/xampp/htdocs/sta-se-nudi/public/assets/imgAds/'.$fileNameNew;
+                                $fileDestination = 'C:/xampp/htdocs/stasenudi/public/assets/imgAds/'.$fileNameNew;
                                 move_uploaded_file($fileTmpName, $fileDestination);
                             }
-                            else
-                            {
-                                echo "File too big";
-                            }
                         }
-                    }
-                    else 
-                    {
-                        echo "Wrong extension";
                     }
                 }
                 
@@ -243,140 +166,10 @@ class User extends BaseController
                     'img'=>$fileNameNew
                 ]);
                 
-                return redirect()->to(site_url('User'));  
+                $this->successMsg('Uspešno ste postavili oglas!');  
         }
         
         
-        
-        
-        /**
-         * Prikaz stranice za promenu lozinke.
-         * 
-         * @return void
-         */     
-        public function changePassword() 
-        {
-                $this->show('password-change', []);
-        }
-        
-        
-        
-        
-        /**
-         * Potvrđivanje zahteva za promenu lozinke.
-         * 
-         * @return void
-         */     
-        public function passwordChangeSubmit()
-        {                       
-                if($this->session->get('user')==null)
-                {
-                    return redirect()->to(site_url("Guest")); 
-                }
-                
-                $oldPass = $this->request->getVar('old-pass');
-                $newPass = $this->request->getVar('new-pass');
-                $newPassConf = $this->request->getVar('new-pass-conf');
-                $oldPassDatabase = $this->session->get('user')->password;
-                
-                if($newPass != $newPassConf)
-                {
-                    return $this->show('password-change', ['poruka'=>"Polja za novu lozinku nisu identična"]);
-                }
-                
-                if($oldPass != $oldPassDatabase)
-                {
-                    return $this->show('password-change', ['poruka'=>"Stara lozinka je pogrešna"]);
-                }
-                
-                $userModel = new UserModel();                
-                $userId = $userModel->find($this->session->get('user')->idK)->idK;
-                
-                $userModel->set('password', $newPass)->where('idK', $userId)->update();
-                $this->session->get('user')->password = $newPass;
-                
-                return redirect()->to(site_url("User/userProfile/{$userId}"));
-        }
-        
-        
-        
-        
-        /**
-         * Prikazuje formu za slanje poruke korisniku koji je prosleđen kao parametar.
-         * 
-         * @param int $userId
-         * 
-         * @return void
-         */     
-        public function sendMessage($userId)
-        {       
-                $userModel = new UserModel();
-                $name = $userModel->find($userId)->name;
-                $surname = $userModel->find($userId)->surname;
-                $this->show('send-message', ['userId' => $userId, 'name' => $name, 'surname' => $surname]);
-        }
-        
-        
-        
-        
-        /**
-         * Potvrđivanje slanja poruke korisniku čiji je id prosleđen kao parametar.
-         * 
-         * @param int $userId
-         * 
-         * @return void
-         */     
-        public function sendMessageSubmit($userId)
-        {       
-                if($this->session->get('user')==null)
-                {
-                    return redirect()->to(site_url("Guest")); 
-                }
-                
-                $msg = $this->request->getVar('message-body');
-                
-                $userModel = new UserModel();
-                $name = $userModel->find($userId)->name;
-                $surname = $userModel->find($userId)->surname;
-                
-                if (empty($msg))
-                {
-                    $this->show('send-message', ['userId' => $userId, 'name' => $name, 'surname' => $surname]);
-                }
-                
-                $chatModel = new ChatModel();
-                
-                $chatModel->save([
-                    'user_to'=>$userId,
-                    'user_from'=>$this->session->get('user')->idK,
-                    'message'=>$msg,
-                    'datetime'=>date('Y-m-d'),
-                ]);
-                
-                $this->show('home', []);
-        }
-        
-        
-        
-        
-        /**
-         * Otvara prijemnno sanduče korisnika.
-         * 
-         * @return void
-         */     
-        public function inbox()
-        {       
-                //lista korisnika sa kojima se dopisivao
-                if($this->session->get('user')==null)
-                {
-                    return redirect()->to(site_url("Guest")); 
-                }
-                
-                $chatModel = new ChatModel();
-                $friends = $chatModel->getFriends($this->session->get('user')->idK);
-                
-                $this->show('inbox', ['friends' => $friends]);
-        }
         
         
         
@@ -418,79 +211,7 @@ class User extends BaseController
                 
                 return redirect()->to(site_url("User/userProfile/$userId"));
         }
-        
-        
-        
-        /**
-         * Prikazivanje prepiske sa korisnikom čiji je id prosleđen kao parametar.
-         * 
-         * @param int $userId
-         * 
-         * @return void
-         */     
-        public function chat($userId)
-        {
-                if($this->session->get('user')==null)
-                {
-                    return redirect()->to(site_url("Guest")); 
-                }
-                
-                $chatModel = new ChatModel();
-                $chat = $chatModel->getChat($this->session->get('user')->idK, $userId);
-                $userModel = new UserModel();
-                $user = $userModel->find($userId);
-                $nameSession = $userModel->find($this->session->get('user')->idK)->name;
-                $surnameSession = $userModel->find($this->session->get('user')->idK)->surname;
-                $this->show('chat', ['chat' => $chat, 'userId' => $userId, 'name' => $user->name, 'surname' => $user->surname, 
-                                    'nameSession' => $nameSession, 'surnameSession' => $surnameSession]);
-        }
-        
-        
-        
-        /**
-         * Funkcija za brisanje korisnika iz baze.
-         * 
-         * @return void
-         */     
-        public function accountDelete()
-        {       
-                if($this->session->get('user')==null)
-                {
-                    return redirect()->to(site_url("Guest")); 
-                }
-                
-                $adModel = new AdModel();
-                $adModel->where('idK', $this->session->get('user')->idK)->delete();
-                $chatModel = new ChatModel();               
-                $chatModel->where('user_from', $this->session->get('user')->idK)->delete();
-                $chatModel->where('user_to', $this->session->get('user')->idK)->delete();
-                $ratingModel = new RatingModel();               
-                $ratingModel->where('user_rater', $this->session->get('user')->idK)->delete();
-                $ratingModel->where('user_rated', $this->session->get('user')->idK)->delete();
-                $userModel = new UserModel();               
-                $userModel->where('idK', $this->session->get('user')->idK)->delete();
-                
-                
-                $this->session->destroy();
-                return redirect()->to(site_url("/"));
-        }
-        
-        
-        
-        /**
-         * Brisanje oglasa iz baze čiji je id prosleđen kao parametar.
-         * 
-         * @param int $adId
-         * 
-         * @return void
-         */     
-        public function deleteAd($adId)
-        {
-                $adModel = new AdModel();
-                $adModel->where('idO', $adId)->delete();
-                
-                return redirect()->to(site_url("User"));
-        }
+
         
         
         /**
@@ -523,7 +244,7 @@ class User extends BaseController
                 $text = $this->request->getVar('description');
                 $img = $this->request->getVar('file');
                 
-                 if (isset($_POST['submit']))
+                if (isset($_POST['submit']))
                 {
                     $file = $_FILES['file'];
                     $fileName = $file['name'];
@@ -544,18 +265,10 @@ class User extends BaseController
                             if ($fileSize < 500000)
                             {
                                 $fileNameNew = uniqid('', true).".".$fileActualExt;
-                                $fileDestination = 'C:/xampp/htdocs/sta-se-nudi/public/assets/imgAds/'.$fileNameNew;
+                                $fileDestination = 'C:/xampp/htdocs/stasenudi/public/assets/imgAds/'.$fileNameNew;
                                 move_uploaded_file($fileTmpName, $fileDestination);
                             }
-                            else
-                            {
-                                echo "File too big";
-                            }
                         }
-                    }
-                    else 
-                    {
-                        echo "Wrong extension";
                     }
                 }
                 
@@ -569,8 +282,281 @@ class User extends BaseController
                 $adModel->set('type', $type)->where('idO', $adId)->update();
                 $adModel->set('state', $state)->where('idO', $adId)->update();
                 $adModel->set('text', $text)->where('idO', $adId)->update();
-                if (!empty($fileNameNew)) $adModel->set('img', $fileNameNew)->where('idO', $adId)->update();
+                if (!empty($fileNameNew)) 
+                {
+                    $adModel->set('img', $fileNameNew)->where('idO', $adId)->update();
+                }
+                else
+                {
+                    $adModel->set('img', null)->where('idO', $adId)->update();
+                }
+                    
                 
-                $this->getAd($adId);
-        }        
+                $this->successMsg("Uspešno ste izmenili oglas!");
+        }       
+        
+        
+        
+        
+         /**
+         * Otvara prijemnno sanduče korisnika.
+         * 
+         * @return void
+         */     
+//        public function inbox()
+//        {       
+//                //lista korisnika sa kojima se dopisivao
+//                if($this->session->get('user')==null)
+//                {
+//                    return redirect()->to(site_url("Guest")); 
+//                }
+//                
+//                $chatModel = new ChatModel();
+//                $friends = $chatModel->getFriends($this->session->get('user')->idK);
+//                
+//                $this->show('inbox', ['friends' => $friends]);
+//        }
+        
+        
+        
+        
+        /**
+         * Funkcija koja salje na formu za potvrdu brisanja oglasa
+         * 
+         * @return void
+         */     
+//        public function deleteAdForm($adId)
+//        {       
+//                if($this->session->get('user') == null)
+//                {
+//                    return redirect()->to(site_url("Guest")); 
+//                }
+//                
+//                $title = 'Brisanje oglasa';
+//                $msg = 'Da li ste sigurni da želite da obrišete oglas?';
+//                $pageSubmit = "deleteAd/$adId";
+//                $pageReturn = "getAd/$adId";
+//                
+//                $this->show('confirmation-message', ['title' => $title, 'msg' => $msg, 'pageSubmit' => $pageSubmit, 'pageReturn' => $pageReturn]);
+//        }
+        
+        
+        
+                /**
+         * Brisanje oglasa iz baze čiji je id prosleđen kao parametar.
+         * 
+         * @param int $adId
+         * 
+         * @return void
+         */     
+//        public function deleteAd($adId)
+//        {
+//                $adModel = new AdModel();
+//                $adModel->where('idO', $adId)->delete();
+//                
+//                $this->successMsg("Uspešno ste obrisali oglas!");
+//        }
+        
+        
+        
+        
+        
+               /**
+         * Prikazivanje prepiske sa korisnikom čiji je id prosleđen kao parametar.
+         * 
+         * @param int $userId
+         * 
+         * @return void
+         */     
+//        public function chat($userId)
+//        {
+//                if($this->session->get('user')==null)
+//                {
+//                    return redirect()->to(site_url("Guest")); 
+//                }
+//                
+//                $chatModel = new ChatModel();
+//                $chat = $chatModel->getChat($this->session->get('user')->idK, $userId);
+//                $userModel = new UserModel();
+//                $user = $userModel->find($userId);
+//                $nameSession = $userModel->find($this->session->get('user')->idK)->name;
+//                $surnameSession = $userModel->find($this->session->get('user')->idK)->surname;
+//                $this->show('chat', ['chat' => $chat, 'userId' => $userId, 'name' => $user->name, 'surname' => $user->surname, 
+//                                    'nameSession' => $nameSession, 'surnameSession' => $surnameSession]);
+//        }
+        
+        
+        
+        
+        
+        /**
+         * Prikaz stranice za promenu lozinke.
+         * 
+         * @return void
+         */     
+//        public function changePassword() 
+//        {
+//                $this->show('password-change', []);
+//        }
+        
+        
+        
+        
+        /**
+         * Potvrđivanje zahteva za promenu lozinke.
+         * 
+         * @return void
+         */     
+//        public function passwordChangeSubmit()
+//        {                       
+//                if($this->session->get('user')==null)
+//                {
+//                    return redirect()->to(site_url("Guest")); 
+//                }
+//                
+//                $oldPass = $this->request->getVar('old-pass');
+//                $newPass = $this->request->getVar('new-pass');
+//                $newPassConf = $this->request->getVar('new-pass-conf');
+//                $oldPassDatabase = $this->session->get('user')->password;
+//                
+//                if($newPass != $newPassConf)
+//                {
+//                    return $this->show('password-change', ['poruka'=>"Polja za novu lozinku nisu identična"]);
+//                }
+//                
+//                if($oldPass != $oldPassDatabase)
+//                {
+//                    return $this->show('password-change', ['poruka'=>"Stara lozinka je pogrešna"]);
+//                }
+//                
+//                $userModel = new UserModel();                
+//                $userId = $userModel->find($this->session->get('user')->idK)->idK;
+//                
+//                $userModel->set('password', $newPass)->where('idK', $userId)->update();
+//                $this->session->get('user')->password = $newPass;
+//                
+//                $this->successMsg('Uspešno ste promenili lozinku!');
+//        }
+        
+        
+        
+        
+        /**
+         * Prikazuje formu za slanje poruke korisniku koji je prosleđen kao parametar.
+         * 
+         * @param int $userId
+         * 
+         * @return void
+         */     
+//        public function sendMessage($userId)
+//        {       
+//                $userModel = new UserModel();
+//                $name = $userModel->find($userId)->name;
+//                $surname = $userModel->find($userId)->surname;
+//                $this->show('send-message', ['userId' => $userId, 'name' => $name, 'surname' => $surname]);
+//        }
+        
+        
+        
+        
+        /**
+         * Potvrđivanje slanja poruke korisniku čiji je id prosleđen kao parametar.
+         * 
+         * @param int $userId
+         * 
+         * @return void
+         */     
+//        public function sendMessageSubmit($userId)
+//        {       
+//                if($this->session->get('user')==null)
+//                {
+//                    return redirect()->to(site_url("Guest")); 
+//                }
+//                
+//                $msg = $this->request->getVar('message-body');
+//                
+//                $userModel = new UserModel();
+//                $name = $userModel->find($userId)->name;
+//                $surname = $userModel->find($userId)->surname;
+//                
+//                if (empty($msg))
+//                {
+//                    $this->show('send-message', ['userId' => $userId, 'name' => $name, 'surname' => $surname]);
+//                }
+//                
+//                $chatModel = new ChatModel();
+//                
+//                $chatModel->save([
+//                    'user_to'=>$userId,
+//                    'user_from'=>$this->session->get('user')->idK,
+//                    'message'=>$msg,
+//                    'datetime'=>date('Y-m-d'),
+//                ]);
+//                
+//                $this->show('send-message', ['userId' => $userId, 'name' => $name, 'surname' => $surname]);
+//        }
+        
+        
+        
+         /**
+         * Funkcija za odjavljivanje korisnika.
+         * 
+         * @return void
+         */     
+//        public function logout()
+//        {
+//                if($this->session->get('user')==null)
+//                {
+//                    return redirect()->to(site_url("Guest")); 
+//                }
+//                
+//                $this->session->destroy();
+//                return redirect()->to(site_url(''));
+//        }
+        
+        
+        
+        
+        
+         /**
+         * Prikaz profila korisnika čiji je id prosleđen kao parametar
+         * 
+         * @param int $userVisitId
+         * 
+         * @return void
+         */     
+//        public function userProfile($userVisitId)
+//        {       
+//                $userModel = new UserModel();
+//                $profile = $userModel->find($userVisitId);
+//                
+//                $ratingModel = new RatingModel();
+//                $rates = $ratingModel->where('user_rated', $userVisitId)->findAll();
+//                $sum = 0;
+//                $cnt = 0;                
+//                foreach ($rates as $rate)
+//                {
+//                    $sum = $sum + $rate->rate;
+//                    $cnt = $cnt + 1;
+//                }
+//                $rating = $cnt == 0 ? 0 : $sum / $cnt;
+//                
+//                
+//                
+//                $page = 'profile-user';
+//                
+//                if($this->session->get('user')==null)
+//                {
+//                    return redirect()->to(site_url("Guest")); 
+//                }
+//                
+//                
+//                if ($this->session->get('user')->idK == $userVisitId)
+//                {
+//                    $page = 'profile-session-user';
+//                }
+//                $this->show($page, ['userVisitId' => $userVisitId, 'name' => $profile->name, 'surname' => $profile->surname ,'username' => $profile->username, 'country' => $profile->country, 
+//                                'num' => $profile->num, 'rating' => $rating, 'date' => $profile->date]);
+//        }
+        
 }

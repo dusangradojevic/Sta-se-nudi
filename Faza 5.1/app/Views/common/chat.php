@@ -3,6 +3,7 @@
 <!--
     Autor: Aleksandra Milović 2018/0126
 -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,22 +18,18 @@
     <div class="content set-overflow">
         <?= anchor("$controller/userProfile/{$userId}", "<h4>$name"." "."$surname</h4><hr>") ?>
         <?php
-        if (!empty($chat))
-        {
-            $last = $chat[0]->user_from;
-        }
         
-        if ($last == $sessionId)
-        {
-            echo "<h5>$nameSession"." "."$surnameSession:</h5>";    
-        }
-        else
-        {
-            echo "<h5>$name"." "."$surname:</h5>";     
-        }
-        
+        $last = '';
         foreach($chat as $msg)
-        {
+        {   
+            if ($last == '')
+            {
+                $last = $msg->user_from;
+                echo $last == $sessionId ? "<h5>$nameSession"." "."$surnameSession:</h5>" : "<h5>$name"." "."$surname:</h5>";
+            }
+            
+            
+            
             if ($msg->user_from == $sessionId)
             {
                 if ($last != $msg->user_from)

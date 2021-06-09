@@ -80,6 +80,7 @@
             <tr>
                 <td align="right" colspan="2">
                     <input class="btn btn-success" type="submit" name="submit" value="Potvrdi" />
+                    <input class="btn btn-secondary" type="reset" value="Poništi" />
                 </td>
             </tr>
         </table>

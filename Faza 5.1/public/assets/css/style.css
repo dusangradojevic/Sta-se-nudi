@@ -367,6 +367,8 @@ img.kategorija {
     width: 100%;
     height: calc(100% - 187px);
     background-color: rgb(227, 233, 243);
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .set-overflow{

@@ -16,7 +16,7 @@
 <body>
     <div id='support' class="content">
         <h2>Pomozite nam da poboljšamo Šta se nudi?</h2><br><br>
-        <form action="<?= site_url("$controller/sendMessageSubmit/1") ?>" method="POST">
+        <form action="<?= site_url("$controller/sendMessageSubmit/1/true") ?>" method="POST">
             <table>
                 <tr>
                     <td colspan="2" style="text-align: center;"><b>Unesite tekst komentara/pitanje:</td>

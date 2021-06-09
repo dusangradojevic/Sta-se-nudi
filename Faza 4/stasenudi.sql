@@ -78,12 +78,12 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`idK`, `username`, `name`, `surname`, `mail`, `password`, `country`, `num`) VALUES
-(1,'admin','admin','adminic','admin@admin.com','sifra1','Srbija','0645828828'),
-(2,'Aleks','Aleksandra','Milovic','aleksandra.milovic@gmail.com','sifra2','Srbija','0632547898'),
-(3,'Ducko','Dusan','Gradojevic','dusan.gradojevic@gmail.com','sifra3','Srbija','0606981984'),
-(4,'Dobri','Dobrosav','Vlaskovic','dobri.vlah@admin.com','sifra4','Srbija','0698745896'),
-(5,'Laki','Lazar','Gospavic','gospavic@admin.com','sifra5','Srbija','0652563516');
+INSERT INTO `users` (`idK`, `username`, `name`, `surname`, `mail`, `password`, `country`, `num`, `date`) VALUES
+(1,'admin','admin','adminic','admin@admin.com',MD5('sifra1'),'Srbija','0645828828', '2021-06-01'),
+(2,'Aleks','Aleksandra','Milovic','aleksandra.milovic@gmail.com',MD5('sifra2'),'Srbija','0632547898', '2021-06-01'),
+(3,'Ducko','Dusan','Gradojevic','dusan.gradojevic@gmail.com',MD5('sifra3'),'Srbija','0606981984', '2021-06-01'),
+(4,'Dobri','Dobrosav','Vlaskovic','dobri.vlah@admin.com',MD5('sifra4'),'Srbija','0698745896', '2021-06-01'),
+(5,'Laki','Lazar','Gospavic','gospavic@admin.com',MD5('sifra5'),'Srbija','0652563516', '2021-06-01');
 
 -- --------------------------------------------------------
 
@@ -110,14 +110,14 @@ CREATE TABLE `ads` (
 -- Dumping data for table `ads`
 --
 
-INSERT INTO `ads` (`idO`, `title`, `text`, `type`, `isValid`, `idK`, `category`,`state`,`country`) VALUES
-(1, 'Povodac za pse', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus, velit!', 'Poklanjanje', 1, 2, 'Ljubimci','Kao novo','Srbija'),
-(2, 'S20', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus! ', 'Razmena', 1, 3, 'Tehnika','Korisceno','Hrvatska'),
-(3, 'Fen', 'Panasonic fen', 'Razmena', 0, 5, 'Tehnika', 'Korisceno', 'Srbija'),
-(4, 'Popcorn popper', 'Pucac kokica iz tehnomanije', 'Razmena', 1, 4, 'Tehnika', 'Korisceno', 'Srbija'),
-(5, 'Patike za trcanje', 'Original nove patike nekoriscene', 'Razmena', 1, 3, 'Odeca', 'Kao novo', 'Srbija'),
-(6, 'Bluetooth slusalice', 'Kenwood', 'Razmena', 0, 5, 'Tehnika', 'Osteceno', 'Srbija'),
-(7, 'Jakna', 'hnggrfgthhthyytfrggthjyuyhtrgrrgfe', 'Poklanjanje', 1, 2, 'Odeca','Korisceno','Srbija');
+INSERT INTO `ads` (`idO`, `title`, `text`, `type`, `isValid`, `idK`, `category`,`state`,`country`, `img`) VALUES
+(1, 'Povodac za pse', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus, velit!', 'Poklanjanje', 1, 2, 'Ljubimci','Kao novo','Srbija', 'povodac.jpg'),
+(2, 'MacBook', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, labore saepe tempora rerum modi aliquid voluptatibus! ', 'Razmena', 1, 3, 'Tehnika','Korisceno','Hrvatska', 'macbook.png'),
+(3, 'Fen', 'Panasonic fen', 'Razmena', 0, 5, 'Tehnika', 'Korisceno', 'Srbija', 'fen.jpg'),
+(4, 'Popcorn popper', 'Pucac kokica iz tehnomanije', 'Razmena', 1, 4, 'Tehnika', 'Korisceno', 'Srbija', 'popper.jpg'),
+(5, 'Patike za trcanje', 'Original nove patike nekoriscene', 'Razmena', 1, 3, 'Odeca', 'Kao novo', 'Srbija', 'patike.jpg'),
+(6, 'Bluetooth slusalice', 'Kenwood', 'Razmena', 0, 5, 'Tehnika', 'Osteceno', 'Srbija', 'slusalice.jpg'),
+(7, 'Jakna', 'hnggrfgthhthyytfrggthjyuyhtrgrrgfe', 'Poklanjanje', 1, 2, 'Odeca','Korisceno','Srbija', 'jakna.jpg');
 
 -- --------------------------------------------------------
 
@@ -165,9 +165,9 @@ CREATE TABLE `announcement` (
 -- Dumping data for table `announcement`
 --
 
-INSERT INTO `announcement` (`idA`, `title`, `text`, `idAd`) VALUES
-(0,'Poruka dobrodoslice!', 'Dobro dosli na sajt Sta se nudi!',1),
-(1,'Izmene na sajtu!', 'Izmene na sajtu stupaju na snagu!',1);
+INSERT INTO `announcement` (`idA`, `title`, `text`, `idAd`, `date`) VALUES
+(1,'Poruka dobrodoslice!', 'Dobro dosli na sajt Sta se nudi!',1,'2021-06-01'),
+(2,'Izmene na sajtu!', 'Izmene na sajtu stupaju na snagu!',1,'2021-06-05');
 
 -- --------------------------------------------------------
 
@@ -228,7 +228,7 @@ ALTER TABLE `rating`
 -- AUTO_INCREMENT for table `chats`
 --
 ALTER TABLE `chats`
-  MODIFY `idc` int(18) NOT NULL AUTO_INCREMENT;
+  MODIFY `idc` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 
 
@@ -237,26 +237,26 @@ ALTER TABLE `chats`
 -- AUTO_INCREMENT for table `announcement``
 --
 ALTER TABLE `announcement`
-  MODIFY `idA` int(18) NOT NULL, AUTO_INCREMENT=3;
+  MODIFY `idA` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `idK` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `idK` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ads`
 --
 ALTER TABLE `ads`
-  MODIFY `idO` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `idO` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `rating`
 --
 ALTER TABLE `rating`
-  MODIFY `IdR` int(18) NOT NULL AUTO_INCREMENT;
+  MODIFY `IdR` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
