@@ -166,7 +166,7 @@ class User extends BaseController
                     'img'=>$fileNameNew
                 ]);
                 
-                $this->successMsg('Uspešno ste postavili oglas!');  
+                $this->successMsg('Uspešno ste postavili oglas. Oglas će biti javan kada ga odobre administratori!');  
         }
         
         
