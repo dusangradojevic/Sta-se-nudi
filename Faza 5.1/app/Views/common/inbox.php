@@ -17,9 +17,9 @@
     <div class="content set-overflow">
         <h1>Inbox</h1><hr>
         <?php
+        $userModel = new \App\Models\UserModel();
         foreach($friends as $friend)
         {
-            $userModel = new \App\Models\UserModel();
             $user = $userModel->find($friend->user_to == $sessionId ? $friend->user_from : $friend->user_to);
             echo anchor("$controller/chat/{$user->idK}", "<h4>$user->name"." "."$user->surname</h4><hr>");
         }

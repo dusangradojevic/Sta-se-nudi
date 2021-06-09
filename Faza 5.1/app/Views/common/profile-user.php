@@ -28,7 +28,8 @@
                 <button type='submit' class='btn btn-info' id='message-button'>Pošaljite poruku</button>
             </form>
             <br/>
-                <?= anchor("$controller/showUserAds/{$userVisitId}", "Svi aktivni oglasi") ?>
+            
+            <?= anchor("$controller/showUserAds/{$userVisitId}", "Svi aktivni oglasi") ?>
             
             <?php if ($controller == 'User' && $userVisitId != 1) { ?>
                 <br>
@@ -47,10 +48,11 @@
             <?php } ?>
                 
             <?php if ($controller == 'Admin') { ?>
-                <?= anchor("$controller/showUserAds/{$sessionId}", "Svi aktivni oglasi");?>
-                <?= anchor("$controller/accountDelete/", "Obriši nalog");?> 
+                <?= anchor("$controller/accountDeleteForm/{$userVisitId}", "Obriši nalog");?> 
                 &nbsp;&nbsp;
             <?php } ?>
+                
+            <br>
             
             <!--<script>
                 var count;

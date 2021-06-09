@@ -43,7 +43,7 @@
                 if ($sessionId == $userId && $controller != 'Admin') {
                 ?>
                     <div class="flex-row">
-                        <form method='POST' action="<?= site_url("$controller/deleteAd/$adId") ?>">
+                        <form method='POST' action="<?= site_url("$controller/deleteAdForm/$adId") ?>">
                             <input class='btn btn-danger' type='submit' value='Obriši oglas'>
                         </form>
                         &nbsp;
@@ -63,7 +63,7 @@
                             </form>
                             &nbsp;
                     <?php } ?>
-                        <form method='POST' action="<?= site_url("$controller/deleteAd/$adId") ?>">
+                        <form method='POST' action="<?= site_url("$controller/deleteAdForm/$adId") ?>">
                             <input class='btn btn-danger' type='submit' value='Obriši oglas'>
                         </form>
                     </div>
@@ -71,7 +71,7 @@
                 <?php } ?>
                 <br>
                 <?php if ($img != null){ ?>
-                        <img src="/assets/imgAds/<?=$img?>" width="300" height="300">
+                        <img src="/assets/imgAds/<?= $img ?>" width="300" height="300">
                 <?php } ?>
                 
                 

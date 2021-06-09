@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id='post-upload' class="content">
-        <form action="<?= site_url("User/adChangeSubmit/$adId") ?>" method="post" enctype=multipart/form-data id="sign-in-and-register">
+        <form action="<?= site_url("User/adChangeSubmit/$adId") ?>" method="POST" enctype=multipart/form-data id="sign-in-and-register">
         <table>
             <tr>
                 <td colspan='2' style="text-align: center;"><h2>Izmena oglasa <?= $title ?></h2></td>
